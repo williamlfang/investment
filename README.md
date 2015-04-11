@@ -1,3 +1,3 @@
-williamlfang.github.com/investment
+button属性修改在bootstrap.css里面
+button显示修改在-include/footer.html和base.js里面
 
-这是个人博客，记录我在做金融投资时的经验与感悟。人是慢慢成长，希望这个博客也能够逐渐走向成熟，因为它不仅记录了我过去一段时期内的琐碎思考与只言片语，而且还承载着我的小小的梦想，就是将来回想起这段投资的日子，会有些许的美好的回忆在里面。

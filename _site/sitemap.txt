@@ -19,88 +19,88 @@
 
 
 
-  http:/williamlfang.github.com/investment2015/03/23/Newton-QuasiNewton-Method.html
+  /investment/2015/03/23/Newton-QuasiNewton-Method.html
 
-  http:/williamlfang.github.com/investment2015/02/13/Cplus-on-MAC.html
+  /investment/2015/02/13/Cplus-on-MAC.html
 
-  http:/williamlfang.github.com/investment2015/02/04/Group-Meeting.html
+  /investment/2015/02/04/Group-Meeting.html
 
-  http:/williamlfang.github.com/investment2015/01/30/Git-Resources.html
+  /investment/2015/01/30/Git-Resources.html
 
-  http:/williamlfang.github.com/investment2015/01/29/Book-List-2015.html
+  /investment/2015/01/29/Book-List-2015.html
 
-  http:/williamlfang.github.com/investment2014/12/06/Make-resume-by-LaTeX.html
+  /investment/2014/12/06/Make-resume-by-LaTeX.html
 
-  http:/williamlfang.github.com/investment2014/11/26/Presentation-at-Chinese-Academy-of-Science.html
+  /investment/2014/11/26/Presentation-at-Chinese-Academy-of-Science.html
 
-  http:/williamlfang.github.com/investment2014/11/10/Basic-Algorithms-of-Convex-Opt.html
+  /investment/2014/11/10/Basic-Algorithms-of-Convex-Opt.html
 
-  http:/williamlfang.github.com/investment2014/11/09/What-is-NP-Hard.html
+  /investment/2014/11/09/What-is-NP-Hard.html
 
-  http:/williamlfang.github.com/investment2014/11/03/Coast.html
+  /investment/2014/11/03/Coast.html
 
-  http:/williamlfang.github.com/investment2014/10/31/Yosemite-Matlab-Running-Error.html
+  /investment/2014/10/31/Yosemite-Matlab-Running-Error.html
 
-  http:/williamlfang.github.com/investment2014/10/07/Mac-Rar-Unrar.html
+  /investment/2014/10/07/Mac-Rar-Unrar.html
 
-  http:/williamlfang.github.com/investment2014/10/01/Alibaba-Big-Data.html
+  /investment/2014/10/01/Alibaba-Big-Data.html
 
-  http:/williamlfang.github.com/investment2014/09/30/Linux4.html
+  /investment/2014/09/30/Linux4.html
 
-  http:/williamlfang.github.com/investment2014/09/19/Linux3.html
+  /investment/2014/09/19/Linux3.html
 
-  http:/williamlfang.github.com/investment2014/09/17/Linux2.html
+  /investment/2014/09/17/Linux2.html
 
-  http:/williamlfang.github.com/investment2014/09/16/Markdown-Math.html
+  /investment/2014/09/16/Markdown-Math.html
 
-  http:/williamlfang.github.com/investment2014/09/13/Linux.html
+  /investment/2014/09/13/Linux.html
 
-  http:/williamlfang.github.com/investment2014/09/12/Linux-Problems.html
+  /investment/2014/09/12/Linux-Problems.html
 
-  http:/williamlfang.github.com/investment2014/09/11/Matlab-tips.html
+  /investment/2014/09/11/Matlab-tips.html
 
-  http:/williamlfang.github.com/investment2014/09/09/Mind-Eraser-Vodka.html
+  /investment/2014/09/09/Mind-Eraser-Vodka.html
 
-  http:/williamlfang.github.com/investment2014/08/31/Papers-about-average-consensus.html
+  /investment/2014/08/31/Papers-about-average-consensus.html
 
-  http:/williamlfang.github.com/investment2014/08/25/Golden-Line.html
+  /investment/2014/08/25/Golden-Line.html
 
-  http:/williamlfang.github.com/investment2014/08/22/Average-Consensus.html
+  /investment/2014/08/22/Average-Consensus.html
 
-  http:/williamlfang.github.com/investment2014/08/12/Remote-Desk-from-Mac-to-Windows-PC.html
+  /investment/2014/08/12/Remote-Desk-from-Mac-to-Windows-PC.html
 
-  http:/williamlfang.github.com/investment2014/08/10/Using-LaTeX-with-Sublime-and-Skim-for-Mac.html
+  /investment/2014/08/10/Using-LaTeX-with-Sublime-and-Skim-for-Mac.html
 
-  http:/williamlfang.github.com/investment2014/08/04/Postmeridian-Track.html
+  /investment/2014/08/04/Postmeridian-Track.html
 
-  http:/williamlfang.github.com/investment2014/08/03/Little-Lady+.html
+  /investment/2014/08/03/Little-Lady+.html
 
-  http:/williamlfang.github.com/investment2014/08/01/My-Paintings.html
+  /investment/2014/08/01/My-Paintings.html
 
-  http:/williamlfang.github.com/investment2014/07/31/LaTeX-beamer-slides.html
+  /investment/2014/07/31/LaTeX-beamer-slides.html
 
-  http:/williamlfang.github.com/investment2014/07/27/norms-of-vector-and-matrix.html
+  /investment/2014/07/27/norms-of-vector-and-matrix.html
 
-  http:/williamlfang.github.com/investment2014/07/25/matrix-completion.html
+  /investment/2014/07/25/matrix-completion.html
 
-  http:/williamlfang.github.com/investment2014/07/24/dream-of-red-chamber.html
+  /investment/2014/07/24/dream-of-red-chamber.html
 
-  http:/williamlfang.github.com/investment2014/01/01/Book-List-2014.html
+  /investment/2014/01/01/Book-List-2014.html
 
-  http:/williamlfang.github.com/investment2013/12/31/Can-not.html
+  /investment/2013/12/31/Can-not.html
 
-  http:/williamlfang.github.com/investment2013/01/28/Mung-Bean-Soup.html
+  /investment/2013/01/28/Mung-Bean-Soup.html
 
-  http:/williamlfang.github.com/investment2013/01/01/Book-List-2013.html
+  /investment/2013/01/01/Book-List-2013.html
 
-  http:/williamlfang.github.com/investment2012/12/31/To-my-friends.html
+  /investment/2012/12/31/To-my-friends.html
 
-  http:/williamlfang.github.com/investment2012/01/01/Book-List-2012.html
+  /investment/2012/01/01/Book-List-2012.html
 
-  http:/williamlfang.github.com/investment2011/09/21/Cat.html
+  /investment/2011/09/21/Cat.html
 
-  http:/williamlfang.github.com/investment2011/06/01/Seeker-reply-me.html
+  /investment/2011/06/01/Seeker-reply-me.html
 
-  http:/williamlfang.github.com/investment2011/01/01/Book-List-2011.html
+  /investment/2011/01/01/Book-List-2011.html
 
-  http:/williamlfang.github.com/investment2010/01/01/Book-List-2010.html
+  /investment/2010/01/01/Book-List-2010.html

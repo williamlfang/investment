@@ -23,8 +23,6 @@
 
   /investment/2014/12/06/Make-resume-by-LaTeX.html
 
-  /investment/2014/11/03/Coast.html
-
   /investment/2014/10/31/Yosemite-Matlab-Running-Error.html
 
   /investment/2014/10/07/Mac-Rar-Unrar.html
@@ -41,19 +39,11 @@
 
   /investment/2014/09/12/Linux-Problems.html
 
-  /investment/2014/09/09/Mind-Eraser-Vodka.html
-
   /investment/2014/08/25/Golden-Line.html
 
   /investment/2014/08/12/Remote-Desk-from-Mac-to-Windows-PC.html
 
   /investment/2014/08/10/Using-LaTeX-with-Sublime-and-Skim-for-Mac.html
-
-  /investment/2014/08/04/Postmeridian-Track.html
-
-  /investment/2014/08/03/Little-Lady+.html
-
-  /investment/2014/08/01/My-Paintings.html
 
   /investment/2014/07/31/LaTeX-beamer-slides.html
 

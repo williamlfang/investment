@@ -224,21 +224,6 @@ $ git push --tags                       #上传所有标签
       </item>
     
       <item>
-        <title>海岸公路</title>
-        <link>http://williamlfang.github.com/investment/investment/2014/11/03/Coast.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/11/03/Coast.html</guid>
-        <pubDate>2014-11-03 00:00:00 +0800</pubDate>
-        <description>&lt;p&gt;&lt;img src=&quot;/public/img/days/coast.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
-
-&lt;h3&gt;故事&lt;/h3&gt;
-
-&lt;p&gt;我生日的时候，这货送我一套绘画工具作为礼物，条件是她生日的时候我要画幅画给她。&lt;/p&gt;
-
-&lt;p&gt;所以，生日快乐啊邓怡。&lt;/p&gt;
-</description>
-      </item>
-    
-      <item>
         <title>Yosemite OS X 10.10 Matlab 2012a停止工作的解决办法</title>
         <link>http://williamlfang.github.com/investment/investment/2014/10/31/Yosemite-Matlab-Running-Error.html</link>
         <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/10/31/Yosemite-Matlab-Running-Error.html</guid>
@@ -855,15 +840,6 @@ touch a.txt&lt;/p&gt;
       </item>
     
       <item>
-        <title>坐在露天酒吧</title>
-        <link>http://williamlfang.github.com/investment/investment/2014/09/09/Mind-Eraser-Vodka.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/09/09/Mind-Eraser-Vodka.html</guid>
-        <pubDate>2014-09-09 00:00:00 +0800</pubDate>
-        <description>&lt;p&gt;&lt;img src=&quot;/public/img/days/4_1.jpg&quot; alt=&quot;4&quot;&gt;&lt;/p&gt;
-</description>
-      </item>
-    
-      <item>
         <title>每个人的金线</title>
         <link>http://williamlfang.github.com/investment/investment/2014/08/25/Golden-Line.html</link>
         <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/08/25/Golden-Line.html</guid>
@@ -1027,29 +1003,236 @@ touch a.txt&lt;/p&gt;
       </item>
     
       <item>
-        <title>午后的操场</title>
-        <link>http://williamlfang.github.com/investment/investment/2014/08/04/Postmeridian-Track.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/08/04/Postmeridian-Track.html</guid>
-        <pubDate>2014-08-04 00:00:00 +0800</pubDate>
-        <description>&lt;p&gt;&lt;img src=&quot;/public/img/days/3.jpg&quot; alt=&quot;3&quot;&gt;&lt;/p&gt;
+        <title>LaTeX beamer制作幻灯片</title>
+        <link>http://williamlfang.github.com/investment/investment/2014/07/31/LaTeX-beamer-slides.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/07/31/LaTeX-beamer-slides.html</guid>
+        <pubDate>2014-07-31 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;用LaTeX beamer制作幻灯片简洁优美，在需要很多数学公式的情况下很实用。这里我用我的第一份LaTeX beamer幻灯片代码为例说明。学习使用任何一种语言编程时，最重要的是对整个代码框架的理解，本文重点讲框架。&lt;/p&gt;
+
+&lt;h3&gt;代码框架理解&lt;/h3&gt;
+
+&lt;p&gt;beamer制作幻灯片的框架大致可分三级（其中for语句仅为便于理解，实际的LaTeX语句中并不会出现）如下：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;定义文件类型&lt;/li&gt;
+&lt;li&gt;放入所有需要使用的主题和包&lt;/li&gt;
+&lt;li&gt;总的开始
+
+&lt;ul&gt;
+&lt;li&gt;编辑幻灯片首页&lt;/li&gt;
+&lt;li&gt;for i = 1,2,...,N
+
+&lt;ul&gt;
+&lt;li&gt;开始编辑第i张幻灯片&lt;/li&gt;
+&lt;li&gt;结束编辑第i张幻灯片&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;end for&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;总的结束&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;一级结构代码&lt;/h3&gt;
+
+&lt;p&gt;具体从代码看，首先是一级结构：&lt;/p&gt;
+
+&lt;p&gt;```tex
+\documentclass[xcolor=dvipsnames]{beamer}  %定义文件类型
+\usetheme{Copenhagen}                      %此句及以下是我使用的主题和包
+\usecolortheme{wolverine}                       %颜色主题
+\usepackage{utopia}                             %字体
+\usecolortheme[named=brown]{structure}          %改变主题内嵌结构的颜色
+\usepackage{CJK}                                %中文包，如果全部英文可以不用&lt;/p&gt;
+
+&lt;p&gt;\begin{document}                           %总的开始&lt;/p&gt;
+
+&lt;p&gt;\end{document}                             %总的结束
+```&lt;/p&gt;
+
+&lt;h3&gt;二级结构代码&lt;/h3&gt;
+
+&lt;p&gt;在&lt;code&gt;总的开始&lt;/code&gt;与&lt;code&gt;总的结束&lt;/code&gt;之间写入如下代码，是二级结构：&lt;/p&gt;
+
+&lt;p&gt;```tex
+\title[幻灯片缩略名]{幻灯片全名}           %以下是幻灯片首页的编辑
+\subtitle{副标题}
+\author{作者姓名}
+\institute{作者所属学校}
+\date[\initclock\tdtime]{\today}                     %总是显示当前的日期
+\logo{\includegraphics[height=10mm]{yellowdeer.jpg}} %这是我的logo，如果不需要删掉词句即可
+\begin{frame}
+\titlepage
+\end{frame}                                %幻灯片首页的编辑到此结束&lt;/p&gt;
+
+&lt;p&gt;\begin{frame}                              %开始编辑第i张幻灯片&lt;/p&gt;
+
+&lt;p&gt;\end{frame}                                %结束编辑第i张幻灯片&lt;/p&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;h3&gt;三级结构代码&lt;/h3&gt;
+
+&lt;p&gt;在&lt;code&gt;开始编辑第i张幻灯片&lt;/code&gt;与&lt;code&gt;结束编辑第i张幻灯片&lt;/code&gt;之间，写入第i张幻灯片的编辑代码，即三级结构。
+这里我以如下图所示的幻灯片的编辑代码为例说明一些基本的、常用的语法：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/slide_eg.JPG&quot; alt=&quot;slide_eg&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;tex
+\begin{frame}{Decentralized low-rank matrix completion problem}  %大括号中是这页幻灯片的标题
+\begin{columns}[onlytextwidth]                                   %将幻灯片分为两栏
+\begin{column}{0.4\textwidth}                                    %开始左边的一栏，该栏占宽比为40%
+\includegraphics[height=40mm]{networki2.jpg}                     %插入图片，图片大小可通过高度自定义
+\begin{itemize}                                                  %开始列出清单
+\footnotesize \item A network of $L$ agents\\                    %清单第一项。其中\footnotesize控制字体大小
+\item Each agent $i$ observes some entries of $\mathbf{W}_{i}$   %清单第二项
+\end{itemize}                                                    %结束列出清单
+\end{column}                                                     %结束左边的这栏
+\begin{column}{0.6\textwidth}                                    %开始右边的一栏，与左栏类似
+\begin{itemize}
+\vbox{}                                                          %空一行
+\item Consider a low-rank matrix $\mathbf{W}$
+\scriptsize \begin{itemize}
+                   \item $\mathbf{W} \in \mathbb{R}^{N \times M}$
+                   \item $rank(\mathbf{W})\le r$
+                   \item $\mathbf{W}_{n,m}$ is known for $(n,m) \in \Omega$
+                   \item $\mathbf{W} = [\mathbf{W}_{1}, \mathbf{W}_{2}, ...,
+\mathbf{W}_{L}] $
+                 \end{itemize}
+\normalsize \vbox{}
+\item An estimate matrix of $\mathbf{W}$: $\mathbf{Z}$
+\scriptsize \begin{itemize}
+                \item $\mathbf{Z} \in \mathbb{R}^{N \times M}$
+                \item $rank(\mathbf{Z})\le r$
+                \item $\mathbf{Z}=\mathbf{X}\mathbf{Y}= \mathbf{X} [\mathbf{Y}_{1}, \mathbf{Y}_{2}, ..., \mathbf{Y}_{L}]$
+                \item $\mathbf{X}\in \mathbb{R}^{N \times r},\mathbf{Y} \in \mathbb{R}^{r \times M}$
+              \end{itemize}
+\end{itemize}
+\normalsize \vbox{}                                             %\normalize使字体恢复正常大小
+\end{column}                                                    %结束右边栏
+\end{columns}                                                   %结束分栏
+\end{frame}
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;以上就是LaTex beamer制作幻灯片的主要内容。
+再次强调，在理解细节之前应先对代码框架有一个大的把握，具体编辑所需的语句可查阅书籍或互联网。&lt;/p&gt;
+
+&lt;p&gt;其实一句话就可以概括啦：不断的begin，不断的end。&lt;/p&gt;
 </description>
       </item>
     
       <item>
-        <title>小礼物Little Lady</title>
-        <link>http://williamlfang.github.com/investment/investment/2014/08/03/Little-Lady+.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/08/03/Little-Lady+.html</guid>
-        <pubDate>2014-08-03 00:00:00 +0800</pubDate>
-        <description>&lt;p&gt;&lt;img src=&quot;/public/img/days/2.jpg&quot; alt=&quot;2&quot;&gt;&lt;/p&gt;
+        <title>低秩矩阵补全</title>
+        <link>http://williamlfang.github.com/investment/investment/2014/07/25/matrix-completion.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/07/25/matrix-completion.html</guid>
+        <pubDate>2014-07-25 00:00:00 +0800</pubDate>
+        <description>&lt;h3&gt;问题描述:&lt;/h3&gt;
+
+&lt;div&gt;如果有这样一个矩阵&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{W}&quot; title=&quot;\mathbf{W}&quot; /&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;矩阵中有部分元素缺失
+&lt;li&gt;矩阵的秩&lt;img src=&quot;http://latex.codecogs.com/gif.latex?rank(\mathbf{W})&quot; title=&quot;rank(\mathbf{W})&quot; /&gt;相较于矩阵维数来说很小，并作为先验已知&lt;/li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;我们希望恢复那些缺失的元素，这个问题就是低秩矩阵补全问题。      &lt;/p&gt;
+
+&lt;h3&gt;思考过程:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;需要恢复一个低秩矩阵
+&lt;li&gt;直接想法是极小化矩阵的秩&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\min&amp;space;rank(\mathbf{W})&quot; title=&quot;\min rank(\mathbf{W})&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;但是&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\min&amp;space;rank(\mathbf{W})&quot; title=&quot;\min rank(\mathbf{W})&quot; /&gt;的优化问题非凸，不好求解&lt;/li&gt;
+&lt;li&gt;核范数&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\left&amp;space;\|&amp;space;\mathbf{W}\right&amp;space;\|_{*}&quot; title=&quot;\left \| \mathbf{W}\right \|_{*}&quot; /&gt;是秩的凸近似，所以想到&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\min&amp;space;\left&amp;space;\|&amp;space;\mathbf{W}\right&amp;space;\|_{*}&quot; title=&quot;\min \left \| \mathbf{W}\right \|_{*}&quot; /&gt;&lt;/li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;极小化核范数的集中式算法:&lt;/h3&gt;
+
+&lt;div&gt;求解&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\min&amp;space;\left&amp;space;\|&amp;space;\mathbf{W}\right&amp;space;\|_{*}&quot; title=&quot;\min \left \| \mathbf{W}\right \|_{*}&quot; /&gt;的集中式算法有很多，比如：&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;singular value thresholding algorithm&lt;/li&gt;
+&lt;li&gt;fixed-point shrinkage algorithm&lt;/li&gt;
+&lt;li&gt;proximal gradient algorithm&lt;/li&gt;
+&lt;li&gt;ADMM&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;但如果矩阵规模和秩增大，以上算法的计算代价也增大，因为它们都需要求解奇异值分解(SVD)。SVD中求伪逆的步骤运算量大，很耗费资源。因此需要想更好的方法，避免极小化核范数。&lt;/p&gt;
+
+&lt;h3&gt;极小化分解矩阵之积的集中式方法:&lt;/h3&gt;
+
+&lt;p&gt;&lt;div&gt;将问题写为&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\min&amp;space;\left&amp;space;\|&amp;space;\mathbf{Z}-\mathbf{X}\mathbf{Y}\right&amp;space;\|_{F}&quot; title=&quot;\min \left \| \mathbf{Z}-\mathbf{X}\mathbf{Y}\right \|_{F}&quot; /&gt;，其中&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{Z}&quot; title=&quot;\mathbf{Z}&quot; /&gt;是对&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{W}&quot; title=&quot;\mathbf{W}&quot; /&gt;的估计，在元素没有缺失的位置上&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{Z}&quot; title=&quot;\mathbf{Z}&quot; /&gt;和&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{W}&quot; title=&quot;\mathbf{W}&quot; /&gt;的元素相同，&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{X}&quot; title=&quot;\mathbf{X}&quot; /&gt;,&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{Y}&quot; title=&quot;\mathbf{Y}&quot; /&gt;是对&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{W}&quot; title=&quot;\mathbf{W}&quot; /&gt;的乘法分解。介绍两种求解该问题的方法：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;nonlinear Gauss-Seidel method&lt;/li&gt;
+&lt;li&gt;nonlinear SOR(Successive Over-Relaxation)-like scheme:LMaFit&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;其中SOR方法是GS方法的拓展，区别仅在于SOR方法中对于&lt;strong&gt;X&lt;/strong&gt;的更新加了权重，并对权值进行更新。&lt;/p&gt;
+
+&lt;h3&gt;去中心式算法:&lt;/h3&gt;
+
+&lt;p&gt;&lt;div&gt;当矩阵规模大到一定程度时，集中式算法在计算能力上要求过高，普通计算机也许无法计算。这时，我们需要在由许多普通计算机作为节点组成的网络中运算，这需要实现去中心式计算。去中心式计算式很容易实现的，将&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{W}&quot; title=&quot;\mathbf{W}&quot; /&gt;,&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{Z}&quot; title=&quot;\mathbf{Z}&quot; /&gt;,&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{Y}&quot; title=&quot;\mathbf{Y}&quot; /&gt;分别切块放在每个节点上，将&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{X}&quot; title=&quot;\mathbf{X}&quot; /&gt;作为公共信息在网络各个邻居节点间交换，优化问题形式不变，但需要加上&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{X}_{(i)}=\mathbf{X}_{(j)}&quot; title=&quot;\mathbf{X}_{(i)}=\mathbf{X}_{(j)}&quot; /&gt;的约束。而这样一个约束就引出了另一个子问题：一致平均(average consensus)问题。&lt;/p&gt;
+
+&lt;p&gt;关于一致平均问题的介绍请看：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://painterlin.com/2014/08/22/Average-Consensus.html&quot;&gt;《对于一致平均问题的理解》&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://painterlin.com/2014/08/31/Papers-about-average-consensus.html&quot;&gt;《动态一致平均问题的4篇论文》&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
       </item>
     
       <item>
-        <title>与亚敏走在石像路</title>
-        <link>http://williamlfang.github.com/investment/investment/2014/08/01/My-Paintings.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/08/01/My-Paintings.html</guid>
-        <pubDate>2014-08-01 00:00:00 +0800</pubDate>
-        <description>&lt;p&gt;&lt;img src=&quot;/public/img/days/1.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+        <title>读《红楼梦》</title>
+        <link>http://williamlfang.github.com/investment/investment/2014/07/24/dream-of-red-chamber.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/07/24/dream-of-red-chamber.html</guid>
+        <pubDate>2014-07-24 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;两个月前在亚马逊上买了岳麓书社的&lt;strong&gt;《红楼梦脂汇本》&lt;/strong&gt;，被师兄们开玩笑说太奢侈。我真想不出还有什么事比买书更朴素。小时候几番试图阅读《红楼梦》，每次都因人物关系过于复杂而放弃。说来很感谢蒋勋的细说红楼音频，尽管后来觉得他有点儿啰嗦。&lt;/p&gt;
+
+&lt;p&gt;几天前，饭桌上谈及红楼梦，被问到最喜欢的人物是谁，一时间回答不上来。我觉得，不管在书中或者在现实里，当你尝试过体会每个角色在其长度为一生的时间轴上所经历的荣与辱、尊与卑、乐与痛、宠与屈之后，是很难去说喜欢谁或者不喜欢谁的。站在一个更高维的空间去看，每个人都过得不容易，而所有事物的发展也逃不过“分久必合，合久必分”八个大字。&lt;/p&gt;
+
+&lt;p&gt;另外想讲讲蒋勋在他的书里一直强调的深情。人类的许多深情都在细节处体现，雨天里为你把蓑衣捋整齐的手，“我的五脏都碎了，你还只是哭”，诸如此类，能够体会的人自然能够体会。以前想不明白的事，也渐渐释然：因为有些问题，本身无解就是解。而这又有什么关系呢。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>2014年阅读书单</title>
+        <link>http://williamlfang.github.com/investment/investment/2014/01/01/Book-List-2014.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/01/01/Book-List-2014.html</guid>
+        <pubDate>2014-01-01 00:00:00 +0800</pubDate>
+        <description></description>
+      </item>
+    
+      <item>
+        <title>绿豆百合羹</title>
+        <link>http://williamlfang.github.com/investment/investment/2013/01/28/Mung-Bean-Soup.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2013/01/28/Mung-Bean-Soup.html</guid>
+        <pubDate>2013-01-28 00:00:00 +0800</pubDate>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;“你要学会转移感情。”--真人秀《LAY的一生》&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3&gt;材料&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;绿豆100g&lt;/li&gt;
+&lt;li&gt;干百合30g&lt;/li&gt;
+&lt;li&gt;冰糖若干&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;步骤&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;绿豆洗净，放入600ml水中大火烧开，改小火烧到绿豆开花&lt;/li&gt;
+&lt;li&gt;此时加入洗净的干百合&lt;/li&gt;
+&lt;li&gt;继续小火烧，凭感觉在适当时刻加入冰糖80g&lt;/li&gt;
+&lt;li&gt;直到绿豆百合煮烂，关火上汤&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;完成&lt;/h3&gt;
+
+&lt;p&gt;味道，清香甘甜，沙感细腻，非同寻常的好。!!!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/food/mung.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
 </description>
       </item>
     

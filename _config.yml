@@ -1,4 +1,4 @@
-permalink: /:year/:month/:day/:title.html
+permalink: /investment/:year/:month/:day/:title.html                     ##     /investment/
 paginate: 10
 markdown: redcarpet
 

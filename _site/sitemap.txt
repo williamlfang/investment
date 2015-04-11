@@ -13,8 +13,6 @@
 
   /page3/index.html
 
-  /page4/index.html
-
 
 
   /2015/02/13/Cplus-on-MAC.html
@@ -69,12 +67,6 @@
 
   /2013/01/01/Book-List-2013.html
 
-  /2012/01/01/Book-List-2012.html
-
   /2011/09/21/Cat.html
 
   /2011/06/01/Seeker-reply-me.html
-
-  /2011/01/01/Book-List-2011.html
-
-  /2010/01/01/Book-List-2010.html

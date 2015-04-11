@@ -1,4 +1,4 @@
-permalink: http://williamlfang.github.com/investment:year/:month/:day/:title.html                     ##     /investment/
+permalink: /investment/:year/:month/:day/:title.html                     ##     /investment/
 paginate: 10
 markdown: redcarpet
 

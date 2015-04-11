@@ -6,97 +6,6 @@
     <description>Website for Investment</description>
     
       <item>
-        <title>牛顿法与拟牛顿法（DFP BFGS LBFGS VLBFGS）</title>
-        <link>http://williamlfang.github.com/investment/2015/03/23/Newton-QuasiNewton-Method.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2015/03/23/Newton-QuasiNewton-Method.html</guid>
-        <pubDate>2015-03-23 00:00:00 +0800</pubDate>
-        <description>&lt;p&gt;最近做LBFGS的并行，顺便把牛顿法、拟牛顿法顺理一下。&lt;/p&gt;
-
-&lt;p&gt;拟牛顿法是求解非线性优化问题最有效的方法之一。考虑无约束的极小化问题&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=\min\limits_x&amp;space;f(x)&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\min\limits_x&amp;space;f(x)&quot; title=&quot;\min\limits_x f(x)&quot; /&gt;&lt;/a&gt;，假设&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=f(x)&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?f(x)&quot; title=&quot;f(x)&quot; /&gt;&lt;/a&gt;为凸函数，且二阶连续可导。&lt;/p&gt;
-
-&lt;h3&gt;原始牛顿法&lt;/h3&gt;
-
-&lt;p&gt;基本思想：在现有极小点估计值的附近对f(x)进行二阶泰勒展开，进而找到下一个极小点的估计值&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=x_{k&amp;plus;1}=x_{k}-(H_k)^{-1}g_{k},&amp;space;k=0,1,\cdots&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?x_{k&amp;plus;1}=x_{k}-(H_k)^{-1}g_{k},&amp;space;k=0,1,\cdots&quot; title=&quot;x_{k+1}=x_{k}-(H_k)^{-1}g_{k}, k=0,1,\cdots&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;牛顿法具有二次收敛性，但当目标函数非二次型时，牛顿法不能保证函数稳定地下降（缺点）。&lt;/p&gt;
-
-&lt;h3&gt;阻尼牛顿法&lt;/h3&gt;
-
-&lt;p&gt;每次迭代前需要沿迭代方向&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=d_k=-(H_k)^{-1}g_k&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?d_k=-(H_k)^{-1}g_k&quot; title=&quot;d_k=-(H_k)^{-1}g_k&quot; /&gt;&lt;/a&gt;做线搜索，寻求最优的步长因子&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=\lambda_k&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\lambda_k&quot; title=&quot;\lambda_k&quot; /&gt;&lt;/a&gt;，即&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=\lambda_k&amp;space;=&amp;space;\arg\min\limits_{\lambda}&amp;space;f(x_k&amp;plus;\lambda&amp;space;d_k)&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\lambda_k&amp;space;=&amp;space;\arg\min\limits_{\lambda}&amp;space;f(x_k&amp;plus;\lambda&amp;space;d_k)&quot; title=&quot;\lambda_k = \arg\min\limits_{\lambda} f(x_k+\lambda d_k)&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3&gt;拟牛顿法&lt;/h3&gt;
-
-&lt;p&gt;基本思想：不使用二阶偏导数而构造出可以近似Hession或Hession的逆的正定对称阵，在“拟牛顿”的条件下优化目标函数。&lt;/p&gt;
-
-&lt;p&gt;先推导拟牛顿条件：在&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=x_{k&amp;plus;1}&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?x_{k&amp;plus;1}&quot; title=&quot;x_{k+1}&quot; /&gt;&lt;/a&gt;附近对&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=f(x)&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?f(x)&quot; title=&quot;f(x)&quot; /&gt;&lt;/a&gt;做泰勒展开，取二阶近似项&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=f(x)=f(x_{k&amp;plus;1})&amp;plus;\nabla&amp;space;f(x_{k&amp;plus;1})(x-x_{k&amp;plus;1})&amp;plus;\frac{1}{2}(x-x_{k&amp;plus;1})^T\nabla^2&amp;space;f(x_{k&amp;plus;1})(x-x_{k&amp;plus;1})&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?f(x)=f(x_{k&amp;plus;1})&amp;plus;\nabla&amp;space;f(x_{k&amp;plus;1})(x-x_{k&amp;plus;1})&amp;plus;\frac{1}{2}(x-x_{k&amp;plus;1})^T\nabla^2&amp;space;f(x_{k&amp;plus;1})(x-x_{k&amp;plus;1})&quot; title=&quot;f(x)=f(x_{k+1})+\nabla f(x_{k+1})(x-x_{k+1})+\frac{1}{2}(x-x_{k+1})^T\nabla^2 f(x_{k+1})(x-x_{k+1})&quot; /&gt;&lt;/a&gt;
-推出&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=\nabla&amp;space;f(x)\approx&amp;space;\nabla&amp;space;f(x_{k&amp;plus;1})&amp;plus;H_{k&amp;plus;1}(x-x_{k&amp;plus;1})&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\nabla&amp;space;f(x)\approx&amp;space;\nabla&amp;space;f(x_{k&amp;plus;1})&amp;plus;H_{k&amp;plus;1}(x-x_{k&amp;plus;1})&quot; title=&quot;\nabla f(x)\approx \nabla f(x_{k+1})+H_{k+1}(x-x_{k+1})&quot; /&gt;&lt;/a&gt;
-取&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=x=x_k&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?x=x_k&quot; title=&quot;x=x_k&quot; /&gt;&lt;/a&gt;，推出&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=g_{k&amp;plus;1}-g_{k}\approx&amp;space;H_{k&amp;plus;1}(x_{k&amp;plus;1}-x_k)&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?g_{k&amp;plus;1}-g_{k}\approx&amp;space;H_{k&amp;plus;1}(x_{k&amp;plus;1}-x_k)&quot; title=&quot;g_{k+1}-g_{k}\approx H_{k+1}(x_{k+1}-x_k)&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;引入记号 &lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=s_k=x_{k&amp;plus;1}-x_{k},&amp;space;y_k=g_{k&amp;plus;1}-g_{k}&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?s_k=x_{k&amp;plus;1}-x_{k},&amp;space;y_k=g_{k&amp;plus;1}-g_{k}&quot; title=&quot;s_k=x_{k+1}-x_{k}, y_k=g_{k+1}-g_{k}&quot; /&gt;&lt;/a&gt;， 推出&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=y_k=H_{k&amp;plus;1}s_k&amp;space;,&amp;space;s_k=H^{-1}_{k&amp;plus;1}y_k&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?y_k=H_{k&amp;plus;1}s_k&amp;space;,&amp;space;s_k=H^{-1}_{k&amp;plus;1}y_k&quot; title=&quot;y_k=H_{k+1}s_k , s_k=H^{-1}_{k+1}y_k&quot; /&gt;&lt;/a&gt;(&lt;code&gt;拟牛顿条件&lt;/code&gt;)&lt;/p&gt;
-
-&lt;p&gt;它迭代过程中的hession矩阵做约束，因此，对hession对近似的&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=B_{k&amp;plus;1}&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?B_{k&amp;plus;1}&quot; title=&quot;B_{k+1}&quot; /&gt;&lt;/a&gt;，以及对hession的逆做近似的&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=D_{k&amp;plus;1}&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?D_{k&amp;plus;1}&quot; title=&quot;D_{k+1}&quot; /&gt;&lt;/a&gt;，可以将&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=y_{k}=B_{k&amp;plus;1}s_k&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?y_{k}=B_{k&amp;plus;1}s_k&quot; title=&quot;y_{k}=B_{k+1}s_k&quot; /&gt;&lt;/a&gt; 或 &lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=s_{k}=D_{k&amp;plus;1}y_k&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?s_{k}=D_{k&amp;plus;1}y_k&quot; title=&quot;s_{k}=D_{k+1}y_k&quot; /&gt;&lt;/a&gt; 作为指导。&lt;/p&gt;
-
-&lt;h4&gt;DFP算法（Davidon–Fletcher–Powell formula）&lt;/h4&gt;
-
-&lt;p&gt;核心：通过迭代的方法，对hession的逆做近似。迭代格式为&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=D_{k&amp;plus;1}=D_k&amp;plus;\Delta&amp;space;D_k&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?D_{k&amp;plus;1}=D_k&amp;plus;\Delta&amp;space;D_k&quot; title=&quot;D_{k+1}=D_k+\Delta D_k&quot; /&gt;&lt;/a&gt;（通常&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=D_0=I&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?D_0=I&quot; title=&quot;D_0=I&quot; /&gt;&lt;/a&gt;）&lt;/p&gt;
-
-&lt;p&gt;猜想&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=\Delta&amp;space;D_k&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\Delta&amp;space;D_k&quot; title=&quot;\Delta D_k&quot; /&gt;&lt;/a&gt;待定为&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=\Delta&amp;space;D_k=\alpha&amp;space;\mathbf{u}&amp;space;\mathbf{u}^{\mathrm{T}}&amp;plus;\beta\mathbf{v}\mathbf{v}^{\mathrm{T}}&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\Delta&amp;space;D_k=\alpha&amp;space;\mathbf{u}&amp;space;\mathbf{u}^{\mathrm{T}}&amp;plus;\beta\mathbf{v}\mathbf{v}^{\mathrm{T}}&quot; title=&quot;\Delta D_k=\alpha \mathbf{u} \mathbf{u}^{\mathrm{T}}+\beta\mathbf{v}\mathbf{v}^{\mathrm{T}}&quot; /&gt;&lt;/a&gt;（具有对称性）&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=\Rightarrow&amp;space;s_k=D_ky_k&amp;plus;\alpha\mathbf{u}\mathbf{u}^{\mathrm{T}}y_k&amp;plus;\beta\mathbf{v}\mathbf{v}^{\mathrm{T}}y_k=D_ky_k&amp;plus;(\alpha\mathbf{u}^{\mathrm{T}}y_k)\mathbf{u}&amp;plus;(\beta\mathbf{v}^{\mathrm{T}}y_k)\mathbf{v}&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\Rightarrow&amp;space;s_k=D_ky_k&amp;plus;\alpha\mathbf{u}\mathbf{u}^{\mathrm{T}}y_k&amp;plus;\beta\mathbf{v}\mathbf{v}^{\mathrm{T}}y_k=D_ky_k&amp;plus;(\alpha\mathbf{u}^{\mathrm{T}}y_k)\mathbf{u}&amp;plus;(\beta\mathbf{v}^{\mathrm{T}}y_k)\mathbf{v}&quot; title=&quot;\Rightarrow s_k=D_ky_k+\alpha\mathbf{u}\mathbf{u}^{\mathrm{T}}y_k+\beta\mathbf{v}\mathbf{v}^{\mathrm{T}}y_k=D_ky_k+(\alpha\mathbf{u}^{\mathrm{T}}y_k)\mathbf{u}+(\beta\mathbf{v}^{\mathrm{T}}y_k)\mathbf{v}&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;括号中是数值，将其分别简单赋值为1，-1，即&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=\alpha=\frac{1}{\mathbf{u}^{\mathrm{T}}y_k},\beta=-\frac{1}{\mathbf{v}^{\mathrm{T}}y_k}&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\alpha=\frac{1}{\mathbf{u}^{\mathrm{T}}y_k},\beta=-\frac{1}{\mathbf{v}^{\mathrm{T}}y_k}&quot; title=&quot;\alpha=\frac{1}{\mathbf{u}^{\mathrm{T}}y_k},\beta=-\frac{1}{\mathbf{v}^{\mathrm{T}}y_k}&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;其中向量u,v仍有待确定，由上面&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=\Rightarrow&amp;space;\mathbf{u}-\mathbf{v}=s_k-D_ky_k&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\Rightarrow&amp;space;\mathbf{u}-\mathbf{v}=s_k-D_ky_k&quot; title=&quot;\Rightarrow \mathbf{u}-\mathbf{v}=s_k-D_ky_k&quot; /&gt;&lt;/a&gt;（要此式成立，不妨直接取&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=\mathbf{u}=s_k,\mathbf{v}=D_ky_k&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{u}=s_k,\mathbf{v}=D_ky_k&quot; title=&quot;\mathbf{u}=s_k,\mathbf{v}=D_ky_k&quot; /&gt;&lt;/a&gt;）&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=\Rightarrow&amp;space;\alpha=\frac{1}{s^{\mathrm{T}}_ky_k},\beta=-\frac{1}{y^{\mathrm{T}}_kD_ky_k}&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\Rightarrow&amp;space;\alpha=\frac{1}{s^{\mathrm{T}}_ky_k},\beta=-\frac{1}{y^{\mathrm{T}}_kD_ky_k}&quot; title=&quot;\Rightarrow \alpha=\frac{1}{s^{\mathrm{T}}_ky_k},\beta=-\frac{1}{y^{\mathrm{T}}_kD_ky_k}&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;至此，校正矩阵&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=\Delta&amp;space;D_k&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\Delta&amp;space;D_k&quot; title=&quot;\Delta D_k&quot; /&gt;&lt;/a&gt;就已经构造出来了&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=\Rightarrow&amp;space;\Delta&amp;space;D_k=\frac{s_ks_k^{\mathrm{T}}}{s_k^{\mathrm{T}}y_k}-\frac{D_ky_ky_k^{\mathrm{T}}D_k}{y_k^{\mathrm{T}}D_ky_k}&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\Rightarrow&amp;space;\Delta&amp;space;D_k=\frac{s_ks_k^{\mathrm{T}}}{s_k^{\mathrm{T}}y_k}-\frac{D_ky_ky_k^{\mathrm{T}}D_k}{y_k^{\mathrm{T}}D_ky_k}&quot; title=&quot;\Rightarrow \Delta D_k=\frac{s_ks_k^{\mathrm{T}}}{s_k^{\mathrm{T}}y_k}-\frac{D_ky_ky_k^{\mathrm{T}}D_k}{y_k^{\mathrm{T}}D_ky_k}&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4&gt;BFGS算法（Broyden–Fletcher–Goldfarb–Shanno algorithm）&lt;/h4&gt;
-
-&lt;p&gt;核心公式的推导过程与DFP完全类似，只是互换了其中s{k}和y{k}的位置。BFGS直接逼近Hession矩阵B_k。(公式敲起来太累了，请自行推导)&lt;/p&gt;
-
-&lt;h4&gt;LBFGS算法(limited-memory BFGS)&lt;/h4&gt;
-
-&lt;p&gt;不再存储完整的D&lt;em&gt;k，而是存储计算过程中的向量序列{s}，{y}。当需要矩阵D&lt;/em&gt;k时，利用向量序列的计算来代替。并且，向量序列也不是全部存储，而是固定存最新的m个。&lt;/p&gt;
-
-&lt;p&gt;若要实现并行，需要同时在x与梯度（影响y的计算）那儿求一致平均。&lt;/p&gt;
-
-&lt;h3&gt;资料&lt;/h3&gt;
-
-&lt;p&gt;【1】&lt;a href=&quot;http://en.wikipedia.org/wiki/Davidon%E2%80%93Fletcher%E2%80%93Powell_formula&quot;&gt;DFP算法&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;【2】&lt;a href=&quot;http://en.wikipedia.org/wiki/Broyden%E2%80%93Fletcher%E2%80%93Goldfarb%E2%80%93Shanno_algorithm&quot;&gt;BFGS算法&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;【3】&lt;a href=&quot;http://en.wikipedia.org/wiki/Limited-memory_BFGS&quot;&gt;LBFGS算法&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;【4】&lt;a href=&quot;http://papers.nips.cc/paper/5333-large-scale-l-bfgs-using-mapreduce.pdf&quot;&gt;Large-scale L-BFGS using MapReduce&lt;/a&gt;&lt;/p&gt;
-</description>
-      </item>
-    
-      <item>
         <title>Mac以及Windows上搭建C++工作环境</title>
         <link>http://williamlfang.github.com/investment/2015/02/13/Cplus-on-MAC.html</link>
         <guid isPermaLink="true">http://williamlfang.github.com/investment/2015/02/13/Cplus-on-MAC.html</guid>
@@ -151,105 +60,6 @@
 &lt;p&gt;【1】&lt;a href=&quot;https://www.cs.drexel.edu/%7Emcs171/Sp14/extras/g++/index.html&quot;&gt;Writing and Running C++ Programs in the UNIX Environment using g++&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;【2】&lt;a href=&quot;https://www.cs.drexel.edu/%7Emcs171/Sp14/extras/xCode_Instructions/index.html&quot;&gt;Writing and Running C++ Programs in the Mac OS X 10.4 Environment using xCode&lt;/a&gt;&lt;/p&gt;
-</description>
-      </item>
-    
-      <item>
-        <title>大数据机器学习初探---南大李武军</title>
-        <link>http://williamlfang.github.com/investment/2015/02/04/Group-Meeting.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2015/02/04/Group-Meeting.html</guid>
-        <pubDate>2015-02-04 00:00:00 +0800</pubDate>
-        <description>&lt;p&gt;每周的组会大概会持续2小时。如果是主讲，就需要花更多的时间去准备报告内容。之前，组会开完我就不管了，缺乏总结思考。而这样子的话实质上意义就不大了，没有内化为自己的知识，也没有什么critical thinking。从现在开始，记录每一次组会的思考。&lt;/p&gt;
-
-&lt;p&gt;常言道：亡羊补牢，为时未晚。T.T&lt;/p&gt;
-
-&lt;h3&gt;Outline&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Learning to Hash&lt;/li&gt;
-&lt;li&gt;Distributed Learning&lt;/li&gt;
-&lt;li&gt;Stochastic Learning&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;有一个形象的比喻是这样说的，大数据是金矿，云计算是采矿技术，大数据机器学习是冶金技术。&lt;/p&gt;
-
-&lt;p&gt;大数据机器学习面临的挑战，一是存储，而是计算速度，三是网络。&lt;/p&gt;
-
-&lt;p&gt;哈希学习，在内存、硬盘、cpu、通信上有优势；
-分布式学习在内存、硬盘、cpu上有优势，但会增加通信成本；随机学习在内存、硬盘、cpu方面有优势。&lt;/p&gt;
-
-&lt;h3&gt;Learning to Hash&lt;/h3&gt;
-
-&lt;p&gt;主讲人：大师兄&lt;/p&gt;
-
-&lt;p&gt;最近邻搜索在大数据背景下，会出现维数灾难，存储成本也高，查询速度也慢。解决方法之一是保相似性哈希，可以降低维数并减少存储成本。通常用海明距离（hamming distance）来表征哈希值之间的差异。哈希方案也具有较快的查询速度，通常具有常数或者次线性的搜索时间复杂度；即使是穷举搜索也可以被接受，因为海明距离计算起来是很快的。&lt;/p&gt;
-
-&lt;p&gt;哈希函数学习的两个阶段：&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Projection Stage（dimension reduction）&lt;/li&gt;
-&lt;li&gt;Quantization Stage&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;贡献：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Isotropic Hash&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;思想：学习一个正交阵（幻灯片21页），其目的是让大于某一阈值的feature的重要程度是一样的。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Supervised Hashing with Latent Factor Models&lt;/li&gt;
-&lt;li&gt;Supervised Multimodal Hashing with SCM&lt;/li&gt;
-&lt;li&gt;Multiple-Bit Quantization&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Distributed Learning&lt;/h3&gt;
-
-&lt;p&gt;主讲人：我&lt;/p&gt;
-
-&lt;p&gt;主要内容：&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;文章：Coupled Group Lasso for Web-Scale CTR Prediction&lt;/li&gt;
-&lt;li&gt;文章：Distributed Power-Law Graph Computing&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4&gt;文章1&lt;/h4&gt;
-
-&lt;p&gt;为了解决在线广告的CTR（click through rate）预测，即当某广告展示给某用户时，它被该用户点击的概率，通常的方法是LR（logistic regression），即逻辑回归。但LR的一个短板是，因其是线性的，所以无法将用户与广告之间某些微妙的非线性关系纳入。注意LR中，正则项若为2范数平方，称为标准逻辑回归；正则项若为1范数，问题通常被叫做Lasso。所以需要一种新的方法。&lt;/p&gt;
-
-&lt;p&gt;这里的贡献是：&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;CGL的似然定义中，可以纳入用户与广告之间的某些非线性关系的考量。&lt;/li&gt;
-&lt;li&gt;正则项改为参数的2-1范数，目的是是用户特征向量参数W、广告特征向量参数V中更多的行为0，行为0说明该行对应的feature没作用，即达到删除冗余feature的作用。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;分布式实现。这个算法具有较好的扩展性，一个master，若干slave，类似于并行计算，从而实现分布式。&lt;/p&gt;
-
-&lt;h4&gt;文章2&lt;/h4&gt;
-
-&lt;p&gt;GP（graph partitioning）图分割的方法有两种：边分割；点分割。点分割在分布式计算中的通信成本会比图分割小，原因在于在不同的machine上，点分割只需保留点的copy，而边分割需要同时保留点与边的copy。&lt;/p&gt;
-
-&lt;p&gt;切割degree大的点，即邻居多的点可以降低通信成本。&lt;/p&gt;
-
-&lt;h3&gt;Stochastic Learning&lt;/h3&gt;
-
-&lt;p&gt;主讲人：浩锋&lt;/p&gt;
-
-&lt;p&gt;思想：在需要用到所有节点上的信息时，通信代价往往很大，这时可以随机的选取某一个节点上的信息（比如梯度）作为替代品。&lt;/p&gt;
-
-&lt;h3&gt;资料&lt;/h3&gt;
-
-&lt;p&gt;【1】&lt;a href=&quot;http://cs.nju.edu.cn/lwj/slides/BigLearning.pdf&quot;&gt;幻灯片&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;【2】&lt;a href=&quot;http://jmlr.csail.mit.edu/proceedings/papers/v32/yan14.pdf&quot;&gt;Coupled Group Lasso for
-Web-Scale CTR Prediction in Display Advertising&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;【3】&lt;a href=&quot;http://papers.nips.cc/paper/5396-distributed-power-law-graph-computing-theoretical-and-empirical-analysis.pdf&quot;&gt;Distributed Power-law Graph Computing:
-Theoretical and Empirical Analysis&lt;/a&gt;&lt;/p&gt;
 </description>
       </item>
     
@@ -414,361 +224,6 @@ $ git push --tags                       #上传所有标签
       </item>
     
       <item>
-        <title>我的报告 Decentralized Privacy-Preserving Low-Rank Matrix Completion</title>
-        <link>http://williamlfang.github.com/investment/2014/11/26/Presentation-at-Chinese-Academy-of-Science.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/11/26/Presentation-at-Chinese-Academy-of-Science.html</guid>
-        <pubDate>2014-11-26 00:00:00 +0800</pubDate>
-        <description>&lt;p&gt;&lt;img src=&quot;/public/img/posts/s1.png&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
-
-&lt;h3&gt;我的报告&lt;/h3&gt;
-
-&lt;h4&gt;Section 0: Introduce Myself&lt;/h4&gt;
-
-&lt;p&gt;Page 1&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Good afternoon everyone! My name is Anya Lin. I&amp;#39;m a second-year master candidate from University of Science and Technology of China. It&amp;#39;s my great pleasure to introduce to you the Decentralized Privacy-Preserving Low-Rank Matrix Completion. It&amp;#39;s a joint work with my supervisor, Prof. Ling from USTC.&lt;/li&gt;
-&lt;li&gt;Before I start, I want to express my thanks to Prof. Ling for his patient instructions and help over the last a few months.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 2&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Here&amp;#39;s the outline of my presentation.&lt;/li&gt;
-&lt;li&gt;First is the introduction.&lt;/li&gt;
-&lt;li&gt;And then the centralized matrix completion problem.&lt;/li&gt;
-&lt;li&gt;We develop a decentralized algorithm in section 3, and our algorithm is derived from a centralized algorithm as I will talk about in section 2.&lt;/li&gt;
-&lt;li&gt;Next, I will introduce the main result of the topology-dependent privacy preservation.&lt;/li&gt;
-&lt;li&gt;At last, it&amp;#39;s the conclusion.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Section 1: Introduction&lt;/h4&gt;
-
-&lt;p&gt;Page 3&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;OK， let&amp;#39;s go into the introduction.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 4&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;I&amp;#39;d like to begin with the concept of matrix completion. So what is matrix completion? As we can see in this picture, we have an incomplete matrix, whose entries are known only for a subset of the whole matrix. And the rank of the matrix is very small compared with the size of the matrix.&lt;/li&gt;
-&lt;li&gt;The goal of the matrix completion is to recover all these unknown entries of of the matrix, as the right-side picture shows. Here, Z is the recovery of W.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 5&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;There&amp;#39;s many applications of such a problem. Like image processing, recommendation system and so on. Here are 2 examples. The first one is a problem of image processing. The left picture has a lot of noises, or say, only a part of the original picture is known. By using the fact that the original picture is usually low-rank, we can matrix completion to denoise the picture and get a clear version of high quality as the right picture shows.&lt;/li&gt;
-&lt;li&gt;The second example is more close to our lives. It&amp;#39;s related to a recommendation system. As you can see, it&amp;#39;s a webpage of Douban Movie. A user sees a movie, such as Interstella, and then scores it on the website. Here we can imagine a huge matrix with rows representing users and columns the movies. This matrix is incomplete and it&amp;#39;s low-rank. Once this matrix is completed, the website can recommend new movies to users.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 6&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Now, here comes a privacy concern. First what is privacy? Privacy is the values one considers private. In the example we mentioned just now, the users&amp;#39; scores of the movies are privacy, because one may not want others to know what movies he has seen or likes. Also, the entries of the matrix could be medical records of patients, or selling data of merchants. These data are considered as privacy.&lt;/li&gt;
-&lt;li&gt;Obviously, no one wants the leakage of his privacy.&lt;/li&gt;
-&lt;li&gt;However, in reality there may exist a malicious agent, a bad guy. For some reasons you have to give your private data to it, but you don&amp;#39;t know wether you can trust it or not.&lt;/li&gt;
-&lt;li&gt;In this situation, we need privacy-preservation. Privacy-preservation is the ability to prevent a malicious agent from obtaining or reconstructing the private data.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Section 2: Centralized Matrix Completion Problem&lt;/h4&gt;
-
-&lt;p&gt;Page 7&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Now let&amp;#39;s go into the centralized matrix completion problem.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 8&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;When we are faced with a low-rank matrix completion problem, the intuitive thought would be to minimize the rank of the matrix, but this is a nonconvex problem. &lt;/li&gt;
-&lt;li&gt;Therefore, we insteadly minimize the nuclear-norm the the matrix, since nuclear-norm is the approximation of the rank and it&amp;#39;s convex.&lt;/li&gt;
-&lt;li&gt;Another approach is if the rank of matrix is known to be r as a prior theoreticallyor empirically, we can get the matrix factorization formulation. This approach is advantageous over the nuclear-norm approach since the latter one needs sigular value decomposition, which is computationally expensive and even intractable in decentralized computing.&lt;/li&gt;
-&lt;li&gt;A centralized algorithm called LMaFit to solve this is as the following steps shows.&lt;/li&gt;
-&lt;li&gt;We have to keep in mind that our algorithm is derived from LMaFit.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Section 3: Decentralized Matrix Completion Problem&lt;/h4&gt;
-
-&lt;p&gt;Page 9&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;After the centralized problem, let&amp;#39;s go into the decentralized one.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 10&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;In decentralized computing, we have a network composed of L agents.&lt;/li&gt;
-&lt;li&gt;There is an undirected edge between two agents if they can communicate with each other through one hop.&lt;/li&gt;
-&lt;li&gt;The goal of all the agents in such a network is to collaboratively complete a low-rank matrix in a decentralized fashion.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 11&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;To be specific, we segment the whole data matrix W into groups of columns. And do the same to Y and Z. Each agent i in the network holds the corresponding Zi, Yi and entries of Wi. &lt;/li&gt;
-&lt;li&gt;However, X cannot be segmented and distributed to agents because the update of X contains the summation of ZiYi&amp;#39; over all agents. So we let each agent i holds a local copy X(i) of X.&lt;/li&gt;
-&lt;li&gt;After doing this, we get a naive decentralized implementation of LMaFit. At iteration k, each agent i does the following steps respectively.&lt;/li&gt;
-&lt;li&gt;Notice that the update of X requires information aggregation of all agents. So here is the challenge: informationaggregationofallagentsisimpossible in real decentralized network unless every agent is connected to all the other agents. &lt;/li&gt;
-&lt;li&gt;How to deal with this challenge?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 12&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The answer is dynamic average consensus. Recall that each agent i holds a local copy X(i) of X. If we can make sure that X(i) equals to X for all i, the challenge is solved. &lt;/li&gt;
-&lt;li&gt;To do this, we choose c to be 1/L and the update of X becomes the average consensus problem, as we can see in equation (8), X(i) is the average of all the ZiYi&amp;#39;.&lt;/li&gt;
-&lt;li&gt;At iteration k,we formulate the average consensus problem as equation (9). The constraint means that instead of letting all the X(i) to be identical we choose to let each X(i) equals to it neighboring X(j).&lt;/li&gt;
-&lt;li&gt;A key observation is that exact average consensus at every iteration is not necessary. We use EXTRA to do inexact dynamic average consensus, which saves the computational cost.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 13&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Our decentralized algorithm called D-LMaFit is developed as below.&lt;/li&gt;
-&lt;li&gt;Step 1 is the initialization.&lt;/li&gt;
-&lt;li&gt;Step 2, use EXTRA to do the inexact average consensus problem.&lt;/li&gt;
-&lt;li&gt;Step 3, update Y and X respectively. &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 14&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The performance of D-LMaFit is shown in these two pictures. (Explain what these pictures indicate to the audience)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Section 4: Topology-Dependent Privacy Preservation&lt;/h4&gt;
-
-&lt;p&gt;Page 15&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Now let&amp;#39;s go into the section of the topology-dependent privacy preservation.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 16&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;First compare decentralized algorithm with centralized one.&lt;/li&gt;
-&lt;li&gt;Centralized algorithm needs a fusion center to collect global data. What if the fusion center is a malicious agent?&lt;/li&gt;
-&lt;li&gt;Oops TT, you&amp;#39;ll lose all your privacy.&lt;/li&gt;
-&lt;li&gt;How about the decentralzied algorithm? One important advantage of decentralized algortihm over a centralized is there&amp;#39;s no global data collection, each agent observes part of the raw data and communicates with its neighboring agent(s). It seems safer.&lt;/li&gt;
-&lt;li&gt;But things aren&amp;#39;t so lucky in reality. Because the communication of X(i) among the network may lead to information leakage.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 17&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;How does this happen? Suppose in a network as this picture shows, we have a malicious agent M, and M attempts to recover the local data matrices of some other agents through information exchange.&lt;/li&gt;
-&lt;li&gt;M is interested in recovering the local data Wi, or equivalently Yi or Zi of a set of agents i∈I.&lt;/li&gt;
-&lt;li&gt;When the iteration k is large enough, X(i) will be identical. So if a malicious agent M somehow knows other agents&amp;#39; Yi, it can recover the data Zi of agent i by doing X(M)Yi.&lt;/li&gt;
-&lt;li&gt;So our concern is, is there any possibility that the malicious agent M can somehow obtain Yi of agent i, and thus get Zi, which is private.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 18&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Before going to details, consider two simple topologies.&lt;/li&gt;
-&lt;li&gt;(Explain the two topologies)&lt;/li&gt;
-&lt;li&gt;Under what conditions can not a malicious agent M reconstruct the sensitive information of P and Q ?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 19&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Recall the update of X.&lt;/li&gt;
-&lt;li&gt;If you could just take a look at the equation, you can find that if the topology is as in the left picture, M can reconstruct ZiYi&amp;#39; and it may be able to solve Yi so that gets the privacy of P and Q.&lt;/li&gt;
-&lt;li&gt;But if the topology is as shown in the right picture. M cannot get the private data of P and Q. Why?&lt;/li&gt;
-&lt;li&gt;(Explain with the equation)&lt;/li&gt;
-&lt;li&gt;M can solve a series of linear inverse problems and calculate the values of ZiYi&amp;#39;, as what we have said just now.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 20&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Now we get a naive conclusion.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 21&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;So the privacy-preserving problem boils down to the linear inverse problem. First we define some variables as this.&lt;/li&gt;
-&lt;li&gt;And further we define A and B.&lt;/li&gt;
-&lt;li&gt;Using these definition,the update of X can be represented by (14).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 22&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Rewrite this as a linear time-invariant systems we get (15). In this system, QI selects those row blocks in Q belonging to the agents in I, and BI selects the corresponding columns in B. QIC and BIC selects the other corresponding row blocks and columns which do not belong to the agents in I.&lt;/li&gt;
-&lt;li&gt;Our analysis uses the concept of z-transfer matrix of (15). The concept is from modern control theory.&lt;/li&gt;
-&lt;li&gt;Obviously, rank(T)=rank(TI TIC), since the latter matrix is just a column rearrangement of the former one. &lt;/li&gt;
-&lt;li&gt;Now we are ready to develop our theorem.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 23&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Check the proof of the suffienciency of our theorem, it&amp;#39;s rather straightforward.&lt;/li&gt;
-&lt;li&gt;If this condition is satisfired, then M has full knowledge of all the X(i).&lt;/li&gt;
-&lt;li&gt;So M can solve a series of linear inverse problems.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 24&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The proof of necessity is a little bit complicated. Here&amp;#39;s the only the simplified version of the proof.&lt;/li&gt;
-&lt;li&gt; First we show that to determine a unique sequence of Q􏰇 from V􏰇 , we must have (18).&lt;/li&gt;
-&lt;li&gt;Suppose (18) doesn&amp;#39;t hold, then there exists at least one column of TI that is linearly dependent on the other columns of T. Then there exists a Q with that column nonzero, and satisfies TQ=0. This corresponds to a nonzero input in I, but the output V is zero for all time. Thus this nonzero input cannot be recovered. This contradicts with the hypothesis. So (18) must hold.&lt;/li&gt;
-&lt;li&gt;(Explain these items)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 25&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;(Explain these items)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Section 5: Conclusion&lt;/h4&gt;
-
-&lt;p&gt;Page 26&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;I&amp;#39;d like to quickly go over the main point of today&amp;#39;s topic.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 27&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;First, we propose a decentralized privacy-preserving algorithm, D-LMaFit, to solve the matrix completion problem.&lt;/li&gt;
-&lt;li&gt;We solve dynamic average consensus subproblem inexactly.&lt;/li&gt;
-&lt;li&gt;We prove the topology-dependent privacy-preserving theorem. It provides a guideline of designing a privacy-preserving network.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 28&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Still we&amp;#39;ve got work to do in the future. (Read items)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 29&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;I guess that&amp;#39;s it. Thank you all very much for listening. Now if you have any question, please feel free to ask me.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;故事&lt;/h3&gt;
-
-&lt;p&gt;这学期我在中科院数学与系统科学研究院(AMSS)访问。第一次参与这边的讨论班时，我就被惊到了：学生做报告也全程英文，不愧是&lt;a href=&quot;http://lsec.cc.ac.cn/%7Eyyx/chinese/indexc.htm&quot;&gt;袁亚湘&lt;/a&gt;老师的学生。于是，11月25日，我也在这儿完成了自己第一次的英文学术报告。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;报告前3天，我问盛镇醴师兄他们报告前会不会排练，师兄说：“肯定要啊！上次去葡萄牙开会，&lt;a href=&quot;http://www.se.cuhk.edu.hk/people/sqma.html&quot;&gt;马士谦&lt;/a&gt;师兄已经讲得那么好了，都还又自己私下练习了5、6遍。师兄真的可以做到每句话精确到几秒钟！”太荔枝了有木有TT。&lt;/li&gt;
-&lt;li&gt;于是我也练习了。果然只有努力了内心才会踏实。在当天的报告中，我不仅不紧张，还在瞅到台下一堆人的专注神情时，心里突然弹幕全开：“哇，这感觉好爽。”&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;在记录报告之前，插播一段回忆：
-大三暑假，我参加&lt;a href=&quot;http://china.ican-contest.org/index.html&quot;&gt;中国大学生物联网创新创业大赛&lt;/a&gt;，正式比赛前一天系里组织答辩练习，我们组讲得一塌糊涂。那一晚，我和向国菲师兄在实验室通宵改幻灯片，准备发言稿，然后一句一句地练习。中途师兄压力太大又累得不行溜出去躲着抽了根烟，回来被我发现了教育了一顿，嗅觉就是这么灵敏没办法。直到凌晨4点，终于觉得还算满意了，两人躺椅子上睡了会儿，当然我被蚊子咬安逸了。早晨7点，寝室开门，两人各自回去洗澡调整状态。9点，开始比赛。不知道为什么突然想起这个，太，美好了。尽管当时觉得真苦逼。&lt;/p&gt;
-
-&lt;h3&gt;资料&lt;/h3&gt;
-
-&lt;p&gt;【1】&lt;a href=&quot;http://www.zhihu.com/question/24544386/answer/30237316&quot;&gt;有哪些高级的英语表达技巧，让人一听就很地道？&lt;/a&gt;&lt;/p&gt;
-</description>
-      </item>
-    
-      <item>
-        <title>凸优化的一些基础算法</title>
-        <link>http://williamlfang.github.com/investment/2014/11/10/Basic-Algorithms-of-Convex-Opt.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/11/10/Basic-Algorithms-of-Convex-Opt.html</guid>
-        <pubDate>2014-11-10 00:00:00 +0800</pubDate>
-        <description>&lt;p&gt;本文假设读者对凸优化有基本了解，主要归纳一些基础算法，以便查阅。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=\min&amp;space;f(x)&amp;space;\triangleq&amp;space;g(x)&amp;plus;h(x)&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\min&amp;space;f(x)&amp;space;\triangleq&amp;space;g(x)&amp;plus;h(x)&quot; title=&quot;\min f(x) \triangleq g(x)+h(x)&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;其中，f，g，h都是凸函数，g是光滑项，h是非光滑项。&lt;/p&gt;
-
-&lt;h3&gt;Gradient Descent&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=x^&amp;plus;=x-\alpha\nabla&amp;space;f(x)&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?x^&amp;plus;=x-\alpha\nabla&amp;space;f(x)&quot; title=&quot;x^+=x-\alpha\nabla f(x)&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3&gt;Proximal Gradient&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codecogs.com/eqnedit.php?latex=x^&amp;plus;=prox_{\alpha&amp;space;h}(x-\alpha&amp;space;\nabla&amp;space;g(x))=&amp;space;\arg\min_u&amp;space;h(u)&amp;plus;\frac{1}{2\alpha}||u-x&amp;plus;\alpha&amp;space;\nabla&amp;space;g(x)||&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://latex.codecogs.com/gif.latex?x^&amp;plus;=prox_{\alpha&amp;space;h}(x-\alpha&amp;space;\nabla&amp;space;g(x))=&amp;space;\arg\min_u&amp;space;h(u)&amp;plus;\frac{1}{2\alpha}||u-x&amp;plus;\alpha&amp;space;\nabla&amp;space;g(x)||&quot; title=&quot;x^+=prox_{\alpha h}(x-\alpha \nabla g(x))= \arg\min_u h(u)+\frac{1}{2\alpha}||u-x+\alpha \nabla g(x)||&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3&gt;Conjugate Gradient&lt;/h3&gt;
-
-&lt;p&gt;是介于最速下降法和牛顿法之间的一个方法，它仅需要利用一阶导数信息，但克服了最速下降法收敛慢的缺点，又避免了牛顿法需要存储和计算Hession并求逆的缺点。它是解决大型线性方程组最有用的方法之一，也是解决大型非线性最优化最有效的算法之一。&lt;/p&gt;
-
-&lt;h3&gt;Newton&lt;/h3&gt;
-
-&lt;p&gt;见&lt;a href=&quot;http://painterlin.com/2015/03/23/Newton-QuasiNewton-Method.html&quot;&gt;牛顿法与拟牛顿法（DFP BFGS LBFGS VLBFGS）&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3&gt;Quasi Newton&lt;/h3&gt;
-
-&lt;p&gt;见&lt;a href=&quot;http://painterlin.com/2015/03/23/Newton-QuasiNewton-Method.html&quot;&gt;牛顿法与拟牛顿法（DFP BFGS LBFGS VLBFGS）&lt;/a&gt;&lt;/p&gt;
-</description>
-      </item>
-    
-      <item>
-        <title>什么是 P, NP, NP-complete, NP-hard</title>
-        <link>http://williamlfang.github.com/investment/2014/11/09/What-is-NP-Hard.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/11/09/What-is-NP-Hard.html</guid>
-        <pubDate>2014-11-09 00:00:00 +0800</pubDate>
-        <description>&lt;h3&gt;相关概念&lt;/h3&gt;
-
-&lt;p&gt;NP-hard（non-deterministic polynomial-time hard）&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;P：能在多项式时间内解决&lt;/li&gt;
-&lt;li&gt;NP：不能在多项式时间内解决或不确定能不能在多项式时间内解决，但一旦你找到一个解，只需要多项式时间去验证这个解是正确的&lt;/li&gt;
-&lt;li&gt;NP-hard：如果一个问题是NP-hard，意味着可以将任意NP问题化约到这个问题。如果可以解这个问题，那么可以轻松地解任意NP问题。&lt;/li&gt;
-&lt;li&gt;NPC：NP完全问题，所有NP问题在多项式时间内都能化约（Reducibility）到某一NP问题，这一NP问题就是NPC问题，即解决了此NPC问题，所有NP问题也都解决了。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3&gt;资料原文&lt;/h3&gt;
-
-&lt;p&gt;These refer to how long it takes a program to run.  Problems in class P can be solved with algorithms that run in &lt;strong&gt;polynomial time&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Say you have an algorithm that finds the smallest integer in an array.  One way to do this is by iterating over all the integers of the array and keeping track of the smallest number you&amp;#39;ve seen up to that point.  Every time you look at an element, you compare it to the current minimum, and if it&amp;#39;s smaller, you update the minimum.&lt;/p&gt;
-
-&lt;p&gt;How long does this take?  Let&amp;#39;s say there are n elements in the array.  For every element the algorithm has to perform a constant number of operations.  Therefore we can say that the algorithm runs in O(n) time, or that the runtime is a linear function of how many elements are in the array.  So this algorithm runs in &lt;strong&gt;linear time&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;You can also have algorithms that run in &lt;strong&gt;quadratic time&lt;/strong&gt; (O(n^2)), &lt;strong&gt;exponential time&lt;/strong&gt; (O(2^n)), or even &lt;strong&gt;logarithmic time&lt;/strong&gt; (O(log n)).  Binary search (on a balanced tree) runs in logarithmic time because the height of the binary search tree is a logarithmic function of the number of elements in the tree.&lt;/p&gt;
-
-&lt;p&gt;If the running time is some polynomial function of the size of the input, for instance if the algorithm runs in linear time or quadratic time or cubic time, then we say the algorithm runs in &lt;strong&gt;polynomial time&lt;/strong&gt; and the problem it solves is in class &lt;strong&gt;P&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3&gt;&lt;strong&gt;NP&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;Now there are a lot of programs that don&amp;#39;t (necessarily) run in polynomial time on a regular computer, but do run in polynomial time on a nondeterministic Turing machine.  These programs solve problems in &lt;strong&gt;NP&lt;/strong&gt;, which stands for &lt;strong&gt;nondeterministic polynomial time&lt;/strong&gt;.  A nondeterministic Turing machine can do everything a regular computer can and more. This means all problems in P are also in NP.&lt;/p&gt;
-
-&lt;p&gt;An equivalent way to define NP is by pointing to the problems that can be verified in polynomial time.  This means there is not necessarily a polynomial-time way to find a solution, but once you have a solution it only takes polynomial time to verify that it is correct.&lt;/p&gt;
-
-&lt;p&gt;Some people think P = NP, which means any problem that can be verified in polynomial time can also be solved in polynomial time and vice versa.  If they could prove this, it would revolutionize computer science because people would be able to construct faster algorithms for a lot of important problems.&lt;/p&gt;
-
-&lt;h3&gt;&lt;strong&gt;NP-hard&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;What does NP-hard mean?  A lot of times you can solve a problem by reducing it to a different problem.  I can reduce Problem B to Problem A if, given a solution to Problem A, I can easily construct a solution to Problem B.  (In this case, &amp;quot;easily&amp;quot; means &amp;quot;in polynomial time.&amp;quot;)&lt;/p&gt;
-
-&lt;p&gt;If a problem is &lt;strong&gt;NP-hard&lt;/strong&gt;, this means I can reduce any problem in NP to that problem.  This means if I can solve that problem, I can easily solve any problem in NP.  If we could solve an NP-hard problem in polynomial time, this would prove P = NP.&lt;/p&gt;
-
-&lt;h3&gt;&lt;strong&gt;NP-complete&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;A problem is &lt;strong&gt;NP-complete&lt;/strong&gt; if the problem is both&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;NP-hard, and&lt;/li&gt;
-&lt;li&gt;in NP.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;参考资料&lt;/h3&gt;
-
-&lt;p&gt;【1】&lt;a href=&quot;http://www.quora.com/What-are-P-NP-NP-complete-and-NP-hard&quot;&gt;What are P, NP, NP-complete, and NP-hard?&lt;/a&gt;&lt;/p&gt;
-</description>
-      </item>
-    
-      <item>
         <title>海岸公路</title>
         <link>http://williamlfang.github.com/investment/2014/11/03/Coast.html</link>
         <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/11/03/Coast.html</guid>
@@ -858,110 +313,6 @@ rar a archivename.rar filename   #压缩
 &lt;h3&gt;谢意&lt;/h3&gt;
 
 &lt;p&gt;蒲俊楠童鞋，阿里嘎多~&lt;/p&gt;
-</description>
-      </item>
-    
-      <item>
-        <title>阿里巴巴大数据竞赛回顾与总结</title>
-        <link>http://williamlfang.github.com/investment/2014/10/01/Alibaba-Big-Data.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/10/01/Alibaba-Big-Data.html</guid>
-        <pubDate>2014-10-01 00:00:00 +0800</pubDate>
-        <description>&lt;p&gt;8个月前，苏宇师兄问我对&lt;a href=&quot;http://102.alibaba.com/competition/addDiscovery/index.htm&quot;&gt;阿里巴巴大数据竞赛&lt;/a&gt;感兴趣吗。正好我选修了&lt;a href=&quot;http://staff.ustc.edu.cn/%7Echeneh/&quot;&gt;陈恩红&lt;/a&gt;老师的《机器学习与数据挖掘》，很好奇这门课在实际中的应用；身为淘宝用户，也好奇我是如何被推荐的。于是和师兄一起参加比赛，加上计算机学院的刘惠民同学，我们组成了名叫&lt;code&gt;Rosemary&lt;/code&gt;三人团队。这次大赛总共有7276支队伍参赛，我们止步于第二赛季。第一赛季排名56；第二赛季排名68。&lt;/p&gt;
-
-&lt;h3&gt;开放数据&lt;/h3&gt;
-
-&lt;table  class=&quot;table table-bordered table-striped table-condensed&quot;&gt;
-   &lt;tr&gt;
-     &lt;th&gt;字段&lt;/th&gt;
-      &lt;th&gt;字段说明&lt;/th&gt;
-      &lt;th&gt;提取说明&lt;/th&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-      &lt;td&gt;user_id&lt;/td&gt;
-      &lt;td&gt;用户标记&lt;/td&gt;
-      &lt;td&gt;抽样、字段加密&lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-      &lt;td&gt;Time&lt;/td&gt;
-      &lt;td&gt;行为时间&lt;/td&gt;
-      &lt;td&gt;精度到天级别、隐藏年份&lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-      &lt;td&gt;action_type&lt;/td&gt;
-      &lt;td&gt;用户对品牌的行为类型&lt;/td&gt;
-      &lt;td&gt;包括点击（0）、购买（1）、加入购物车（2）、收藏（3）四种行为 &lt;/td&gt;
-  &lt;/tr&gt;
-   &lt;tr&gt;
-      &lt;td&gt;brand_id&lt;/td&gt;
-      &lt;td&gt;品牌数字ID&lt;/td&gt;
-      &lt;td&gt;抽样、字段加密&lt;/td&gt;
-   &lt;/tr&gt;
-&lt;/table&gt;
-
-&lt;h3&gt;比赛任务&lt;/h3&gt;
-
-&lt;p&gt;根据用户4个月在天猫的行为日志，建立用户的品牌偏好，并预测他们在将来一个月内对品牌下商品的购买行为。&lt;/p&gt;
-
-&lt;h3&gt;评估指标&lt;/h3&gt;
-
-&lt;p&gt;大赛最终的比赛成绩排名以F1得分为准。&lt;/p&gt;
-
-&lt;p&gt;准确率：&lt;img src=&quot;http://latex.codecogs.com/gif.latex?Precision=\frac{\sum_i^N&amp;space;hitBrands_i}{\sum_i^N&amp;space;pBrands_i}&quot; title=&quot;Precision=\frac{\sum_i^N hitBrands_i}{\sum_i^N pBrands_i}&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;召回率：&lt;img src=&quot;http://latex.codecogs.com/gif.latex?Recall=\frac{\sum_i^M&amp;space;hitBrands_i}{\sum_i^M&amp;space;bBrands_i}&quot; title=&quot;Recall=\frac{\sum_i^M hitBrands_i}{\sum_i^M bBrands_i}&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;F1-Score：&lt;img src=&quot;http://latex.codecogs.com/gif.latex?F_1=\frac{2\times&amp;space;P\times&amp;space;R}{P&amp;plus;R}&quot; title=&quot;F_1=\frac{2\times P\times R}{P+R}&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;其中，&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;N 为参赛队预测的用户数；M 为实际产生成交的用户数量&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;pBrandsi为对用户i 预测他(她)会购买的品牌列表个数；bBrandsi为用户i 真实购买的品牌个数 &lt;/li&gt;
-&lt;li&gt;hitBrandsi对用户i预测的品牌列表与用户i真实购买的品牌交集的个数&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;解读&lt;code&gt;准确率&lt;/code&gt;、&lt;code&gt;召回率&lt;/code&gt;和&lt;code&gt;F1-Score&lt;/code&gt;&lt;/h3&gt;
-
-&lt;p&gt;准确率就是正确预测数目比上预测总数目。召回率就是正确预测数目比上真实总数目。F1-Score是准确率和召回率的调和平均。理论上，准确率与召回率并没有必然的联系；但在实际中，这二者往往此消彼长、相互制约。有研究表明，在不牺牲准确率的情况下，获得一个高召回率是很难的。在赛题环境下举个栗子：&lt;/p&gt;
-
-&lt;table  class=&quot;table table-bordered table-striped table-condensed&quot;&gt;
-   &lt;tr&gt;
-     &lt;th&gt;我们预测出&lt;/th&gt;
-      &lt;th&gt;会有3个人买东西，A买品牌a，B买品牌b，C买P品牌c&lt;/th&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-      &lt;td&gt;真实情况是&lt;/td&gt;
-      &lt;td&gt;有4个人买了东西，这4个人分别是A，B，C，D，其中A买a和b，B买b，C买b和c，D买a。&lt;/td&gt;
-   &lt;/tr&gt;
-&lt;/table&gt;
-
-&lt;p&gt;按照我们的预测，准确率达到了100%，而召回率仅为50%。由此可见，想取得一个较好的F1-Score成绩，需要保证预测的数据尽量hit之外，还要保证预测的数据能够覆盖尽量多的真实数据。具体到比赛中，就需要很好地确定每个被预测的用户可能会买多少个品牌。&lt;/p&gt;
-
-&lt;p&gt;通过对这三个评判标准的分析，我们初步确定了第一赛季所用的策略。&lt;/p&gt;
-
-&lt;h3&gt;第一赛季&lt;/h3&gt;
-
-&lt;p&gt;大致的方案是：&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;加权对用户4种行为次数求和，得到简单的用户ID（行）与品牌ID（列）的&lt;code&gt;兴趣度&lt;/code&gt;（值）矩阵。&lt;/li&gt;
-&lt;li&gt;统计前4个月平均每个月有多少用户购买超过2个品牌的东西，记为B。&lt;/li&gt;
-&lt;li&gt;根据用户前4个月的购买行为，按照&lt;code&gt;购买力&lt;/code&gt;划分用户购买等级。直白解释就是你以前在天猫上平均每个月买了多少次，我就假设你下个月还会买这么多次。&lt;/li&gt;
-&lt;li&gt;第一次切分兴趣度矩阵，保留前B行矩阵。&lt;/li&gt;
-&lt;li&gt;对每个用户对不同品牌的兴趣度由高到低排序，再根据每个用户的购买力确定对该用户保留前n列的兴趣数据，并预测他会买这n个数据对应的品牌。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;当然，在最初的模型建立起来之后，我们还陆续加了一些规则，比如在&lt;code&gt;时间节截止点&lt;/code&gt;(最后N天，N可以根据自己的理解取值)的单独分析。另外，调参数真就是一项体力活。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/public/img/posts/s1.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
-
-&lt;h3&gt;第二赛季&lt;/h3&gt;
-
-&lt;p&gt;（好困，需要去睡觉Zzz···）细节未完待续&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/public/img/posts/score0.png&quot; alt=&quot;2&quot;&gt;&lt;/p&gt;
-
-&lt;h3&gt;总结&lt;/h3&gt;
 </description>
       </item>
     
@@ -1504,102 +855,201 @@ touch a.txt&lt;/p&gt;
       </item>
     
       <item>
-        <title>Matlab科研小贴士</title>
-        <link>http://williamlfang.github.com/investment/2014/09/11/Matlab-tips.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/09/11/Matlab-tips.html</guid>
-        <pubDate>2014-09-11 00:00:00 +0800</pubDate>
-        <description>&lt;p&gt;使用MATLAB运行算法程序时，可能遇到各种各样的报错。比如，为了保护隐私数据，我在分布式矩阵补全算法中加入随机矩阵之后，某项变量在运行几百步之后会出现NaN报错。我只根据算法顺序去分析问题出现的可能原因，并修改程序。感觉并没有很好地利用MATLAB的强大功能去锁定症结所在。幸运的是，&lt;a href=&quot;http://home.ustc.edu.cn/%7Eshiwei00/index.html&quot;&gt;施伟&lt;/a&gt;大师兄当时和我在一起，他非常热心地帮我分析问题，教我以后遇到类似状况应该怎么去分析与思考。和大师兄讨论了半小时，感觉自己收获不少。&lt;/p&gt;
+        <title>坐在露天酒吧</title>
+        <link>http://williamlfang.github.com/investment/2014/09/09/Mind-Eraser-Vodka.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/09/09/Mind-Eraser-Vodka.html</guid>
+        <pubDate>2014-09-09 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;&lt;img src=&quot;/public/img/days/4_1.jpg&quot; alt=&quot;4&quot;&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>每个人的金线</title>
+        <link>http://williamlfang.github.com/investment/2014/08/25/Golden-Line.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/08/25/Golden-Line.html</guid>
+        <pubDate>2014-08-25 00:00:00 +0800</pubDate>
+        <description>&lt;h3&gt;文学的金线&lt;/h3&gt;
 
-&lt;p&gt;这篇文章会陆续记录下自己使用MATLAB的体会，以及解决问题的一些技巧。&lt;/p&gt;
+&lt;p&gt;冯唐在《三十六大》里试图说明文学有“金线”。和音乐、美食、普世价值等等一样，尽管标准难以量化，优劣的判断也多半掺杂了人的主观，但文学始终是有一条金线存在的，达到了就是达到了，没达到就是没达到。“文章千古事，得失寸心知”。这条金线和文章的销量没有正相关的关系，在某些时代，甚至负相关。但这条文学的金线，两三千年来香火不绝地流传了下来，掌握在少数人手里。并且，冯唐认为，他就能够明眼看出这一条文学的金线。&lt;/p&gt;
 
-&lt;h3&gt;Clear&lt;/h3&gt;
+&lt;h3&gt;手机的金线&lt;/h3&gt;
 
-&lt;p&gt;运行一段代码前通常需要将工作空间里的已有数据清除掉。只需要在编辑有实际意义的代码之前写下如下代码：&lt;/p&gt;
+&lt;p&gt;王自如在对锤子手机T1的测评末尾，花费占总视频1/5的时间，强调如果抛开一切情怀的包装去看产品，平心而论，这部手机与罗永浩自己宣称的东半球最好用还相差甚远。虽然如此，仍有很多人会把自己想了但没做的情感寄托到这个想了也做了的人身上。如果活在罗永浩的“情怀”之内，那么所有关于产品的技术性的好与坏、对与错都会变得界限模糊。我反感用情怀去包装产品，也反感罗永浩这个人，私以为乔布斯的iPhone在金线之上，罗永浩的锤子在金线之下。但那群活在罗永浩情怀里的人，恐怕不会赞同。&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;matlab
-clc; clear; close all;
-&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;生命的金线&lt;/h3&gt;
 
-&lt;h3&gt;Random Seed&lt;/h3&gt;
+&lt;p&gt;有的人真的达到了，在我认同的金线之上；以同一条金线为准，有的人就是达不到，可对我你而言的达不到，就真的是没有达到吗？我希望我和冯唐的观点一致，但事实上我并不这么认为。&lt;strong&gt;云在青天，水在瓶，时光澄澈&lt;/strong&gt;。如果说真理就在万物的自然常态中，那么人各有态，每个人都有自己笃定的金线，每种人的存在本身就是真理。人类用认知却获得自己看到的那条金线。而认知，却构筑在好奇心、生存环境、教育等诸多因素之上。各式各样的生命形态遍布地球，生命形态的金线，又是否存在？&lt;/p&gt;
 
-&lt;p&gt;为了保证程序在相同环境下运行以便测试某一个或几个改变对于算法的影响，在使用各种random命令时，需要设定固定种子。这样就不会因为每次随机产生的序列不同而影响程序运行结果。设置随机种子的代码如下：&lt;/p&gt;
+&lt;p&gt;梁启超对曾国藩的评价颇高，说曾文正公做到了“立德、立功、立言三并不朽”，文森特·梵高希望所有人都能看到他的画并因此感受到他的内心，不惜因此疯掉；阿来在《尘埃落定》里塑造的傻子，因为傻，反而能对大事做出超乎常人的正确决断，加西亚·马尔克斯的《百年孤独》中经历战争而变了个人的年老上校将所有的生命热力用于制作金鱼；痞子在酒肉中嫖赌，高僧鹤形仙眉隐于白云深处，或宏伟、或浪漫、甚至疯狂、不堪，这些生命形态，真的可以用一条金线去分割吗？不然。他们仅仅是以不同的形式存在而已，云在青天水在瓶，野猪在林，家猪在圈，蝼蚁在泥土，它们都在存在的金线之上。&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;matlab
-%% random seed
-%seed=round(5000*rand);       % use this line if you set a random seed
-seed=3302;    % use this line if you set a fixed seed. 3302 can be replaced by other numbers.
-fprintf(&amp;#39;Seed = %d\n&amp;#39;,seed);  % print the current seed 
-if exist(&amp;#39;RandStream&amp;#39;,&amp;#39;file&amp;#39;)
-   RandStream.setGlobalStream(RandStream(&amp;#39;mt19937ar&amp;#39;,&amp;#39;seed&amp;#39;,seed));
-else
-   rand(&amp;#39;state&amp;#39;,seed); 
-   randn(&amp;#39;state&amp;#39;,seed^2);
-end
-&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;万紫千红，各花入各眼。南北西东，各方自有人。既然存在着，虽不欲划分生命形态的三六九等，人活着的不同阶段也有不同的追求，情怀会变。但我想，每个人在自己老了之后，心里是会有条金线的，或准之以勤，或以诚，或以快乐，或以勇敢，或成就，或物质。回顾一生，达到或者没达到，各位看官，茶余饭后，不妨斟酌斟酌。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Mac远程桌面连接Windows</title>
+        <link>http://williamlfang.github.com/investment/2014/08/12/Remote-Desk-from-Mac-to-Windows-PC.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/08/12/Remote-Desk-from-Mac-to-Windows-PC.html</guid>
+        <pubDate>2014-08-12 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;在学习或者工作中，有时候需要远程控制Windows电脑。比如在家遇上暴雨天气，又急需使用办公室里的电脑，每当跋涉在雨中的时候，都希望可以远程控制。在生活中，也会有这样的时刻。比如远程帮助爸妈或者爷爷奶奶外公外婆解决一些电脑问题。&lt;/p&gt;
 
-&lt;h3&gt;NaN&lt;/h3&gt;
+&lt;p&gt;本文的目标就是，在完成所有步骤之后，可以从Mac OS X系统远程控制Windows电脑。&lt;/p&gt;
 
-&lt;p&gt;NaN是Not a Number的缩写。当某变量显示NaN时，表示该变量是不明确的数值结果。比如0/0、inf/inf等运算会出现NaN报错。遇到这种情况，首先判断NaN出现在哪一步：&lt;/p&gt;
+&lt;h3&gt;准备工作：&lt;/h3&gt;
 
-&lt;p&gt;&lt;code&gt;matlab
-if isnan(norres)    %括号里是变量名。判断norres是否为NaN，若是，则在该步暂停程序。
-    keyboard;
-end
-&lt;/code&gt;
-再在命令窗里单独查看与该变量有关的其他变量，从而排除正常变量，获知究竟是哪个或哪几个变量出了问题，变为无穷大或无穷小。再检查与这些变量有关的算法。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mac一台&lt;/li&gt;
+&lt;li&gt;Windows PC一台（这里用Windows 8系统的电脑）&lt;/li&gt;
+&lt;li&gt;互联网&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3&gt;SaveAs&lt;/h3&gt;
+&lt;h3&gt;第一步：在Mac上安装Remote Desktop Connection&lt;/h3&gt;
 
-&lt;p&gt;若需要比较各参数对算法性能的影响，通常是在程序中修改参数运行，得到算法收敛精度与迭代次数的曲线图。再根据曲线图反向思考修改哪些参数有效。这个过程需要保存产生的大量图片。可以使用&lt;code&gt;hold on&lt;/code&gt;命令将所有虚线画在同一张图上，也可以使用&lt;code&gt;saveas&lt;/code&gt;将所有图片自动保存。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进入&lt;a href=&quot;http://www.microsoft.com/en-us/download/details.aspx?id=18140&quot;&gt;Microsoft Remote Desktop Connection&lt;/a&gt;下载安装包。&lt;/li&gt;
+&lt;li&gt;下载完成之后，双击安装包进行安装。&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;matlab
-%% plot
-figure(1)
-semilogy(1:iter,y_axis(1:iter),&amp;#39;b-&amp;#39;);  %b：蓝色。－：线段形状
-set(gca,&amp;#39;fontsize&amp;#39;,12);
-grid on;
-xlabel(&amp;#39;\fontsize{12}\it Iteration&amp;#39;); ylabel(&amp;#39;\fontsize{12}\it Normalized residual&amp;#39;);
-legend(&amp;#39;\fontsize{12}\it text&amp;#39;);       %text：这条蓝色代表什么
-hold on
-saveas(gcf,&amp;#39;filename&amp;#39;,&amp;#39;fig&amp;#39;)           %filename：将图片保存为这个名字。fig：保存为fig格式
-&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;第二步：在Windows电脑上设置“远程设置”&lt;/h3&gt;
 
-&lt;p&gt;保存变量数据的命令：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;右键“&lt;code&gt;我的电脑&lt;/code&gt;”，单击“&lt;code&gt;属性&lt;/code&gt;”，单击“&lt;code&gt;远程设置&lt;/code&gt;”&lt;/li&gt;
+&lt;li&gt;勾选“&lt;code&gt;允许远程协助连接这台计算机&lt;/code&gt;”，勾选“&lt;code&gt;允许远程连接到此计算机&lt;/code&gt;”&lt;/li&gt;
+&lt;li&gt;单击“&lt;code&gt;确定&lt;/code&gt;”退出&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-save(&amp;#39;filename&amp;#39;)
-save(&amp;#39;filename&amp;#39;,&amp;#39;variables&amp;#39;)
-&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;第三步：在Windows电脑上设置用户账户及密码（已设置过就跳过这一步）&lt;/h3&gt;
 
-&lt;p&gt;注意，在使用&lt;code&gt;hold on&lt;/code&gt;命令时，应该保留上次程序运行后产生的各种数据。即不能在程序中写类似与&lt;code&gt;clear all&lt;/code&gt;之类的清除语句，否则上次曲线图也将被删除。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进入“&lt;code&gt;控制面板&lt;/code&gt;”，进入“&lt;code&gt;用户账户&lt;/code&gt;”&lt;/li&gt;
+&lt;li&gt;设置账户名和密码，并牢记&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3&gt;矩阵规范化&lt;/h3&gt;
+&lt;h3&gt;第四步：查看Windows电脑的IP地址&lt;/h3&gt;
 
-&lt;p&gt;已知满秩矩阵A，进行下面操作使其所有奇异值均为1。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将鼠标移动至屏幕最右侧，出现命令条，单击“&lt;code&gt;搜索&lt;/code&gt;”&lt;/li&gt;
+&lt;li&gt;输入“&lt;code&gt;cmd&lt;/code&gt;”并回车，这样就打开了命令提示符&lt;/li&gt;
+&lt;li&gt;在命令提示符里输入“&lt;code&gt;ipconfig&lt;/code&gt;”，回车&lt;/li&gt;
+&lt;li&gt;在输出中查看“&lt;code&gt;IPv4 地址&lt;/code&gt;”后面的数字串，就是Windows本机的IP（比如我家的192.168.1.112）。&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;matlab
-[u s v]=svd(A);
-A=u*v&amp;#39;;
-&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;第五步：从Mac远程桌面连接到Windows&lt;/h3&gt;
 
-&lt;h3&gt;安装CVX&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;回到Mac，打开第一步中下载并安装好的&lt;code&gt;Remote Desktop Connection&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;窗口中输入第四步中查看到的Windows电脑IP地址（比如我就输入192.168.1.112）&lt;/li&gt;
+&lt;li&gt;点击“&lt;code&gt;连接&lt;/code&gt;”&lt;/li&gt;
+&lt;li&gt;输入第三步里设置的Windows电脑的用户账户名和密码&lt;/li&gt;
+&lt;li&gt;点击“&lt;code&gt;确定&lt;/code&gt;”（注意：在远程连接过程中Windows电脑必须保持开机状态，关机、待机或者锁屏状态都不行）&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;ol&gt;
-&lt;li&gt;将cvx压缩包解压&lt;/li&gt;
-&lt;li&gt;将cvx文件夹拷贝至如D:\MATLAB Programs\Compressed Sensing目录下&lt;/li&gt;
-&lt;li&gt;在Current Folder窗口中打开cvx文件夹&lt;/li&gt;
-&lt;li&gt;在Command Window中输入cvx_setup&lt;/li&gt;
-&lt;li&gt;在MATLAB的File菜单下的set path把此路径加上。&lt;/li&gt;
-&lt;li&gt;把路径加进去后在file→Preferences→General的Toolbox Path Caching里点击update Toolbox Path Cache更新一下&lt;/li&gt;
-&lt;li&gt;完成&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3&gt;恭喜，全部完成! ✌️&lt;/h3&gt;
 
-&lt;h3&gt;%%分段运行程序&lt;/h3&gt;
+&lt;p&gt;OK，现在就稍微等待一下，我们已经完成了从Mac远程桌面控制Windows电脑，大概30秒之后就可以身在合肥，操作远在重庆的Windows电脑了。或者看着暴雨中浑身湿乎乎的人们然后心中暗爽一下。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>在Mac上通过Sublime、Skim编辑LaTeX</title>
+        <link>http://williamlfang.github.com/investment/2014/08/10/Using-LaTeX-with-Sublime-and-Skim-for-Mac.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/08/10/Using-LaTeX-with-Sublime-and-Skim-for-Mac.html</guid>
+        <pubDate>2014-08-10 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;Sublime Text是一款非常优秀的编辑器，速度快，界面简洁，插件众多。并且能跨平台使用，在Mac和Windows上都能完美使用。虽然是一款付费软件，但作者很厚道地给了无限期的试用期限。这一切正如其官网广告词说的那样：The text editor you&amp;#39;ll fall in love with.&lt;/p&gt;
 
-&lt;ol&gt;
-&lt;li&gt;选中%%分段&lt;/li&gt;
-&lt;li&gt;右键选择&lt;code&gt;evaluate current section&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;Skim是一款免费轻量的PDF阅读、标注工具，布局贴心友好，与OS X自带的Previewer相比，Skim能更好的注释PDF文件。&lt;/p&gt;
+
+&lt;p&gt;LaTeX是一款权威的科技论文排版软件，不仅可以写论文，也可以处理日常的各种文档工作，甚至是做幻灯片。相比于Word，LaTeX最大的优势是对于复杂公式的编辑与排版非常漂亮。并且用简单的命令就可以生成脚注、索引、目录和参考文献等复杂的结构。这一切优点都使得世界上众多的“科学家”们不再需要身兼作者与排版工两职，从而将更多的精力集中于文章内容本身。&lt;/p&gt;
+
+&lt;p&gt;本文的目的是将上述三种软件综合部署在Mac上。完成之后，你将可以在Sublime Text里面进行LaTeX代码编辑，用Skim预览生成的PDF文件。更重要的是，让你觉得，写论文也可以是一件很优美的事。&lt;/p&gt;
+
+&lt;h3&gt;准备工作：&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mac上至少4GB的空余空间&lt;/li&gt;
+&lt;li&gt;高速的互联网连接&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;第一步：安装MacTeX&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;进入&lt;a href=&quot;http://www.tug.org/mactex&quot;&gt;MacTeX官网&lt;/a&gt;下载&lt;code&gt;MacTeX.pkg&lt;/code&gt;文件。文件大约2GB，需要一段时间才能完成下载，趁现在去喝杯咖啡吧。&lt;/li&gt;
+&lt;li&gt;下载完成之后，双击&lt;code&gt;MacTeX.pkg&lt;/code&gt;进行安装。&lt;/li&gt;
+&lt;li&gt;安装完成之后，会看到许多与TeX有关的程序图标，暂时忽略它们。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;第二步：安装Sublime Text&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;进入&lt;a href=&quot;http://www.sublimetext.com&quot;&gt;Sublime Text官网&lt;/a&gt;下载最新版本的Sublime Text。这里我下载的是Sublime Text 3.&lt;/li&gt;
+&lt;li&gt;下载完成之后，将文件拖入应用程序文件夹安装。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;第三步：在Sublime Text中安装Package Control&lt;/h3&gt;
+
+&lt;p&gt;我们需要在Sublime Text中下载插件以便能够很好地操作与LaTeX有关的文件。而插件是通过Package Control下载的。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;进入&lt;a href=&quot;http://sublime.wbond.net/installation&quot;&gt;Package Control官网&lt;/a&gt;复制灰色区块的代码。&lt;/li&gt;
+&lt;li&gt;打开Sublime Text。&lt;/li&gt;
+&lt;li&gt;使用快捷键“&lt;code&gt;control+~&lt;/code&gt;”（~就在Esc键的下方）打开控制面板Console。你会在Sublime Text的底部看到弹出一个白色窗口。&lt;/li&gt;
+&lt;li&gt;将刚才复制的代码粘贴到控制面板。&lt;/li&gt;
+&lt;li&gt;按下“&lt;code&gt;Enter&lt;/code&gt;”回车键。然后退出并重启Sublime Text。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;第四步：安装LaTeX Tools&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sublime Text重启后，按下“&lt;code&gt;Command+Shift+P&lt;/code&gt;”打开命令托盘Command pallet，这一步也可以通过Tools下拉菜单完成。&lt;/li&gt;
+&lt;li&gt;在命令托盘里输入“&lt;code&gt;Install Package&lt;/code&gt;”，按下&lt;code&gt;Enter&lt;/code&gt;回车建。&lt;/li&gt;
+&lt;li&gt;完成之后，输入“&lt;code&gt;LaTeX Tools&lt;/code&gt;”，找到这一项并回车安装。&lt;/li&gt;
+&lt;li&gt;退出并重启Sublime Text。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;第五步：安装Skim&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;进&lt;a href=&quot;http://skim-app.sourceforge.net&quot;&gt;Skim&lt;/a&gt;下载Skim并安装&lt;/li&gt;
+&lt;li&gt;打开Skim，在菜单栏中&lt;code&gt;Skim &amp;gt; Preference(选项) &amp;gt; Sync(同步)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在预设菜单中选择&lt;code&gt;Sublime Text&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/skim.png&quot; alt=&quot;skim&quot;&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;关闭上面这个窗口。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;全部完成，✌️&lt;/h3&gt;
+
+&lt;p&gt;现在，我们已经做完了所有的步骤，可以打开Sublime Text，&lt;code&gt;Command+N&lt;/code&gt;新建文件并在里面编写LaTeX代码了，完成编辑之后，&lt;code&gt;Command+S&lt;/code&gt;保存文件，&lt;code&gt;Command+B&lt;/code&gt;编译并运行，这时就可以在Skim里面看到PDF预览了。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>午后的操场</title>
+        <link>http://williamlfang.github.com/investment/2014/08/04/Postmeridian-Track.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/08/04/Postmeridian-Track.html</guid>
+        <pubDate>2014-08-04 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;&lt;img src=&quot;/public/img/days/3.jpg&quot; alt=&quot;3&quot;&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>小礼物Little Lady</title>
+        <link>http://williamlfang.github.com/investment/2014/08/03/Little-Lady+.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/08/03/Little-Lady+.html</guid>
+        <pubDate>2014-08-03 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;&lt;img src=&quot;/public/img/days/2.jpg&quot; alt=&quot;2&quot;&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>与亚敏走在石像路</title>
+        <link>http://williamlfang.github.com/investment/2014/08/01/My-Paintings.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/08/01/My-Paintings.html</guid>
+        <pubDate>2014-08-01 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;&lt;img src=&quot;/public/img/days/1.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
 </description>
       </item>
     

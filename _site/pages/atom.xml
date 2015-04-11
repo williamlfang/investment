@@ -2,13 +2,13 @@
 <rss version="2.0">
   <channel>
     <title>价值投资者</title>
-    <link>http://williamlfang.github.com</link>
+    <link>http://williamlfang.github.com/</link>
     <description>Website for Investment</description>
     
       <item>
         <title>牛顿法与拟牛顿法（DFP BFGS LBFGS VLBFGS）</title>
-        <link>http://williamlfang.github.com/2015/03/23/Newton-QuasiNewton-Method.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/2015/03/23/Newton-QuasiNewton-Method.html</guid>
+        <link>http://williamlfang.github.com//2015/03/23/Newton-QuasiNewton-Method.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2015/03/23/Newton-QuasiNewton-Method.html</guid>
         <pubDate>2015-03-23 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;最近做LBFGS的并行，顺便把牛顿法、拟牛顿法顺理一下。&lt;/p&gt;
 
@@ -98,8 +98,8 @@
     
       <item>
         <title>Mac以及Windows上搭建C++工作环境</title>
-        <link>http://williamlfang.github.com/2015/02/13/Cplus-on-MAC.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/2015/02/13/Cplus-on-MAC.html</guid>
+        <link>http://williamlfang.github.com//2015/02/13/Cplus-on-MAC.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2015/02/13/Cplus-on-MAC.html</guid>
         <pubDate>2015-02-13 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;实验室里我申请的垃圾老爷机被师弟玩坏了，弄了一天，最后发现根本就是硬件损伤，想把它砸掉！太坑了。&lt;/p&gt;
 
@@ -156,8 +156,8 @@
     
       <item>
         <title>大数据机器学习初探---南大李武军</title>
-        <link>http://williamlfang.github.com/2015/02/04/Group-Meeting.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/2015/02/04/Group-Meeting.html</guid>
+        <link>http://williamlfang.github.com//2015/02/04/Group-Meeting.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2015/02/04/Group-Meeting.html</guid>
         <pubDate>2015-02-04 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;每周的组会大概会持续2小时。如果是主讲，就需要花更多的时间去准备报告内容。之前，组会开完我就不管了，缺乏总结思考。而这样子的话实质上意义就不大了，没有内化为自己的知识，也没有什么critical thinking。从现在开始，记录每一次组会的思考。&lt;/p&gt;
 
@@ -255,8 +255,8 @@ Theoretical and Empirical Analysis&lt;/a&gt;&lt;/p&gt;
     
       <item>
         <title>Git常用命令速查表</title>
-        <link>http://williamlfang.github.com/2015/01/30/Git-Resources.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/2015/01/30/Git-Resources.html</guid>
+        <link>http://williamlfang.github.com//2015/01/30/Git-Resources.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2015/01/30/Git-Resources.html</guid>
         <pubDate>2015-01-30 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;master: 默认开发分支&lt;/p&gt;
 
@@ -346,16 +346,16 @@ $ git push --tags                       #上传所有标签
     
       <item>
         <title>2015年阅读书单</title>
-        <link>http://williamlfang.github.com/2015/01/29/Book-List-2015.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/2015/01/29/Book-List-2015.html</guid>
+        <link>http://williamlfang.github.com//2015/01/29/Book-List-2015.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2015/01/29/Book-List-2015.html</guid>
         <pubDate>2015-01-29 00:00:00 +0800</pubDate>
         <description></description>
       </item>
     
       <item>
         <title>在Mac上用LaTeX写漂亮的简历</title>
-        <link>http://williamlfang.github.com/2014/12/06/Make-resume-by-LaTeX.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/2014/12/06/Make-resume-by-LaTeX.html</guid>
+        <link>http://williamlfang.github.com//2014/12/06/Make-resume-by-LaTeX.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/12/06/Make-resume-by-LaTeX.html</guid>
         <pubDate>2014-12-06 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;&lt;img src=&quot;/public/img/posts/resume.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
 
@@ -415,8 +415,8 @@ $ git push --tags                       #上传所有标签
     
       <item>
         <title>我的报告 Decentralized Privacy-Preserving Low-Rank Matrix Completion</title>
-        <link>http://williamlfang.github.com/2014/11/26/Presentation-at-Chinese-Academy-of-Science.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/2014/11/26/Presentation-at-Chinese-Academy-of-Science.html</guid>
+        <link>http://williamlfang.github.com//2014/11/26/Presentation-at-Chinese-Academy-of-Science.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/11/26/Presentation-at-Chinese-Academy-of-Science.html</guid>
         <pubDate>2014-11-26 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;&lt;img src=&quot;/public/img/posts/s1.png&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
 
@@ -680,8 +680,8 @@ $ git push --tags                       #上传所有标签
     
       <item>
         <title>凸优化的一些基础算法</title>
-        <link>http://williamlfang.github.com/2014/11/10/Basic-Algorithms-of-Convex-Opt.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/2014/11/10/Basic-Algorithms-of-Convex-Opt.html</guid>
+        <link>http://williamlfang.github.com//2014/11/10/Basic-Algorithms-of-Convex-Opt.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/11/10/Basic-Algorithms-of-Convex-Opt.html</guid>
         <pubDate>2014-11-10 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;本文假设读者对凸优化有基本了解，主要归纳一些基础算法，以便查阅。&lt;/p&gt;
 
@@ -713,8 +713,8 @@ $ git push --tags                       #上传所有标签
     
       <item>
         <title>什么是 P, NP, NP-complete, NP-hard</title>
-        <link>http://williamlfang.github.com/2014/11/09/What-is-NP-Hard.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/2014/11/09/What-is-NP-Hard.html</guid>
+        <link>http://williamlfang.github.com//2014/11/09/What-is-NP-Hard.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/11/09/What-is-NP-Hard.html</guid>
         <pubDate>2014-11-09 00:00:00 +0800</pubDate>
         <description>&lt;h3&gt;相关概念&lt;/h3&gt;
 
@@ -770,8 +770,8 @@ $ git push --tags                       #上传所有标签
     
       <item>
         <title>海岸公路</title>
-        <link>http://williamlfang.github.com/2014/11/03/Coast.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/2014/11/03/Coast.html</guid>
+        <link>http://williamlfang.github.com//2014/11/03/Coast.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/11/03/Coast.html</guid>
         <pubDate>2014-11-03 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;&lt;img src=&quot;/public/img/days/coast.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
 
@@ -785,8 +785,8 @@ $ git push --tags                       #上传所有标签
     
       <item>
         <title>黑椒牛排</title>
-        <link>http://williamlfang.github.com/2014/11/02/Steak.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/2014/11/02/Steak.html</guid>
+        <link>http://williamlfang.github.com//2014/11/02/Steak.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/11/02/Steak.html</guid>
         <pubDate>2014-11-02 00:00:00 +0800</pubDate>
         <description>&lt;blockquote&gt;
 &lt;p&gt;“两个人吃的是饭，一个人吃的是饲料。”——日剧《最完美的离婚》&lt;/p&gt;
@@ -828,8 +828,8 @@ $ git push --tags                       #上传所有标签
     
       <item>
         <title>Yosemite OS X 10.10 Matlab 2012a停止工作的解决办法</title>
-        <link>http://williamlfang.github.com/2014/10/31/Yosemite-Matlab-Running-Error.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/2014/10/31/Yosemite-Matlab-Running-Error.html</guid>
+        <link>http://williamlfang.github.com//2014/10/31/Yosemite-Matlab-Running-Error.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/10/31/Yosemite-Matlab-Running-Error.html</guid>
         <pubDate>2014-10-31 00:00:00 +0800</pubDate>
         <description>&lt;h3&gt;问题描述&lt;/h3&gt;
 
@@ -857,8 +857,8 @@ sudo ln -s /opt/X11/ /usr/X11
     
       <item>
         <title>煎蛋吐司</title>
-        <link>http://williamlfang.github.com/2014/10/29/Fried-Egg-Toast.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/2014/10/29/Fried-Egg-Toast.html</guid>
+        <link>http://williamlfang.github.com//2014/10/29/Fried-Egg-Toast.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/10/29/Fried-Egg-Toast.html</guid>
         <pubDate>2014-10-29 00:00:00 +0800</pubDate>
         <description>&lt;blockquote&gt;
 &lt;p&gt;“两个人吃的是饭，一个人吃的是饲料。”——日剧《最完美的离婚》&lt;/p&gt;
@@ -894,8 +894,8 @@ sudo ln -s /opt/X11/ /usr/X11
     
       <item>
         <title>Mac安装unrar和rar解压缩工具</title>
-        <link>http://williamlfang.github.com/2014/10/07/Mac-Rar-Unrar.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/2014/10/07/Mac-Rar-Unrar.html</guid>
+        <link>http://williamlfang.github.com//2014/10/07/Mac-Rar-Unrar.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/10/07/Mac-Rar-Unrar.html</guid>
         <pubDate>2014-10-07 00:00:00 +0800</pubDate>
         <description>&lt;h3&gt;问题描述&lt;/h3&gt;
 
@@ -943,8 +943,8 @@ rar a archivename.rar filename   #压缩
     
       <item>
         <title>阿里巴巴大数据竞赛回顾与总结</title>
-        <link>http://williamlfang.github.com/2014/10/01/Alibaba-Big-Data.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/2014/10/01/Alibaba-Big-Data.html</guid>
+        <link>http://williamlfang.github.com//2014/10/01/Alibaba-Big-Data.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/10/01/Alibaba-Big-Data.html</guid>
         <pubDate>2014-10-01 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;8个月前，苏宇师兄问我对&lt;a href=&quot;http://102.alibaba.com/competition/addDiscovery/index.htm&quot;&gt;阿里巴巴大数据竞赛&lt;/a&gt;感兴趣吗。正好我选修了&lt;a href=&quot;http://staff.ustc.edu.cn/%7Echeneh/&quot;&gt;陈恩红&lt;/a&gt;老师的《机器学习与数据挖掘》，很好奇这门课在实际中的应用；身为淘宝用户，也好奇我是如何被推荐的。于是和师兄一起参加比赛，加上计算机学院的刘惠民同学，我们组成了名叫&lt;code&gt;Rosemary&lt;/code&gt;三人团队。这次大赛总共有7276支队伍参赛，我们止步于第二赛季。第一赛季排名56；第二赛季排名68。&lt;/p&gt;
 
@@ -1047,8 +1047,8 @@ rar a archivename.rar filename   #压缩
     
       <item>
         <title>Linux 4：磁盘与文件系统管理</title>
-        <link>http://williamlfang.github.com/2014/09/30/Linux4.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/2014/09/30/Linux4.html</guid>
+        <link>http://williamlfang.github.com//2014/09/30/Linux4.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/09/30/Linux4.html</guid>
         <pubDate>2014-09-30 00:00:00 +0800</pubDate>
         <description>&lt;h3&gt;认识EXT2文件系统&lt;/h3&gt;
 
@@ -1125,8 +1125,8 @@ rar a archivename.rar filename   #压缩
     
       <item>
         <title>Linux 3：文件与目录管理</title>
-        <link>http://williamlfang.github.com/2014/09/19/Linux3.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/2014/09/19/Linux3.html</guid>
+        <link>http://williamlfang.github.com//2014/09/19/Linux3.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/09/19/Linux3.html</guid>
         <pubDate>2014-09-19 00:00:00 +0800</pubDate>
         <description>&lt;h3&gt;目录的相关操作&lt;/h3&gt;
 
@@ -1289,8 +1289,8 @@ chmod g+s,o+t test; ls -l test          # 配置权限为-rws--s--t，即加入S
     
       <item>
         <title>Linux 2：文件权限与目录配置</title>
-        <link>http://williamlfang.github.com/2014/09/17/Linux2.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/2014/09/17/Linux2.html</guid>
+        <link>http://williamlfang.github.com//2014/09/17/Linux2.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/09/17/Linux2.html</guid>
         <pubDate>2014-09-17 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;Linux最优秀的地方之一，就在于它的多用户、多任务环境。Linux一般将文件可存取访问的身份分为3个类别，分别是owner（用户）、group（用户组）、others（其他人），且3种身份都各自有自己的read，write，execute等权限。&lt;/p&gt;
 
@@ -1369,8 +1369,8 @@ chmod       #改变文件的权限
     
       <item>
         <title>Markdown输入LaTeX数学公式</title>
-        <link>http://williamlfang.github.com/2014/09/16/Markdown-Math.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/2014/09/16/Markdown-Math.html</guid>
+        <link>http://williamlfang.github.com//2014/09/16/Markdown-Math.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/09/16/Markdown-Math.html</guid>
         <pubDate>2014-09-16 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;Markdown是读写性都非常好的轻量文本编辑语言，这个博客以及世界上许多博客的文章都是用其书写的。但是，在写“科研”博客时，难免会需要频繁地输入数学公式，而Markdown本身并不支持数学公式的输入。我曾经想偷懒直接用Markdown的语法去代替LaTeX数学公式，最后页面显示的结果有点儿丑。却一直也没有去修改。直到前天收到了&lt;a href=&quot;http://www.math.ucla.edu/%7Ewotaoyin/&quot;&gt;印卧涛&lt;/a&gt;老师的一封邮件，邮件里所有的数学公式都是用LaTeX代码写的，正规而美观。由此觉得自己做事还是水了点。做事要认真啊亲。&lt;/p&gt;
 
@@ -1400,8 +1400,8 @@ chmod       #改变文件的权限
     
       <item>
         <title>Linux 1：登陆与在线求助man page</title>
-        <link>http://williamlfang.github.com/2014/09/13/Linux.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/2014/09/13/Linux.html</guid>
+        <link>http://williamlfang.github.com//2014/09/13/Linux.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/09/13/Linux.html</guid>
         <pubDate>2014-09-13 00:00:00 +0800</pubDate>
         <description>&lt;h3&gt;查看内核版本&lt;/h3&gt;
 

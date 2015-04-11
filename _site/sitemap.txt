@@ -13,40 +13,40 @@
 
 
 
-  /2015/02/13/Cplus-on-MAC.html
+  /investment/2015/02/13/Cplus-on-MAC.html
 
-  /2015/01/30/Git-Resources.html
+  /investment/2015/01/30/Git-Resources.html
 
-  /2015/01/29/Book-List-2015.html
+  /investment/2015/01/29/Book-List-2015.html
 
-  /2014/12/06/Make-resume-by-LaTeX.html
+  /investment/2014/12/06/Make-resume-by-LaTeX.html
 
-  /2014/10/31/Yosemite-Matlab-Running-Error.html
+  /investment/2014/10/31/Yosemite-Matlab-Running-Error.html
 
-  /2014/10/07/Mac-Rar-Unrar.html
+  /investment/2014/10/07/Mac-Rar-Unrar.html
 
-  /2014/09/30/Linux4.html
+  /investment/2014/09/30/Linux4.html
 
-  /2014/09/19/Linux3.html
+  /investment/2014/09/19/Linux3.html
 
-  /2014/09/17/Linux2.html
+  /investment/2014/09/17/Linux2.html
 
-  /2014/09/16/Markdown-Math.html
+  /investment/2014/09/16/Markdown-Math.html
 
-  /2014/09/13/Linux.html
+  /investment/2014/09/13/Linux.html
 
-  /2014/09/12/Linux-Problems.html
+  /investment/2014/09/12/Linux-Problems.html
 
-  /2014/08/25/Golden-Line.html
+  /investment/2014/08/25/Golden-Line.html
 
-  /2014/08/12/Remote-Desk-from-Mac-to-Windows-PC.html
+  /investment/2014/08/12/Remote-Desk-from-Mac-to-Windows-PC.html
 
-  /2014/08/10/Using-LaTeX-with-Sublime-and-Skim-for-Mac.html
+  /investment/2014/08/10/Using-LaTeX-with-Sublime-and-Skim-for-Mac.html
 
-  /2014/07/31/LaTeX-beamer-slides.html
+  /investment/2014/07/31/LaTeX-beamer-slides.html
 
-  /2014/07/24/dream-of-red-chamber.html
+  /investment/2014/07/24/dream-of-red-chamber.html
 
-  /2014/01/01/Book-List-2014.html
+  /investment/2014/01/01/Book-List-2014.html
 
-  /2013/01/01/Book-List-2013.html
+  /investment/2013/01/01/Book-List-2013.html

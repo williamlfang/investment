@@ -7,8 +7,8 @@
     
       <item>
         <title>Mac以及Windows上搭建C++工作环境</title>
-        <link>http://williamlfang.github.com/investment/2015/02/13/Cplus-on-MAC.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2015/02/13/Cplus-on-MAC.html</guid>
+        <link>http://williamlfang.github.com/investment/investment/2015/02/13/Cplus-on-MAC.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2015/02/13/Cplus-on-MAC.html</guid>
         <pubDate>2015-02-13 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;实验室里我申请的垃圾老爷机被师弟玩坏了，弄了一天，最后发现根本就是硬件损伤，想把它砸掉！太坑了。&lt;/p&gt;
 
@@ -65,8 +65,8 @@
     
       <item>
         <title>Git常用命令速查表</title>
-        <link>http://williamlfang.github.com/investment/2015/01/30/Git-Resources.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2015/01/30/Git-Resources.html</guid>
+        <link>http://williamlfang.github.com/investment/investment/2015/01/30/Git-Resources.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2015/01/30/Git-Resources.html</guid>
         <pubDate>2015-01-30 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;master: 默认开发分支&lt;/p&gt;
 
@@ -156,16 +156,16 @@ $ git push --tags                       #上传所有标签
     
       <item>
         <title>2015年阅读书单</title>
-        <link>http://williamlfang.github.com/investment/2015/01/29/Book-List-2015.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2015/01/29/Book-List-2015.html</guid>
+        <link>http://williamlfang.github.com/investment/investment/2015/01/29/Book-List-2015.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2015/01/29/Book-List-2015.html</guid>
         <pubDate>2015-01-29 00:00:00 +0800</pubDate>
         <description></description>
       </item>
     
       <item>
         <title>在Mac上用LaTeX写漂亮的简历</title>
-        <link>http://williamlfang.github.com/investment/2014/12/06/Make-resume-by-LaTeX.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/12/06/Make-resume-by-LaTeX.html</guid>
+        <link>http://williamlfang.github.com/investment/investment/2014/12/06/Make-resume-by-LaTeX.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/12/06/Make-resume-by-LaTeX.html</guid>
         <pubDate>2014-12-06 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;&lt;img src=&quot;/public/img/posts/resume.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
 
@@ -225,8 +225,8 @@ $ git push --tags                       #上传所有标签
     
       <item>
         <title>Yosemite OS X 10.10 Matlab 2012a停止工作的解决办法</title>
-        <link>http://williamlfang.github.com/investment/2014/10/31/Yosemite-Matlab-Running-Error.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/10/31/Yosemite-Matlab-Running-Error.html</guid>
+        <link>http://williamlfang.github.com/investment/investment/2014/10/31/Yosemite-Matlab-Running-Error.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/10/31/Yosemite-Matlab-Running-Error.html</guid>
         <pubDate>2014-10-31 00:00:00 +0800</pubDate>
         <description>&lt;h3&gt;问题描述&lt;/h3&gt;
 
@@ -254,8 +254,8 @@ sudo ln -s /opt/X11/ /usr/X11
     
       <item>
         <title>Mac安装unrar和rar解压缩工具</title>
-        <link>http://williamlfang.github.com/investment/2014/10/07/Mac-Rar-Unrar.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/10/07/Mac-Rar-Unrar.html</guid>
+        <link>http://williamlfang.github.com/investment/investment/2014/10/07/Mac-Rar-Unrar.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/10/07/Mac-Rar-Unrar.html</guid>
         <pubDate>2014-10-07 00:00:00 +0800</pubDate>
         <description>&lt;h3&gt;问题描述&lt;/h3&gt;
 
@@ -303,8 +303,8 @@ rar a archivename.rar filename   #压缩
     
       <item>
         <title>Linux 4：磁盘与文件系统管理</title>
-        <link>http://williamlfang.github.com/investment/2014/09/30/Linux4.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/09/30/Linux4.html</guid>
+        <link>http://williamlfang.github.com/investment/investment/2014/09/30/Linux4.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/09/30/Linux4.html</guid>
         <pubDate>2014-09-30 00:00:00 +0800</pubDate>
         <description>&lt;h3&gt;认识EXT2文件系统&lt;/h3&gt;
 
@@ -381,8 +381,8 @@ rar a archivename.rar filename   #压缩
     
       <item>
         <title>Linux 3：文件与目录管理</title>
-        <link>http://williamlfang.github.com/investment/2014/09/19/Linux3.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/09/19/Linux3.html</guid>
+        <link>http://williamlfang.github.com/investment/investment/2014/09/19/Linux3.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/09/19/Linux3.html</guid>
         <pubDate>2014-09-19 00:00:00 +0800</pubDate>
         <description>&lt;h3&gt;目录的相关操作&lt;/h3&gt;
 
@@ -545,8 +545,8 @@ chmod g+s,o+t test; ls -l test          # 配置权限为-rws--s--t，即加入S
     
       <item>
         <title>Linux 2：文件权限与目录配置</title>
-        <link>http://williamlfang.github.com/investment/2014/09/17/Linux2.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/09/17/Linux2.html</guid>
+        <link>http://williamlfang.github.com/investment/investment/2014/09/17/Linux2.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/09/17/Linux2.html</guid>
         <pubDate>2014-09-17 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;Linux最优秀的地方之一，就在于它的多用户、多任务环境。Linux一般将文件可存取访问的身份分为3个类别，分别是owner（用户）、group（用户组）、others（其他人），且3种身份都各自有自己的read，write，execute等权限。&lt;/p&gt;
 
@@ -625,8 +625,8 @@ chmod       #改变文件的权限
     
       <item>
         <title>Markdown输入LaTeX数学公式</title>
-        <link>http://williamlfang.github.com/investment/2014/09/16/Markdown-Math.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/09/16/Markdown-Math.html</guid>
+        <link>http://williamlfang.github.com/investment/investment/2014/09/16/Markdown-Math.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/09/16/Markdown-Math.html</guid>
         <pubDate>2014-09-16 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;Markdown是读写性都非常好的轻量文本编辑语言，这个博客以及世界上许多博客的文章都是用其书写的。但是，在写“科研”博客时，难免会需要频繁地输入数学公式，而Markdown本身并不支持数学公式的输入。我曾经想偷懒直接用Markdown的语法去代替LaTeX数学公式，最后页面显示的结果有点儿丑。却一直也没有去修改。直到前天收到了&lt;a href=&quot;http://www.math.ucla.edu/%7Ewotaoyin/&quot;&gt;印卧涛&lt;/a&gt;老师的一封邮件，邮件里所有的数学公式都是用LaTeX代码写的，正规而美观。由此觉得自己做事还是水了点。做事要认真啊亲。&lt;/p&gt;
 
@@ -656,8 +656,8 @@ chmod       #改变文件的权限
     
       <item>
         <title>Linux 1：登陆与在线求助man page</title>
-        <link>http://williamlfang.github.com/investment/2014/09/13/Linux.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/09/13/Linux.html</guid>
+        <link>http://williamlfang.github.com/investment/investment/2014/09/13/Linux.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/09/13/Linux.html</guid>
         <pubDate>2014-09-13 00:00:00 +0800</pubDate>
         <description>&lt;h3&gt;查看内核版本&lt;/h3&gt;
 
@@ -748,8 +748,8 @@ shutdown -k now ‘The system will be reboot’    #仅发出警告，系统并�
     
       <item>
         <title>Linux 0：实际问题</title>
-        <link>http://williamlfang.github.com/investment/2014/09/12/Linux-Problems.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/09/12/Linux-Problems.html</guid>
+        <link>http://williamlfang.github.com/investment/investment/2014/09/12/Linux-Problems.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/09/12/Linux-Problems.html</guid>
         <pubDate>2014-09-12 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;管理实验室服务器的大神师兄&lt;a href=&quot;&quot;&gt;苏宇&lt;/a&gt;毕业了，他将管理服务器的工作交给了我——对Linux和服务器管理毫无经验的小菜一枚。前几天师弟&lt;a href=&quot;https://yunpeng.blog.ustc.edu.cn&quot;&gt;段云鹏&lt;/a&gt;的一些机缘巧合的误操作导致服务器核崩溃，我却手足无措，请来&lt;a href=&quot;http://painterliu.com&quot;&gt;刘惠民&lt;/a&gt;童鞋帮着忙活了两晚，也没能复原系统。最后还是让苏神师兄回了学校一趟才解决问题。由此想了两件事：既然答应了负责管理服务器，就不能再以“浪费精力”、“没兴趣”等借口拒绝学习相关技术；人的时间与精力真的很有限，下一次给承诺之前，先想想自己是否花得起这份时间与精力。&lt;/p&gt;
 
@@ -841,8 +841,8 @@ touch a.txt&lt;/p&gt;
     
       <item>
         <title>每个人的金线</title>
-        <link>http://williamlfang.github.com/investment/2014/08/25/Golden-Line.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/08/25/Golden-Line.html</guid>
+        <link>http://williamlfang.github.com/investment/investment/2014/08/25/Golden-Line.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/08/25/Golden-Line.html</guid>
         <pubDate>2014-08-25 00:00:00 +0800</pubDate>
         <description>&lt;h3&gt;文学的金线&lt;/h3&gt;
 
@@ -864,8 +864,8 @@ touch a.txt&lt;/p&gt;
     
       <item>
         <title>Mac远程桌面连接Windows</title>
-        <link>http://williamlfang.github.com/investment/2014/08/12/Remote-Desk-from-Mac-to-Windows-PC.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/08/12/Remote-Desk-from-Mac-to-Windows-PC.html</guid>
+        <link>http://williamlfang.github.com/investment/investment/2014/08/12/Remote-Desk-from-Mac-to-Windows-PC.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/08/12/Remote-Desk-from-Mac-to-Windows-PC.html</guid>
         <pubDate>2014-08-12 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;在学习或者工作中，有时候需要远程控制Windows电脑。比如在家遇上暴雨天气，又急需使用办公室里的电脑，每当跋涉在雨中的时候，都希望可以远程控制。在生活中，也会有这样的时刻。比如远程帮助爸妈或者爷爷奶奶外公外婆解决一些电脑问题。&lt;/p&gt;
 
@@ -928,8 +928,8 @@ touch a.txt&lt;/p&gt;
     
       <item>
         <title>在Mac上通过Sublime、Skim编辑LaTeX</title>
-        <link>http://williamlfang.github.com/investment/2014/08/10/Using-LaTeX-with-Sublime-and-Skim-for-Mac.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/08/10/Using-LaTeX-with-Sublime-and-Skim-for-Mac.html</guid>
+        <link>http://williamlfang.github.com/investment/investment/2014/08/10/Using-LaTeX-with-Sublime-and-Skim-for-Mac.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/08/10/Using-LaTeX-with-Sublime-and-Skim-for-Mac.html</guid>
         <pubDate>2014-08-10 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;Sublime Text是一款非常优秀的编辑器，速度快，界面简洁，插件众多。并且能跨平台使用，在Mac和Windows上都能完美使用。虽然是一款付费软件，但作者很厚道地给了无限期的试用期限。这一切正如其官网广告词说的那样：The text editor you&amp;#39;ll fall in love with.&lt;/p&gt;
 
@@ -1004,8 +1004,8 @@ touch a.txt&lt;/p&gt;
     
       <item>
         <title>LaTeX beamer制作幻灯片</title>
-        <link>http://williamlfang.github.com/investment/2014/07/31/LaTeX-beamer-slides.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/07/31/LaTeX-beamer-slides.html</guid>
+        <link>http://williamlfang.github.com/investment/investment/2014/07/31/LaTeX-beamer-slides.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/07/31/LaTeX-beamer-slides.html</guid>
         <pubDate>2014-07-31 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;用LaTeX beamer制作幻灯片简洁优美，在需要很多数学公式的情况下很实用。这里我用我的第一份LaTeX beamer幻灯片代码为例说明。学习使用任何一种语言编程时，最重要的是对整个代码框架的理解，本文重点讲框架。&lt;/p&gt;
 
@@ -1121,8 +1121,8 @@ touch a.txt&lt;/p&gt;
     
       <item>
         <title>读《红楼梦》</title>
-        <link>http://williamlfang.github.com/investment/2014/07/24/dream-of-red-chamber.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/07/24/dream-of-red-chamber.html</guid>
+        <link>http://williamlfang.github.com/investment/investment/2014/07/24/dream-of-red-chamber.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/07/24/dream-of-red-chamber.html</guid>
         <pubDate>2014-07-24 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;两个月前在亚马逊上买了岳麓书社的&lt;strong&gt;《红楼梦脂汇本》&lt;/strong&gt;，被师兄们开玩笑说太奢侈。我真想不出还有什么事比买书更朴素。小时候几番试图阅读《红楼梦》，每次都因人物关系过于复杂而放弃。说来很感谢蒋勋的细说红楼音频，尽管后来觉得他有点儿啰嗦。&lt;/p&gt;
 
@@ -1134,16 +1134,16 @@ touch a.txt&lt;/p&gt;
     
       <item>
         <title>2014年阅读书单</title>
-        <link>http://williamlfang.github.com/investment/2014/01/01/Book-List-2014.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2014/01/01/Book-List-2014.html</guid>
+        <link>http://williamlfang.github.com/investment/investment/2014/01/01/Book-List-2014.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/01/01/Book-List-2014.html</guid>
         <pubDate>2014-01-01 00:00:00 +0800</pubDate>
         <description></description>
       </item>
     
       <item>
         <title>2013年阅读书单</title>
-        <link>http://williamlfang.github.com/investment/2013/01/01/Book-List-2013.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/2013/01/01/Book-List-2013.html</guid>
+        <link>http://williamlfang.github.com/investment/investment/2013/01/01/Book-List-2013.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2013/01/01/Book-List-2013.html</guid>
         <pubDate>2013-01-01 00:00:00 +0800</pubDate>
         <description></description>
       </item>

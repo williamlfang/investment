@@ -11,6 +11,6 @@
 
 
 
-  /investment/2015/01/29/Book-List-2015.html
+  /2015/01/29/Book-List-2015.html
 
-  /investment/2014/08/25/Golden-Line.html
+  /2014/08/25/Golden-Line.html

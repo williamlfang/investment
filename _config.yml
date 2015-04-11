@@ -15,7 +15,8 @@ author:
 # 站点信息
 title: 价值投资者
 description: Website for Investment
-url: http://williamlfang.github.com/investment         ## {{ site.url }}
+url: http://williamlfang.github.com        ## {{ site.url }}/
+sub_url: /investment
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon

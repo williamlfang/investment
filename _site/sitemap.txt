@@ -11,8 +11,6 @@
 
   /page2/index.html
 
-  /page3/index.html
-
 
 
   /investment/2015/02/13/Cplus-on-MAC.html
@@ -46,8 +44,6 @@
   /investment/2014/08/10/Using-LaTeX-with-Sublime-and-Skim-for-Mac.html
 
   /investment/2014/07/31/LaTeX-beamer-slides.html
-
-  /investment/2014/07/25/matrix-completion.html
 
   /investment/2014/07/24/dream-of-red-chamber.html
 

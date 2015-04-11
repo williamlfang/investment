@@ -1120,68 +1120,6 @@ touch a.txt&lt;/p&gt;
       </item>
     
       <item>
-        <title>低秩矩阵补全</title>
-        <link>http://williamlfang.github.com/investment/investment/2014/07/25/matrix-completion.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/07/25/matrix-completion.html</guid>
-        <pubDate>2014-07-25 00:00:00 +0800</pubDate>
-        <description>&lt;h3&gt;问题描述:&lt;/h3&gt;
-
-&lt;div&gt;如果有这样一个矩阵&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{W}&quot; title=&quot;\mathbf{W}&quot; /&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-&lt;li&gt;矩阵中有部分元素缺失
-&lt;li&gt;矩阵的秩&lt;img src=&quot;http://latex.codecogs.com/gif.latex?rank(\mathbf{W})&quot; title=&quot;rank(\mathbf{W})&quot; /&gt;相较于矩阵维数来说很小，并作为先验已知&lt;/li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;我们希望恢复那些缺失的元素，这个问题就是低秩矩阵补全问题。      &lt;/p&gt;
-
-&lt;h3&gt;思考过程:&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;需要恢复一个低秩矩阵
-&lt;li&gt;直接想法是极小化矩阵的秩&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\min&amp;space;rank(\mathbf{W})&quot; title=&quot;\min rank(\mathbf{W})&quot; /&gt;&lt;/li&gt;
-&lt;li&gt;但是&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\min&amp;space;rank(\mathbf{W})&quot; title=&quot;\min rank(\mathbf{W})&quot; /&gt;的优化问题非凸，不好求解&lt;/li&gt;
-&lt;li&gt;核范数&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\left&amp;space;\|&amp;space;\mathbf{W}\right&amp;space;\|_{*}&quot; title=&quot;\left \| \mathbf{W}\right \|_{*}&quot; /&gt;是秩的凸近似，所以想到&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\min&amp;space;\left&amp;space;\|&amp;space;\mathbf{W}\right&amp;space;\|_{*}&quot; title=&quot;\min \left \| \mathbf{W}\right \|_{*}&quot; /&gt;&lt;/li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;极小化核范数的集中式算法:&lt;/h3&gt;
-
-&lt;div&gt;求解&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\min&amp;space;\left&amp;space;\|&amp;space;\mathbf{W}\right&amp;space;\|_{*}&quot; title=&quot;\min \left \| \mathbf{W}\right \|_{*}&quot; /&gt;的集中式算法有很多，比如：&lt;/div&gt;
-
-&lt;ul&gt;
-&lt;li&gt;singular value thresholding algorithm&lt;/li&gt;
-&lt;li&gt;fixed-point shrinkage algorithm&lt;/li&gt;
-&lt;li&gt;proximal gradient algorithm&lt;/li&gt;
-&lt;li&gt;ADMM&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;但如果矩阵规模和秩增大，以上算法的计算代价也增大，因为它们都需要求解奇异值分解(SVD)。SVD中求伪逆的步骤运算量大，很耗费资源。因此需要想更好的方法，避免极小化核范数。&lt;/p&gt;
-
-&lt;h3&gt;极小化分解矩阵之积的集中式方法:&lt;/h3&gt;
-
-&lt;p&gt;&lt;div&gt;将问题写为&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\min&amp;space;\left&amp;space;\|&amp;space;\mathbf{Z}-\mathbf{X}\mathbf{Y}\right&amp;space;\|_{F}&quot; title=&quot;\min \left \| \mathbf{Z}-\mathbf{X}\mathbf{Y}\right \|_{F}&quot; /&gt;，其中&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{Z}&quot; title=&quot;\mathbf{Z}&quot; /&gt;是对&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{W}&quot; title=&quot;\mathbf{W}&quot; /&gt;的估计，在元素没有缺失的位置上&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{Z}&quot; title=&quot;\mathbf{Z}&quot; /&gt;和&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{W}&quot; title=&quot;\mathbf{W}&quot; /&gt;的元素相同，&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{X}&quot; title=&quot;\mathbf{X}&quot; /&gt;,&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{Y}&quot; title=&quot;\mathbf{Y}&quot; /&gt;是对&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{W}&quot; title=&quot;\mathbf{W}&quot; /&gt;的乘法分解。介绍两种求解该问题的方法：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;nonlinear Gauss-Seidel method&lt;/li&gt;
-&lt;li&gt;nonlinear SOR(Successive Over-Relaxation)-like scheme:LMaFit&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;其中SOR方法是GS方法的拓展，区别仅在于SOR方法中对于&lt;strong&gt;X&lt;/strong&gt;的更新加了权重，并对权值进行更新。&lt;/p&gt;
-
-&lt;h3&gt;去中心式算法:&lt;/h3&gt;
-
-&lt;p&gt;&lt;div&gt;当矩阵规模大到一定程度时，集中式算法在计算能力上要求过高，普通计算机也许无法计算。这时，我们需要在由许多普通计算机作为节点组成的网络中运算，这需要实现去中心式计算。去中心式计算式很容易实现的，将&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{W}&quot; title=&quot;\mathbf{W}&quot; /&gt;,&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{Z}&quot; title=&quot;\mathbf{Z}&quot; /&gt;,&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{Y}&quot; title=&quot;\mathbf{Y}&quot; /&gt;分别切块放在每个节点上，将&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{X}&quot; title=&quot;\mathbf{X}&quot; /&gt;作为公共信息在网络各个邻居节点间交换，优化问题形式不变，但需要加上&lt;img src=&quot;http://latex.codecogs.com/gif.latex?\mathbf{X}_{(i)}=\mathbf{X}_{(j)}&quot; title=&quot;\mathbf{X}_{(i)}=\mathbf{X}_{(j)}&quot; /&gt;的约束。而这样一个约束就引出了另一个子问题：一致平均(average consensus)问题。&lt;/p&gt;
-
-&lt;p&gt;关于一致平均问题的介绍请看：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://painterlin.com/2014/08/22/Average-Consensus.html&quot;&gt;《对于一致平均问题的理解》&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://painterlin.com/2014/08/31/Papers-about-average-consensus.html&quot;&gt;《动态一致平均问题的4篇论文》&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      </item>
-    
-      <item>
         <title>读《红楼梦》</title>
         <link>http://williamlfang.github.com/investment/investment/2014/07/24/dream-of-red-chamber.html</link>
         <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2014/07/24/dream-of-red-chamber.html</guid>
@@ -1234,6 +1172,14 @@ touch a.txt&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/public/img/food/mung.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
 </description>
+      </item>
+    
+      <item>
+        <title>2013年阅读书单</title>
+        <link>http://williamlfang.github.com/investment/investment/2013/01/01/Book-List-2013.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com/investment/investment/2013/01/01/Book-List-2013.html</guid>
+        <pubDate>2013-01-01 00:00:00 +0800</pubDate>
+        <description></description>
       </item>
     
   </channel>

@@ -2,8 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-<title>首页 | 价值投资者</title>
+<title>牛顿法与拟牛顿法（DFP BFGS LBFGS VLBFGS） | 价值投资者</title>
 <meta name="author" content="William Fang">
+
+  <meta name="keywords" content="拟牛顿法">
 
 
 <link rel="shortcut icon" href="http://williamlfang.github.com/investment//public/img/deer3.png" />
@@ -471,185 +473,95 @@
             <div class="row">
   <div class="col-md-13 aside3-title">
     <br>
-    <h2 id="#identifier"><i class="fa fa-home fa-lg"></i></h2>
+    <h2 id="#identifier">牛顿法与拟牛顿法（DFP BFGS LBFGS VLBFGS）</h2>
+    2015年03月23日
   </div>
   <div class="col-md-13 aside3-content">
-    <div id="page-content">
-      <!--<br>--> 
-<center><h3><font color="#000080">怕</font><font color="#FFA500">什</font><font color="#2E8B57">么</font><font color="#F08080">真</font><font color="#00CED1">理</font><font color="red">无</font><font color="#BA55D3">穷, </font><font color="#601986">进</font><font color="#556fb5">一</font><font color="#fa1089">寸</font><font color="#638c0b">有</font><font color="#e00089">一</font><font color="#0a1089">寸</font><font color="#f0c089">的</font><font color="#00c380">欢</font><font color="#cc1089">喜</font></h3></center>
-<div class="row">
-  <div class="col-md-12">
-    <div class="panel panel-primary">
-      <div class="panel-heading">最新文章</div>
-      
-        <a  href='/investment/2014/07/27/norms-of-vector-and-matrix.html' class="list-group-item pjaxlink clearfix">
-          各类范数
-          <span class="badge">2014年07月27日</span>
-        </a>
-      
-        <a  href='/investment/2014/07/25/matrix-completion.html' class="list-group-item pjaxlink clearfix">
-          低秩矩阵补全
-          <span class="badge">2014年07月25日</span>
-        </a>
-      
-        <a  href='/investment/2014/07/24/dream-of-red-chamber.html' class="list-group-item pjaxlink clearfix">
-          读《红楼梦》
-          <span class="badge">2014年07月24日</span>
-        </a>
-      
-        <a  href='/investment/2014/01/01/Book-List-2014.html' class="list-group-item pjaxlink clearfix">
-          2014年阅读书单
-          <span class="badge">2014年01月01日</span>
-        </a>
-      
-        <a  href='/investment/2013/12/31/Can-not.html' class="list-group-item pjaxlink clearfix">
-          学不会
-          <span class="badge">2013年12月31日</span>
-        </a>
-      
-        <a  href='/investment/2013/01/28/Mung-Bean-Soup.html' class="list-group-item pjaxlink clearfix">
-          绿豆百合羹
-          <span class="badge">2013年01月28日</span>
-        </a>
-      
-        <a  href='/investment/2013/01/01/Book-List-2013.html' class="list-group-item pjaxlink clearfix">
-          2013年阅读书单
-          <span class="badge">2013年01月01日</span>
-        </a>
-      
-        <a  href='/investment/2012/12/31/To-my-friends.html' class="list-group-item pjaxlink clearfix">
-          致友人书
-          <span class="badge">2012年12月31日</span>
-        </a>
-      
-        <a  href='/investment/2012/01/01/Book-List-2012.html' class="list-group-item pjaxlink clearfix">
-          2012年阅读书单
-          <span class="badge">2012年01月01日</span>
-        </a>
-      
-        <a  href='/investment/2011/09/21/Cat.html' class="list-group-item pjaxlink clearfix">
-          一只猫
-          <span class="badge">2011年09月21日</span>
-        </a>
-      
-    </div>
-  </div>
-  
-    <div class="col-md-12">
-      <div class="panel panel-primary">
-        <div class="panel-heading">Optimization</div>
-         
-          
-         
-          
-         
-          
-            
-              <a  href='/investment/2015/03/23/Newton-QuasiNewton-Method.html' class="list-group-item pjaxlink clearfix">
-                牛顿法与拟牛顿法（DFP BFGS LBFGS VLBFGS）
-                <span class="badge">2015年03月23日</span>
-              </a>
-            
-              <a  href='/investment/2015/02/04/Group-Meeting.html' class="list-group-item pjaxlink clearfix">
-                大数据机器学习初探---南大李武军
-                <span class="badge">2015年02月04日</span>
-              </a>
-            
-              <a  href='/investment/2014/11/26/Presentation-at-Chinese-Academy-of-Science.html' class="list-group-item pjaxlink clearfix">
-                我的报告 Decentralized Privacy-Preserving Low-Rank Matrix Completion
-                <span class="badge">2014年11月26日</span>
-              </a>
-            
-              <a  href='/investment/2014/11/10/Basic-Algorithms-of-Convex-Opt.html' class="list-group-item pjaxlink clearfix">
-                凸优化的一些基础算法
-                <span class="badge">2014年11月10日</span>
-              </a>
-            
-              <a  href='/investment/2014/08/31/Papers-about-average-consensus.html' class="list-group-item pjaxlink clearfix">
-                动态一致平均问题算法-EXTRA和DAC
-                <span class="badge">2014年08月31日</span>
-              </a>
-            
-              <a  href='/investment/2014/08/22/Average-Consensus.html' class="list-group-item pjaxlink clearfix">
-                对于一致平均问题的理解
-                <span class="badge">2014年08月22日</span>
-              </a>
-            
-              <a  href='/investment/2014/07/25/matrix-completion.html' class="list-group-item pjaxlink clearfix">
-                低秩矩阵补全
-                <span class="badge">2014年07月25日</span>
-              </a>
-            
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-        
-      </div>
-    </div>
-  
-    <div class="col-md-12">
-      <div class="panel panel-primary">
-        <div class="panel-heading">LaTeX</div>
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-            
-              <a  href='/investment/2014/12/06/Make-resume-by-LaTeX.html' class="list-group-item pjaxlink clearfix">
-                在Mac上用LaTeX写漂亮的简历
-                <span class="badge">2014年12月06日</span>
-              </a>
-            
-              <a  href='/investment/2014/09/16/Markdown-Math.html' class="list-group-item pjaxlink clearfix">
-                Markdown输入LaTeX数学公式
-                <span class="badge">2014年09月16日</span>
-              </a>
-            
-              <a  href='/investment/2014/08/10/Using-LaTeX-with-Sublime-and-Skim-for-Mac.html' class="list-group-item pjaxlink clearfix">
-                在Mac上通过Sublime、Skim编辑LaTeX
-                <span class="badge">2014年08月10日</span>
-              </a>
-            
-              <a  href='/investment/2014/07/31/LaTeX-beamer-slides.html' class="list-group-item pjaxlink clearfix">
-                LaTeX beamer制作幻灯片
-                <span class="badge">2014年07月31日</span>
-              </a>
-            
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-        
-      </div>
-    </div>
-  
-</div>
- 
+    <hr>
+    <div id="content">
+      <p>最近做LBFGS的并行，顺便把牛顿法、拟牛顿法顺理一下。</p>
+
+<p>拟牛顿法是求解非线性优化问题最有效的方法之一。考虑无约束的极小化问题<a href="http://www.codecogs.com/eqnedit.php?latex=\min\limits_x&space;f(x)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\min\limits_x&space;f(x)" title="\min\limits_x f(x)" /></a>，假设<a href="http://www.codecogs.com/eqnedit.php?latex=f(x)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?f(x)" title="f(x)" /></a>为凸函数，且二阶连续可导。</p>
+
+<h3>原始牛顿法</h3>
+
+<p>基本思想：在现有极小点估计值的附近对f(x)进行二阶泰勒展开，进而找到下一个极小点的估计值</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=x_{k&plus;1}=x_{k}-(H_k)^{-1}g_{k},&space;k=0,1,\cdots" target="_blank"><img src="http://latex.codecogs.com/gif.latex?x_{k&plus;1}=x_{k}-(H_k)^{-1}g_{k},&space;k=0,1,\cdots" title="x_{k+1}=x_{k}-(H_k)^{-1}g_{k}, k=0,1,\cdots" /></a></p>
+
+<p>牛顿法具有二次收敛性，但当目标函数非二次型时，牛顿法不能保证函数稳定地下降（缺点）。</p>
+
+<h3>阻尼牛顿法</h3>
+
+<p>每次迭代前需要沿迭代方向<a href="http://www.codecogs.com/eqnedit.php?latex=d_k=-(H_k)^{-1}g_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?d_k=-(H_k)^{-1}g_k" title="d_k=-(H_k)^{-1}g_k" /></a>做线搜索，寻求最优的步长因子<a href="http://www.codecogs.com/eqnedit.php?latex=\lambda_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\lambda_k" title="\lambda_k" /></a>，即</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=\lambda_k&space;=&space;\arg\min\limits_{\lambda}&space;f(x_k&plus;\lambda&space;d_k)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\lambda_k&space;=&space;\arg\min\limits_{\lambda}&space;f(x_k&plus;\lambda&space;d_k)" title="\lambda_k = \arg\min\limits_{\lambda} f(x_k+\lambda d_k)" /></a></p>
+
+<h3>拟牛顿法</h3>
+
+<p>基本思想：不使用二阶偏导数而构造出可以近似Hession或Hession的逆的正定对称阵，在“拟牛顿”的条件下优化目标函数。</p>
+
+<p>先推导拟牛顿条件：在<a href="http://www.codecogs.com/eqnedit.php?latex=x_{k&plus;1}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?x_{k&plus;1}" title="x_{k+1}" /></a>附近对<a href="http://www.codecogs.com/eqnedit.php?latex=f(x)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?f(x)" title="f(x)" /></a>做泰勒展开，取二阶近似项</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=f(x)=f(x_{k&plus;1})&plus;\nabla&space;f(x_{k&plus;1})(x-x_{k&plus;1})&plus;\frac{1}{2}(x-x_{k&plus;1})^T\nabla^2&space;f(x_{k&plus;1})(x-x_{k&plus;1})" target="_blank"><img src="http://latex.codecogs.com/gif.latex?f(x)=f(x_{k&plus;1})&plus;\nabla&space;f(x_{k&plus;1})(x-x_{k&plus;1})&plus;\frac{1}{2}(x-x_{k&plus;1})^T\nabla^2&space;f(x_{k&plus;1})(x-x_{k&plus;1})" title="f(x)=f(x_{k+1})+\nabla f(x_{k+1})(x-x_{k+1})+\frac{1}{2}(x-x_{k+1})^T\nabla^2 f(x_{k+1})(x-x_{k+1})" /></a>
+推出</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=\nabla&space;f(x)\approx&space;\nabla&space;f(x_{k&plus;1})&plus;H_{k&plus;1}(x-x_{k&plus;1})" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\nabla&space;f(x)\approx&space;\nabla&space;f(x_{k&plus;1})&plus;H_{k&plus;1}(x-x_{k&plus;1})" title="\nabla f(x)\approx \nabla f(x_{k+1})+H_{k+1}(x-x_{k+1})" /></a>
+取<a href="http://www.codecogs.com/eqnedit.php?latex=x=x_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?x=x_k" title="x=x_k" /></a>，推出</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=g_{k&plus;1}-g_{k}\approx&space;H_{k&plus;1}(x_{k&plus;1}-x_k)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?g_{k&plus;1}-g_{k}\approx&space;H_{k&plus;1}(x_{k&plus;1}-x_k)" title="g_{k+1}-g_{k}\approx H_{k+1}(x_{k+1}-x_k)" /></a></p>
+
+<p>引入记号 <a href="http://www.codecogs.com/eqnedit.php?latex=s_k=x_{k&plus;1}-x_{k},&space;y_k=g_{k&plus;1}-g_{k}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?s_k=x_{k&plus;1}-x_{k},&space;y_k=g_{k&plus;1}-g_{k}" title="s_k=x_{k+1}-x_{k}, y_k=g_{k+1}-g_{k}" /></a>， 推出</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=y_k=H_{k&plus;1}s_k&space;,&space;s_k=H^{-1}_{k&plus;1}y_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?y_k=H_{k&plus;1}s_k&space;,&space;s_k=H^{-1}_{k&plus;1}y_k" title="y_k=H_{k+1}s_k , s_k=H^{-1}_{k+1}y_k" /></a>(<code>拟牛顿条件</code>)</p>
+
+<p>它迭代过程中的hession矩阵做约束，因此，对hession对近似的<a href="http://www.codecogs.com/eqnedit.php?latex=B_{k&plus;1}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?B_{k&plus;1}" title="B_{k+1}" /></a>，以及对hession的逆做近似的<a href="http://www.codecogs.com/eqnedit.php?latex=D_{k&plus;1}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?D_{k&plus;1}" title="D_{k+1}" /></a>，可以将</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=y_{k}=B_{k&plus;1}s_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?y_{k}=B_{k&plus;1}s_k" title="y_{k}=B_{k+1}s_k" /></a> 或 <a href="http://www.codecogs.com/eqnedit.php?latex=s_{k}=D_{k&plus;1}y_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?s_{k}=D_{k&plus;1}y_k" title="s_{k}=D_{k+1}y_k" /></a> 作为指导。</p>
+
+<h4>DFP算法（Davidon–Fletcher–Powell formula）</h4>
+
+<p>核心：通过迭代的方法，对hession的逆做近似。迭代格式为</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=D_{k&plus;1}=D_k&plus;\Delta&space;D_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?D_{k&plus;1}=D_k&plus;\Delta&space;D_k" title="D_{k+1}=D_k+\Delta D_k" /></a>（通常<a href="http://www.codecogs.com/eqnedit.php?latex=D_0=I" target="_blank"><img src="http://latex.codecogs.com/gif.latex?D_0=I" title="D_0=I" /></a>）</p>
+
+<p>猜想<a href="http://www.codecogs.com/eqnedit.php?latex=\Delta&space;D_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\Delta&space;D_k" title="\Delta D_k" /></a>待定为<a href="http://www.codecogs.com/eqnedit.php?latex=\Delta&space;D_k=\alpha&space;\mathbf{u}&space;\mathbf{u}^{\mathrm{T}}&plus;\beta\mathbf{v}\mathbf{v}^{\mathrm{T}}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\Delta&space;D_k=\alpha&space;\mathbf{u}&space;\mathbf{u}^{\mathrm{T}}&plus;\beta\mathbf{v}\mathbf{v}^{\mathrm{T}}" title="\Delta D_k=\alpha \mathbf{u} \mathbf{u}^{\mathrm{T}}+\beta\mathbf{v}\mathbf{v}^{\mathrm{T}}" /></a>（具有对称性）</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=\Rightarrow&space;s_k=D_ky_k&plus;\alpha\mathbf{u}\mathbf{u}^{\mathrm{T}}y_k&plus;\beta\mathbf{v}\mathbf{v}^{\mathrm{T}}y_k=D_ky_k&plus;(\alpha\mathbf{u}^{\mathrm{T}}y_k)\mathbf{u}&plus;(\beta\mathbf{v}^{\mathrm{T}}y_k)\mathbf{v}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\Rightarrow&space;s_k=D_ky_k&plus;\alpha\mathbf{u}\mathbf{u}^{\mathrm{T}}y_k&plus;\beta\mathbf{v}\mathbf{v}^{\mathrm{T}}y_k=D_ky_k&plus;(\alpha\mathbf{u}^{\mathrm{T}}y_k)\mathbf{u}&plus;(\beta\mathbf{v}^{\mathrm{T}}y_k)\mathbf{v}" title="\Rightarrow s_k=D_ky_k+\alpha\mathbf{u}\mathbf{u}^{\mathrm{T}}y_k+\beta\mathbf{v}\mathbf{v}^{\mathrm{T}}y_k=D_ky_k+(\alpha\mathbf{u}^{\mathrm{T}}y_k)\mathbf{u}+(\beta\mathbf{v}^{\mathrm{T}}y_k)\mathbf{v}" /></a></p>
+
+<p>括号中是数值，将其分别简单赋值为1，-1，即</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=\alpha=\frac{1}{\mathbf{u}^{\mathrm{T}}y_k},\beta=-\frac{1}{\mathbf{v}^{\mathrm{T}}y_k}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\alpha=\frac{1}{\mathbf{u}^{\mathrm{T}}y_k},\beta=-\frac{1}{\mathbf{v}^{\mathrm{T}}y_k}" title="\alpha=\frac{1}{\mathbf{u}^{\mathrm{T}}y_k},\beta=-\frac{1}{\mathbf{v}^{\mathrm{T}}y_k}" /></a></p>
+
+<p>其中向量u,v仍有待确定，由上面</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=\Rightarrow&space;\mathbf{u}-\mathbf{v}=s_k-D_ky_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\Rightarrow&space;\mathbf{u}-\mathbf{v}=s_k-D_ky_k" title="\Rightarrow \mathbf{u}-\mathbf{v}=s_k-D_ky_k" /></a>（要此式成立，不妨直接取<a href="http://www.codecogs.com/eqnedit.php?latex=\mathbf{u}=s_k,\mathbf{v}=D_ky_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\mathbf{u}=s_k,\mathbf{v}=D_ky_k" title="\mathbf{u}=s_k,\mathbf{v}=D_ky_k" /></a>）</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=\Rightarrow&space;\alpha=\frac{1}{s^{\mathrm{T}}_ky_k},\beta=-\frac{1}{y^{\mathrm{T}}_kD_ky_k}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\Rightarrow&space;\alpha=\frac{1}{s^{\mathrm{T}}_ky_k},\beta=-\frac{1}{y^{\mathrm{T}}_kD_ky_k}" title="\Rightarrow \alpha=\frac{1}{s^{\mathrm{T}}_ky_k},\beta=-\frac{1}{y^{\mathrm{T}}_kD_ky_k}" /></a></p>
+
+<p>至此，校正矩阵<a href="http://www.codecogs.com/eqnedit.php?latex=\Delta&space;D_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\Delta&space;D_k" title="\Delta D_k" /></a>就已经构造出来了</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=\Rightarrow&space;\Delta&space;D_k=\frac{s_ks_k^{\mathrm{T}}}{s_k^{\mathrm{T}}y_k}-\frac{D_ky_ky_k^{\mathrm{T}}D_k}{y_k^{\mathrm{T}}D_ky_k}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\Rightarrow&space;\Delta&space;D_k=\frac{s_ks_k^{\mathrm{T}}}{s_k^{\mathrm{T}}y_k}-\frac{D_ky_ky_k^{\mathrm{T}}D_k}{y_k^{\mathrm{T}}D_ky_k}" title="\Rightarrow \Delta D_k=\frac{s_ks_k^{\mathrm{T}}}{s_k^{\mathrm{T}}y_k}-\frac{D_ky_ky_k^{\mathrm{T}}D_k}{y_k^{\mathrm{T}}D_ky_k}" /></a></p>
+
+<h4>BFGS算法（Broyden–Fletcher–Goldfarb–Shanno algorithm）</h4>
+
+<p>核心公式的推导过程与DFP完全类似，只是互换了其中s{k}和y{k}的位置。BFGS直接逼近Hession矩阵B_k。(公式敲起来太累了，请自行推导)</p>
+
+<h4>LBFGS算法(limited-memory BFGS)</h4>
+
+<p>不再存储完整的D<em>k，而是存储计算过程中的向量序列{s}，{y}。当需要矩阵D</em>k时，利用向量序列的计算来代替。并且，向量序列也不是全部存储，而是固定存最新的m个。</p>
+
+<p>若要实现并行，需要同时在x与梯度（影响y的计算）那儿求一致平均。</p>
+
+<h3>资料</h3>
+
+<p>【1】<a href="http://en.wikipedia.org/wiki/Davidon%E2%80%93Fletcher%E2%80%93Powell_formula">DFP算法</a></p>
+
+<p>【2】<a href="http://en.wikipedia.org/wiki/Broyden%E2%80%93Fletcher%E2%80%93Goldfarb%E2%80%93Shanno_algorithm">BFGS算法</a></p>
+
+<p>【3】<a href="http://en.wikipedia.org/wiki/Limited-memory_BFGS">LBFGS算法</a></p>
+
+<p>【4】<a href="http://papers.nips.cc/paper/5333-large-scale-l-bfgs-using-mapreduce.pdf">Large-scale L-BFGS using MapReduce</a></p>
 
     </div>
     <hr>
@@ -660,7 +572,14 @@
 </div>
 
   </div>
+  <!-- 目录 -->
+  <div id="content_table" style="position:fixed;right:20px;top:120px;display:none;">
+    <div class="panel panel-success">
+      <div class="panel-body" id="nav"></div>
+    </div>
+  </div>
 </div>
+
 
           </div>
         </div>

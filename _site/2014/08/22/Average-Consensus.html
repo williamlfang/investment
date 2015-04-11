@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-<title>每个人的金线 | 价值投资者</title>
+<title>对于一致平均问题的理解 | 价值投资者</title>
 <meta name="author" content="William Fang">
 
-  <meta name="keywords" content="阅读，金线">
+  <meta name="keywords" content="矩阵补全，一致平均">
 
 
 <link rel="shortcut icon" href="http://williamlfang.github.com/investment//public/img/deer3.png" />
@@ -483,27 +483,63 @@
             <div class="row">
   <div class="col-md-13 aside3-title">
     <br>
-    <h2 id="#identifier">每个人的金线</h2>
-    2014年08月25日
+    <h2 id="#identifier">对于一致平均问题的理解</h2>
+    2014年08月22日
   </div>
   <div class="col-md-13 aside3-content">
     <hr>
     <div id="content">
-      <h3>文学的金线</h3>
+      <p>最近几个月在研究分布式低秩矩阵补全的问题，参考文章<a href="http://painterlin.com/2014/07/25/matrix-completion.html">《低秩矩阵补全》</a>。</p>
 
-<p>冯唐在《三十六大》里试图说明文学有“金线”。和音乐、美食、普世价值等等一样，尽管标准难以量化，优劣的判断也多半掺杂了人的主观，但文学始终是有一条金线存在的，达到了就是达到了，没达到就是没达到。“文章千古事，得失寸心知”。这条金线和文章的销量没有正相关的关系，在某些时代，甚至负相关。但这条文学的金线，两三千年来香火不绝地流传了下来，掌握在少数人手里。并且，冯唐认为，他就能够明眼看出这一条文学的金线。</p>
+<p>低秩矩阵补全问题的各类算法中，很关键的一个子问题叫做一致平均问题(Average Consensus)，而上一篇文章并没有对这个问题进行说明。那么，什么叫做“一致平均”呢？</p>
 
-<h3>手机的金线</h3>
+<h3>问题阐释：</h3>
 
-<p>王自如在对锤子手机T1的测评末尾，花费占总视频1/5的时间，强调如果抛开一切情怀的包装去看产品，平心而论，这部手机与罗永浩自己宣称的东半球最好用还相差甚远。虽然如此，仍有很多人会把自己想了但没做的情感寄托到这个想了也做了的人身上。如果活在罗永浩的“情怀”之内，那么所有关于产品的技术性的好与坏、对与错都会变得界限模糊。我反感用情怀去包装产品，也反感罗永浩这个人，私以为乔布斯的iPhone在金线之上，罗永浩的锤子在金线之下。但那群活在罗永浩情怀里的人，恐怕不会赞同。</p>
+<div>考虑一个有<img src="http://latex.codecogs.com/gif.latex?L" title="L" />个节点的网络，每个节点上存储一个关于自己的数值信息，叫做初值。一致平均问题就是使所有节点在算法停止的时候收敛到<img src="http://latex.codecogs.com/gif.latex?L" title="L" />个初值的平均。
+</div>
 
-<h3>生命的金线</h3>
+<div>在分布式算法中，通常会存在这样一个变量<img src="http://latex.codecogs.com/gif.latex?\mathbf{X}" title="\mathbf{X}" />，它作为公有信息在网络中传递，每个节点储存自己的<img src="http://latex.codecogs.com/gif.latex?\mathbf{X}_{(i)}" title="\mathbf{X}_{(i)}" />。在总算法的每一次迭代中，每个节点<img src="http://latex.codecogs.com/gif.latex?i" title="i" />接收自己邻居节点传递过来的公有信息，然后与自己的私有信息共同计算出新的公有信息，并传给自己的邻居。我们需要保证每个节点上的公有信息<img src="http://latex.codecogs.com/gif.latex?\mathbf{X}_{(i)}=\mathbf{X}_{(j)}" title="\mathbf{X}_{(i)}=\mathbf{X}_{(j)}" />，使分布的算法以某种方式交流合作，以便获得最优解。这就是分布式算法中的一致平均问题。</div>
 
-<p>有的人真的达到了，在我认同的金线之上；以同一条金线为准，有的人就是达不到，可对我你而言的达不到，就真的是没有达到吗？我希望我和冯唐的观点一致，但事实上我并不这么认为。<strong>云在青天，水在瓶，时光澄澈</strong>。如果说真理就在万物的自然常态中，那么人各有态，每个人都有自己笃定的金线，每种人的存在本身就是真理。人类用认知却获得自己看到的那条金线。而认知，却构筑在好奇心、生存环境、教育等诸多因素之上。各式各样的生命形态遍布地球，生命形态的金线，又是否存在？</p>
+<h3>问题分类：</h3>
 
-<p>梁启超对曾国藩的评价颇高，说曾文正公做到了“立德、立功、立言三并不朽”，文森特·梵高希望所有人都能看到他的画并因此感受到他的内心，不惜因此疯掉；阿来在《尘埃落定》里塑造的傻子，因为傻，反而能对大事做出超乎常人的正确决断，加西亚·马尔克斯的《百年孤独》中经历战争而变了个人的年老上校将所有的生命热力用于制作金鱼；痞子在酒肉中嫖赌，高僧鹤形仙眉隐于白云深处，或宏伟、或浪漫、甚至疯狂、不堪，这些生命形态，真的可以用一条金线去分割吗？不然。他们仅仅是以不同的形式存在而已，云在青天水在瓶，野猪在林，家猪在圈，蝼蚁在泥土，它们都在存在的金线之上。</p>
+<p>根据节点上的数值信息是否随时间变化，又把一致平均问题分为：</p>
 
-<p>万紫千红，各花入各眼。南北西东，各方自有人。既然存在着，虽不欲划分生命形态的三六九等，人活着的不同阶段也有不同的追求，情怀会变。但我想，每个人在自己老了之后，心里是会有条金线的，或准之以勤，或以诚，或以快乐，或以勇敢，或成就，或物质。回顾一生，达到或者没达到，各位看官，茶余饭后，不妨斟酌斟酌。</p>
+<ul>
+<li>静态一致平均 (Static average consensus)</li>
+<li>动态一致平均 (Dynamic average consensus)</li>
+</ul>
+
+<div>
+顾名思义，静态一致平均指节点上的初值不会发生变化，只需要保证最后每个节点都收敛到<img src="http://latex.codecogs.com/gif.latex?L" title="L" />个初值的平均值即可；而动态一致平均则是，节点上的数值不断发生变化，即<img src="http://latex.codecogs.com/gif.latex?\mathbf{X}_{(i)}" title="\mathbf{X}_{(i)}" />在<img src="http://latex.codecogs.com/gif.latex?t" title="t" />时刻的值并不一定与0时刻的值（初值）相同，我们使用不断变化的公有信息（因为公有信息不断在被更新），仍需要保证最后每个节点都收敛到<img src="http://latex.codecogs.com/gif.latex?L" title="L" />个初值的平均。相比于静态一致平均，动态一致平均问题更为棘手。
+</div>
+
+<h3>求解方法分类：</h3>
+
+<p>在文章《低秩矩阵补全》的最后，提供一种求解方法的分类概念，将方法分为：</p>
+
+<ul>
+<li>精确一致平均 (Exact average consensus)</li>
+<li>不精确一致平均 (Inexact average consensus)</li>
+</ul>
+
+<p>这又是什么意思呢？</p>
+
+<div>
+在解决分布式低秩矩阵补全问题的时候，我们将算法分解两个子问题不断求解，一是交替极小化(Alternating minimization)得到每个节点的新的<img src="http://latex.codecogs.com/gif.latex?\mathbf{X}" title="\mathbf{X}" />,<img src="http://latex.codecogs.com/gif.latex?\mathbf{Y}" title="\mathbf{Y}" />；二是在网络中对<img src="http://latex.codecogs.com/gif.latex?L" title="L" />个节点的<img src="http://latex.codecogs.com/gif.latex?\mathbf{X}" title="\mathbf{X}" />求一致平均。对于第二个子问题，在每一次算法总的迭代中，都去求解精确的一致平均显然能够解决问题，但是因为一致平均也需要一定次数的迭代才能被解除，如果在总算法的每一次迭代中都去求精确的一致平均，则相当耗费计算资源，增加了算法的时间复杂度。
+</div>
+
+<p>很自然地，我们会想到，既然一致平均只是矩阵补全的一个子问题，我们是不是可以通过某种松弛，来降低算法的时间复杂度并节省计算资源，同时仍旧保证总算法的收敛呢。这样，就提出了不精确的一致平均。</p>
+
+<div>
+不精确一致平均，就是在每一次求解一致平均子问题时，只迭代一次或者若干次，而不是迭代所有<img src="http://latex.codecogs.com/gif.latex?N" title="N" />次（<img src="http://latex.codecogs.com/gif.latex?N" title="N" />可以很大），使每个节点`近似`的达到它们初值的均值。
+</div>
+
+<h3>精确一致平均与不精确一致平均优缺点比较:</h3>
+
+<ul>
+<li>精确(Exact)求解：理论上容易证明，但计算代价通常比inexact方法高</li>
+<li>不精确(Inexact)求解：理论分析上不好证明，除此之外具有exact不具有的所有优点，比如算法时间复杂度低，节省计算资源等等。</li>
+</ul>
 
     </div>
     <hr>

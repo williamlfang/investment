@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-<title>每个人的金线 | 价值投资者</title>
+<title>牛顿法与拟牛顿法（DFP BFGS LBFGS VLBFGS） | 价值投资者</title>
 <meta name="author" content="William Fang">
 
-  <meta name="keywords" content="阅读，金线">
+  <meta name="keywords" content="拟牛顿法">
 
 
 <link rel="shortcut icon" href="http://williamlfang.github.com/investment//public/img/deer3.png" />
@@ -483,27 +483,95 @@
             <div class="row">
   <div class="col-md-13 aside3-title">
     <br>
-    <h2 id="#identifier">每个人的金线</h2>
-    2014年08月25日
+    <h2 id="#identifier">牛顿法与拟牛顿法（DFP BFGS LBFGS VLBFGS）</h2>
+    2015年03月23日
   </div>
   <div class="col-md-13 aside3-content">
     <hr>
     <div id="content">
-      <h3>文学的金线</h3>
+      <p>最近做LBFGS的并行，顺便把牛顿法、拟牛顿法顺理一下。</p>
 
-<p>冯唐在《三十六大》里试图说明文学有“金线”。和音乐、美食、普世价值等等一样，尽管标准难以量化，优劣的判断也多半掺杂了人的主观，但文学始终是有一条金线存在的，达到了就是达到了，没达到就是没达到。“文章千古事，得失寸心知”。这条金线和文章的销量没有正相关的关系，在某些时代，甚至负相关。但这条文学的金线，两三千年来香火不绝地流传了下来，掌握在少数人手里。并且，冯唐认为，他就能够明眼看出这一条文学的金线。</p>
+<p>拟牛顿法是求解非线性优化问题最有效的方法之一。考虑无约束的极小化问题<a href="http://www.codecogs.com/eqnedit.php?latex=\min\limits_x&space;f(x)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\min\limits_x&space;f(x)" title="\min\limits_x f(x)" /></a>，假设<a href="http://www.codecogs.com/eqnedit.php?latex=f(x)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?f(x)" title="f(x)" /></a>为凸函数，且二阶连续可导。</p>
 
-<h3>手机的金线</h3>
+<h3>原始牛顿法</h3>
 
-<p>王自如在对锤子手机T1的测评末尾，花费占总视频1/5的时间，强调如果抛开一切情怀的包装去看产品，平心而论，这部手机与罗永浩自己宣称的东半球最好用还相差甚远。虽然如此，仍有很多人会把自己想了但没做的情感寄托到这个想了也做了的人身上。如果活在罗永浩的“情怀”之内，那么所有关于产品的技术性的好与坏、对与错都会变得界限模糊。我反感用情怀去包装产品，也反感罗永浩这个人，私以为乔布斯的iPhone在金线之上，罗永浩的锤子在金线之下。但那群活在罗永浩情怀里的人，恐怕不会赞同。</p>
+<p>基本思想：在现有极小点估计值的附近对f(x)进行二阶泰勒展开，进而找到下一个极小点的估计值</p>
 
-<h3>生命的金线</h3>
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=x_{k&plus;1}=x_{k}-(H_k)^{-1}g_{k},&space;k=0,1,\cdots" target="_blank"><img src="http://latex.codecogs.com/gif.latex?x_{k&plus;1}=x_{k}-(H_k)^{-1}g_{k},&space;k=0,1,\cdots" title="x_{k+1}=x_{k}-(H_k)^{-1}g_{k}, k=0,1,\cdots" /></a></p>
 
-<p>有的人真的达到了，在我认同的金线之上；以同一条金线为准，有的人就是达不到，可对我你而言的达不到，就真的是没有达到吗？我希望我和冯唐的观点一致，但事实上我并不这么认为。<strong>云在青天，水在瓶，时光澄澈</strong>。如果说真理就在万物的自然常态中，那么人各有态，每个人都有自己笃定的金线，每种人的存在本身就是真理。人类用认知却获得自己看到的那条金线。而认知，却构筑在好奇心、生存环境、教育等诸多因素之上。各式各样的生命形态遍布地球，生命形态的金线，又是否存在？</p>
+<p>牛顿法具有二次收敛性，但当目标函数非二次型时，牛顿法不能保证函数稳定地下降（缺点）。</p>
 
-<p>梁启超对曾国藩的评价颇高，说曾文正公做到了“立德、立功、立言三并不朽”，文森特·梵高希望所有人都能看到他的画并因此感受到他的内心，不惜因此疯掉；阿来在《尘埃落定》里塑造的傻子，因为傻，反而能对大事做出超乎常人的正确决断，加西亚·马尔克斯的《百年孤独》中经历战争而变了个人的年老上校将所有的生命热力用于制作金鱼；痞子在酒肉中嫖赌，高僧鹤形仙眉隐于白云深处，或宏伟、或浪漫、甚至疯狂、不堪，这些生命形态，真的可以用一条金线去分割吗？不然。他们仅仅是以不同的形式存在而已，云在青天水在瓶，野猪在林，家猪在圈，蝼蚁在泥土，它们都在存在的金线之上。</p>
+<h3>阻尼牛顿法</h3>
 
-<p>万紫千红，各花入各眼。南北西东，各方自有人。既然存在着，虽不欲划分生命形态的三六九等，人活着的不同阶段也有不同的追求，情怀会变。但我想，每个人在自己老了之后，心里是会有条金线的，或准之以勤，或以诚，或以快乐，或以勇敢，或成就，或物质。回顾一生，达到或者没达到，各位看官，茶余饭后，不妨斟酌斟酌。</p>
+<p>每次迭代前需要沿迭代方向<a href="http://www.codecogs.com/eqnedit.php?latex=d_k=-(H_k)^{-1}g_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?d_k=-(H_k)^{-1}g_k" title="d_k=-(H_k)^{-1}g_k" /></a>做线搜索，寻求最优的步长因子<a href="http://www.codecogs.com/eqnedit.php?latex=\lambda_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\lambda_k" title="\lambda_k" /></a>，即</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=\lambda_k&space;=&space;\arg\min\limits_{\lambda}&space;f(x_k&plus;\lambda&space;d_k)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\lambda_k&space;=&space;\arg\min\limits_{\lambda}&space;f(x_k&plus;\lambda&space;d_k)" title="\lambda_k = \arg\min\limits_{\lambda} f(x_k+\lambda d_k)" /></a></p>
+
+<h3>拟牛顿法</h3>
+
+<p>基本思想：不使用二阶偏导数而构造出可以近似Hession或Hession的逆的正定对称阵，在“拟牛顿”的条件下优化目标函数。</p>
+
+<p>先推导拟牛顿条件：在<a href="http://www.codecogs.com/eqnedit.php?latex=x_{k&plus;1}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?x_{k&plus;1}" title="x_{k+1}" /></a>附近对<a href="http://www.codecogs.com/eqnedit.php?latex=f(x)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?f(x)" title="f(x)" /></a>做泰勒展开，取二阶近似项</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=f(x)=f(x_{k&plus;1})&plus;\nabla&space;f(x_{k&plus;1})(x-x_{k&plus;1})&plus;\frac{1}{2}(x-x_{k&plus;1})^T\nabla^2&space;f(x_{k&plus;1})(x-x_{k&plus;1})" target="_blank"><img src="http://latex.codecogs.com/gif.latex?f(x)=f(x_{k&plus;1})&plus;\nabla&space;f(x_{k&plus;1})(x-x_{k&plus;1})&plus;\frac{1}{2}(x-x_{k&plus;1})^T\nabla^2&space;f(x_{k&plus;1})(x-x_{k&plus;1})" title="f(x)=f(x_{k+1})+\nabla f(x_{k+1})(x-x_{k+1})+\frac{1}{2}(x-x_{k+1})^T\nabla^2 f(x_{k+1})(x-x_{k+1})" /></a>
+推出</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=\nabla&space;f(x)\approx&space;\nabla&space;f(x_{k&plus;1})&plus;H_{k&plus;1}(x-x_{k&plus;1})" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\nabla&space;f(x)\approx&space;\nabla&space;f(x_{k&plus;1})&plus;H_{k&plus;1}(x-x_{k&plus;1})" title="\nabla f(x)\approx \nabla f(x_{k+1})+H_{k+1}(x-x_{k+1})" /></a>
+取<a href="http://www.codecogs.com/eqnedit.php?latex=x=x_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?x=x_k" title="x=x_k" /></a>，推出</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=g_{k&plus;1}-g_{k}\approx&space;H_{k&plus;1}(x_{k&plus;1}-x_k)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?g_{k&plus;1}-g_{k}\approx&space;H_{k&plus;1}(x_{k&plus;1}-x_k)" title="g_{k+1}-g_{k}\approx H_{k+1}(x_{k+1}-x_k)" /></a></p>
+
+<p>引入记号 <a href="http://www.codecogs.com/eqnedit.php?latex=s_k=x_{k&plus;1}-x_{k},&space;y_k=g_{k&plus;1}-g_{k}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?s_k=x_{k&plus;1}-x_{k},&space;y_k=g_{k&plus;1}-g_{k}" title="s_k=x_{k+1}-x_{k}, y_k=g_{k+1}-g_{k}" /></a>， 推出</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=y_k=H_{k&plus;1}s_k&space;,&space;s_k=H^{-1}_{k&plus;1}y_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?y_k=H_{k&plus;1}s_k&space;,&space;s_k=H^{-1}_{k&plus;1}y_k" title="y_k=H_{k+1}s_k , s_k=H^{-1}_{k+1}y_k" /></a>(<code>拟牛顿条件</code>)</p>
+
+<p>它迭代过程中的hession矩阵做约束，因此，对hession对近似的<a href="http://www.codecogs.com/eqnedit.php?latex=B_{k&plus;1}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?B_{k&plus;1}" title="B_{k+1}" /></a>，以及对hession的逆做近似的<a href="http://www.codecogs.com/eqnedit.php?latex=D_{k&plus;1}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?D_{k&plus;1}" title="D_{k+1}" /></a>，可以将</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=y_{k}=B_{k&plus;1}s_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?y_{k}=B_{k&plus;1}s_k" title="y_{k}=B_{k+1}s_k" /></a> 或 <a href="http://www.codecogs.com/eqnedit.php?latex=s_{k}=D_{k&plus;1}y_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?s_{k}=D_{k&plus;1}y_k" title="s_{k}=D_{k+1}y_k" /></a> 作为指导。</p>
+
+<h4>DFP算法（Davidon–Fletcher–Powell formula）</h4>
+
+<p>核心：通过迭代的方法，对hession的逆做近似。迭代格式为</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=D_{k&plus;1}=D_k&plus;\Delta&space;D_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?D_{k&plus;1}=D_k&plus;\Delta&space;D_k" title="D_{k+1}=D_k+\Delta D_k" /></a>（通常<a href="http://www.codecogs.com/eqnedit.php?latex=D_0=I" target="_blank"><img src="http://latex.codecogs.com/gif.latex?D_0=I" title="D_0=I" /></a>）</p>
+
+<p>猜想<a href="http://www.codecogs.com/eqnedit.php?latex=\Delta&space;D_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\Delta&space;D_k" title="\Delta D_k" /></a>待定为<a href="http://www.codecogs.com/eqnedit.php?latex=\Delta&space;D_k=\alpha&space;\mathbf{u}&space;\mathbf{u}^{\mathrm{T}}&plus;\beta\mathbf{v}\mathbf{v}^{\mathrm{T}}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\Delta&space;D_k=\alpha&space;\mathbf{u}&space;\mathbf{u}^{\mathrm{T}}&plus;\beta\mathbf{v}\mathbf{v}^{\mathrm{T}}" title="\Delta D_k=\alpha \mathbf{u} \mathbf{u}^{\mathrm{T}}+\beta\mathbf{v}\mathbf{v}^{\mathrm{T}}" /></a>（具有对称性）</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=\Rightarrow&space;s_k=D_ky_k&plus;\alpha\mathbf{u}\mathbf{u}^{\mathrm{T}}y_k&plus;\beta\mathbf{v}\mathbf{v}^{\mathrm{T}}y_k=D_ky_k&plus;(\alpha\mathbf{u}^{\mathrm{T}}y_k)\mathbf{u}&plus;(\beta\mathbf{v}^{\mathrm{T}}y_k)\mathbf{v}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\Rightarrow&space;s_k=D_ky_k&plus;\alpha\mathbf{u}\mathbf{u}^{\mathrm{T}}y_k&plus;\beta\mathbf{v}\mathbf{v}^{\mathrm{T}}y_k=D_ky_k&plus;(\alpha\mathbf{u}^{\mathrm{T}}y_k)\mathbf{u}&plus;(\beta\mathbf{v}^{\mathrm{T}}y_k)\mathbf{v}" title="\Rightarrow s_k=D_ky_k+\alpha\mathbf{u}\mathbf{u}^{\mathrm{T}}y_k+\beta\mathbf{v}\mathbf{v}^{\mathrm{T}}y_k=D_ky_k+(\alpha\mathbf{u}^{\mathrm{T}}y_k)\mathbf{u}+(\beta\mathbf{v}^{\mathrm{T}}y_k)\mathbf{v}" /></a></p>
+
+<p>括号中是数值，将其分别简单赋值为1，-1，即</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=\alpha=\frac{1}{\mathbf{u}^{\mathrm{T}}y_k},\beta=-\frac{1}{\mathbf{v}^{\mathrm{T}}y_k}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\alpha=\frac{1}{\mathbf{u}^{\mathrm{T}}y_k},\beta=-\frac{1}{\mathbf{v}^{\mathrm{T}}y_k}" title="\alpha=\frac{1}{\mathbf{u}^{\mathrm{T}}y_k},\beta=-\frac{1}{\mathbf{v}^{\mathrm{T}}y_k}" /></a></p>
+
+<p>其中向量u,v仍有待确定，由上面</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=\Rightarrow&space;\mathbf{u}-\mathbf{v}=s_k-D_ky_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\Rightarrow&space;\mathbf{u}-\mathbf{v}=s_k-D_ky_k" title="\Rightarrow \mathbf{u}-\mathbf{v}=s_k-D_ky_k" /></a>（要此式成立，不妨直接取<a href="http://www.codecogs.com/eqnedit.php?latex=\mathbf{u}=s_k,\mathbf{v}=D_ky_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\mathbf{u}=s_k,\mathbf{v}=D_ky_k" title="\mathbf{u}=s_k,\mathbf{v}=D_ky_k" /></a>）</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=\Rightarrow&space;\alpha=\frac{1}{s^{\mathrm{T}}_ky_k},\beta=-\frac{1}{y^{\mathrm{T}}_kD_ky_k}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\Rightarrow&space;\alpha=\frac{1}{s^{\mathrm{T}}_ky_k},\beta=-\frac{1}{y^{\mathrm{T}}_kD_ky_k}" title="\Rightarrow \alpha=\frac{1}{s^{\mathrm{T}}_ky_k},\beta=-\frac{1}{y^{\mathrm{T}}_kD_ky_k}" /></a></p>
+
+<p>至此，校正矩阵<a href="http://www.codecogs.com/eqnedit.php?latex=\Delta&space;D_k" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\Delta&space;D_k" title="\Delta D_k" /></a>就已经构造出来了</p>
+
+<p><a href="http://www.codecogs.com/eqnedit.php?latex=\Rightarrow&space;\Delta&space;D_k=\frac{s_ks_k^{\mathrm{T}}}{s_k^{\mathrm{T}}y_k}-\frac{D_ky_ky_k^{\mathrm{T}}D_k}{y_k^{\mathrm{T}}D_ky_k}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\Rightarrow&space;\Delta&space;D_k=\frac{s_ks_k^{\mathrm{T}}}{s_k^{\mathrm{T}}y_k}-\frac{D_ky_ky_k^{\mathrm{T}}D_k}{y_k^{\mathrm{T}}D_ky_k}" title="\Rightarrow \Delta D_k=\frac{s_ks_k^{\mathrm{T}}}{s_k^{\mathrm{T}}y_k}-\frac{D_ky_ky_k^{\mathrm{T}}D_k}{y_k^{\mathrm{T}}D_ky_k}" /></a></p>
+
+<h4>BFGS算法（Broyden–Fletcher–Goldfarb–Shanno algorithm）</h4>
+
+<p>核心公式的推导过程与DFP完全类似，只是互换了其中s{k}和y{k}的位置。BFGS直接逼近Hession矩阵B_k。(公式敲起来太累了，请自行推导)</p>
+
+<h4>LBFGS算法(limited-memory BFGS)</h4>
+
+<p>不再存储完整的D<em>k，而是存储计算过程中的向量序列{s}，{y}。当需要矩阵D</em>k时，利用向量序列的计算来代替。并且，向量序列也不是全部存储，而是固定存最新的m个。</p>
+
+<p>若要实现并行，需要同时在x与梯度（影响y的计算）那儿求一致平均。</p>
+
+<h3>资料</h3>
+
+<p>【1】<a href="http://en.wikipedia.org/wiki/Davidon%E2%80%93Fletcher%E2%80%93Powell_formula">DFP算法</a></p>
+
+<p>【2】<a href="http://en.wikipedia.org/wiki/Broyden%E2%80%93Fletcher%E2%80%93Goldfarb%E2%80%93Shanno_algorithm">BFGS算法</a></p>
+
+<p>【3】<a href="http://en.wikipedia.org/wiki/Limited-memory_BFGS">LBFGS算法</a></p>
+
+<p>【4】<a href="http://papers.nips.cc/paper/5333-large-scale-l-bfgs-using-mapreduce.pdf">Large-scale L-BFGS using MapReduce</a></p>
 
     </div>
     <hr>

@@ -2,10 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-<title>每个人的金线 | 价值投资者</title>
+<title>LaTeX beamer制作幻灯片 | 价值投资者</title>
 <meta name="author" content="William Fang">
-
-  <meta name="keywords" content="阅读，金线">
 
 
 <link rel="shortcut icon" href="http://williamlfang.github.com/investment//public/img/deer3.png" />
@@ -483,27 +481,121 @@
             <div class="row">
   <div class="col-md-13 aside3-title">
     <br>
-    <h2 id="#identifier">每个人的金线</h2>
-    2014年08月25日
+    <h2 id="#identifier">LaTeX beamer制作幻灯片</h2>
+    2014年07月31日
   </div>
   <div class="col-md-13 aside3-content">
     <hr>
     <div id="content">
-      <h3>文学的金线</h3>
+      <p>用LaTeX beamer制作幻灯片简洁优美，在需要很多数学公式的情况下很实用。这里我用我的第一份LaTeX beamer幻灯片代码为例说明。学习使用任何一种语言编程时，最重要的是对整个代码框架的理解，本文重点讲框架。</p>
 
-<p>冯唐在《三十六大》里试图说明文学有“金线”。和音乐、美食、普世价值等等一样，尽管标准难以量化，优劣的判断也多半掺杂了人的主观，但文学始终是有一条金线存在的，达到了就是达到了，没达到就是没达到。“文章千古事，得失寸心知”。这条金线和文章的销量没有正相关的关系，在某些时代，甚至负相关。但这条文学的金线，两三千年来香火不绝地流传了下来，掌握在少数人手里。并且，冯唐认为，他就能够明眼看出这一条文学的金线。</p>
+<h3>代码框架理解</h3>
 
-<h3>手机的金线</h3>
+<p>beamer制作幻灯片的框架大致可分三级（其中for语句仅为便于理解，实际的LaTeX语句中并不会出现）如下：</p>
 
-<p>王自如在对锤子手机T1的测评末尾，花费占总视频1/5的时间，强调如果抛开一切情怀的包装去看产品，平心而论，这部手机与罗永浩自己宣称的东半球最好用还相差甚远。虽然如此，仍有很多人会把自己想了但没做的情感寄托到这个想了也做了的人身上。如果活在罗永浩的“情怀”之内，那么所有关于产品的技术性的好与坏、对与错都会变得界限模糊。我反感用情怀去包装产品，也反感罗永浩这个人，私以为乔布斯的iPhone在金线之上，罗永浩的锤子在金线之下。但那群活在罗永浩情怀里的人，恐怕不会赞同。</p>
+<ul>
+<li>定义文件类型</li>
+<li>放入所有需要使用的主题和包</li>
+<li>总的开始
 
-<h3>生命的金线</h3>
+<ul>
+<li>编辑幻灯片首页</li>
+<li>for i = 1,2,...,N
 
-<p>有的人真的达到了，在我认同的金线之上；以同一条金线为准，有的人就是达不到，可对我你而言的达不到，就真的是没有达到吗？我希望我和冯唐的观点一致，但事实上我并不这么认为。<strong>云在青天，水在瓶，时光澄澈</strong>。如果说真理就在万物的自然常态中，那么人各有态，每个人都有自己笃定的金线，每种人的存在本身就是真理。人类用认知却获得自己看到的那条金线。而认知，却构筑在好奇心、生存环境、教育等诸多因素之上。各式各样的生命形态遍布地球，生命形态的金线，又是否存在？</p>
+<ul>
+<li>开始编辑第i张幻灯片</li>
+<li>结束编辑第i张幻灯片</li>
+</ul></li>
+<li>end for</li>
+</ul></li>
+<li>总的结束</li>
+</ul>
 
-<p>梁启超对曾国藩的评价颇高，说曾文正公做到了“立德、立功、立言三并不朽”，文森特·梵高希望所有人都能看到他的画并因此感受到他的内心，不惜因此疯掉；阿来在《尘埃落定》里塑造的傻子，因为傻，反而能对大事做出超乎常人的正确决断，加西亚·马尔克斯的《百年孤独》中经历战争而变了个人的年老上校将所有的生命热力用于制作金鱼；痞子在酒肉中嫖赌，高僧鹤形仙眉隐于白云深处，或宏伟、或浪漫、甚至疯狂、不堪，这些生命形态，真的可以用一条金线去分割吗？不然。他们仅仅是以不同的形式存在而已，云在青天水在瓶，野猪在林，家猪在圈，蝼蚁在泥土，它们都在存在的金线之上。</p>
+<h3>一级结构代码</h3>
 
-<p>万紫千红，各花入各眼。南北西东，各方自有人。既然存在着，虽不欲划分生命形态的三六九等，人活着的不同阶段也有不同的追求，情怀会变。但我想，每个人在自己老了之后，心里是会有条金线的，或准之以勤，或以诚，或以快乐，或以勇敢，或成就，或物质。回顾一生，达到或者没达到，各位看官，茶余饭后，不妨斟酌斟酌。</p>
+<p>具体从代码看，首先是一级结构：</p>
+
+<p>```tex
+\documentclass[xcolor=dvipsnames]{beamer}  %定义文件类型
+\usetheme{Copenhagen}                      %此句及以下是我使用的主题和包
+\usecolortheme{wolverine}                       %颜色主题
+\usepackage{utopia}                             %字体
+\usecolortheme[named=brown]{structure}          %改变主题内嵌结构的颜色
+\usepackage{CJK}                                %中文包，如果全部英文可以不用</p>
+
+<p>\begin{document}                           %总的开始</p>
+
+<p>\end{document}                             %总的结束
+```</p>
+
+<h3>二级结构代码</h3>
+
+<p>在<code>总的开始</code>与<code>总的结束</code>之间写入如下代码，是二级结构：</p>
+
+<p>```tex
+\title[幻灯片缩略名]{幻灯片全名}           %以下是幻灯片首页的编辑
+\subtitle{副标题}
+\author{作者姓名}
+\institute{作者所属学校}
+\date[\initclock\tdtime]{\today}                     %总是显示当前的日期
+\logo{\includegraphics[height=10mm]{yellowdeer.jpg}} %这是我的logo，如果不需要删掉词句即可
+\begin{frame}
+\titlepage
+\end{frame}                                %幻灯片首页的编辑到此结束</p>
+
+<p>\begin{frame}                              %开始编辑第i张幻灯片</p>
+
+<p>\end{frame}                                %结束编辑第i张幻灯片</p>
+
+<p>```</p>
+
+<h3>三级结构代码</h3>
+
+<p>在<code>开始编辑第i张幻灯片</code>与<code>结束编辑第i张幻灯片</code>之间，写入第i张幻灯片的编辑代码，即三级结构。
+这里我以如下图所示的幻灯片的编辑代码为例说明一些基本的、常用的语法：</p>
+
+<p><img src="/public/img/slide_eg.JPG" alt="slide_eg"></p>
+
+<p><code>tex
+\begin{frame}{Decentralized low-rank matrix completion problem}  %大括号中是这页幻灯片的标题
+\begin{columns}[onlytextwidth]                                   %将幻灯片分为两栏
+\begin{column}{0.4\textwidth}                                    %开始左边的一栏，该栏占宽比为40%
+\includegraphics[height=40mm]{networki2.jpg}                     %插入图片，图片大小可通过高度自定义
+\begin{itemize}                                                  %开始列出清单
+\footnotesize \item A network of $L$ agents\\                    %清单第一项。其中\footnotesize控制字体大小
+\item Each agent $i$ observes some entries of $\mathbf{W}_{i}$   %清单第二项
+\end{itemize}                                                    %结束列出清单
+\end{column}                                                     %结束左边的这栏
+\begin{column}{0.6\textwidth}                                    %开始右边的一栏，与左栏类似
+\begin{itemize}
+\vbox{}                                                          %空一行
+\item Consider a low-rank matrix $\mathbf{W}$
+\scriptsize \begin{itemize}
+                   \item $\mathbf{W} \in \mathbb{R}^{N \times M}$
+                   \item $rank(\mathbf{W})\le r$
+                   \item $\mathbf{W}_{n,m}$ is known for $(n,m) \in \Omega$
+                   \item $\mathbf{W} = [\mathbf{W}_{1}, \mathbf{W}_{2}, ...,
+\mathbf{W}_{L}] $
+                 \end{itemize}
+\normalsize \vbox{}
+\item An estimate matrix of $\mathbf{W}$: $\mathbf{Z}$
+\scriptsize \begin{itemize}
+                \item $\mathbf{Z} \in \mathbb{R}^{N \times M}$
+                \item $rank(\mathbf{Z})\le r$
+                \item $\mathbf{Z}=\mathbf{X}\mathbf{Y}= \mathbf{X} [\mathbf{Y}_{1}, \mathbf{Y}_{2}, ..., \mathbf{Y}_{L}]$
+                \item $\mathbf{X}\in \mathbb{R}^{N \times r},\mathbf{Y} \in \mathbb{R}^{r \times M}$
+              \end{itemize}
+\end{itemize}
+\normalsize \vbox{}                                             %\normalize使字体恢复正常大小
+\end{column}                                                    %结束右边栏
+\end{columns}                                                   %结束分栏
+\end{frame}
+</code></p>
+
+<p>以上就是LaTex beamer制作幻灯片的主要内容。
+再次强调，在理解细节之前应先对代码框架有一个大的把握，具体编辑所需的语句可查阅书籍或互联网。</p>
+
+<p>其实一句话就可以概括啦：不断的begin，不断的end。</p>
 
     </div>
     <hr>

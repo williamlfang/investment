@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-<title>每个人的金线 | 价值投资者</title>
+<title>什么是 P, NP, NP-complete, NP-hard | 价值投资者</title>
 <meta name="author" content="William Fang">
 
-  <meta name="keywords" content="阅读，金线">
+  <meta name="keywords" content="概念，NPhard">
 
 
 <link rel="shortcut icon" href="http://williamlfang.github.com/investment//public/img/deer3.png" />
@@ -483,27 +483,61 @@
             <div class="row">
   <div class="col-md-13 aside3-title">
     <br>
-    <h2 id="#identifier">每个人的金线</h2>
-    2014年08月25日
+    <h2 id="#identifier">什么是 P, NP, NP-complete, NP-hard</h2>
+    2014年11月09日
   </div>
   <div class="col-md-13 aside3-content">
     <hr>
     <div id="content">
-      <h3>文学的金线</h3>
+      <h3>相关概念</h3>
 
-<p>冯唐在《三十六大》里试图说明文学有“金线”。和音乐、美食、普世价值等等一样，尽管标准难以量化，优劣的判断也多半掺杂了人的主观，但文学始终是有一条金线存在的，达到了就是达到了，没达到就是没达到。“文章千古事，得失寸心知”。这条金线和文章的销量没有正相关的关系，在某些时代，甚至负相关。但这条文学的金线，两三千年来香火不绝地流传了下来，掌握在少数人手里。并且，冯唐认为，他就能够明眼看出这一条文学的金线。</p>
+<p>NP-hard（non-deterministic polynomial-time hard）</p>
 
-<h3>手机的金线</h3>
+<ol>
+<li>P：能在多项式时间内解决</li>
+<li>NP：不能在多项式时间内解决或不确定能不能在多项式时间内解决，但一旦你找到一个解，只需要多项式时间去验证这个解是正确的</li>
+<li>NP-hard：如果一个问题是NP-hard，意味着可以将任意NP问题化约到这个问题。如果可以解这个问题，那么可以轻松地解任意NP问题。</li>
+<li>NPC：NP完全问题，所有NP问题在多项式时间内都能化约（Reducibility）到某一NP问题，这一NP问题就是NPC问题，即解决了此NPC问题，所有NP问题也都解决了。</li>
+</ol>
 
-<p>王自如在对锤子手机T1的测评末尾，花费占总视频1/5的时间，强调如果抛开一切情怀的包装去看产品，平心而论，这部手机与罗永浩自己宣称的东半球最好用还相差甚远。虽然如此，仍有很多人会把自己想了但没做的情感寄托到这个想了也做了的人身上。如果活在罗永浩的“情怀”之内，那么所有关于产品的技术性的好与坏、对与错都会变得界限模糊。我反感用情怀去包装产品，也反感罗永浩这个人，私以为乔布斯的iPhone在金线之上，罗永浩的锤子在金线之下。但那群活在罗永浩情怀里的人，恐怕不会赞同。</p>
+<h3>资料原文</h3>
 
-<h3>生命的金线</h3>
+<p>These refer to how long it takes a program to run.  Problems in class P can be solved with algorithms that run in <strong>polynomial time</strong>.</p>
 
-<p>有的人真的达到了，在我认同的金线之上；以同一条金线为准，有的人就是达不到，可对我你而言的达不到，就真的是没有达到吗？我希望我和冯唐的观点一致，但事实上我并不这么认为。<strong>云在青天，水在瓶，时光澄澈</strong>。如果说真理就在万物的自然常态中，那么人各有态，每个人都有自己笃定的金线，每种人的存在本身就是真理。人类用认知却获得自己看到的那条金线。而认知，却构筑在好奇心、生存环境、教育等诸多因素之上。各式各样的生命形态遍布地球，生命形态的金线，又是否存在？</p>
+<p>Say you have an algorithm that finds the smallest integer in an array.  One way to do this is by iterating over all the integers of the array and keeping track of the smallest number you&#39;ve seen up to that point.  Every time you look at an element, you compare it to the current minimum, and if it&#39;s smaller, you update the minimum.</p>
 
-<p>梁启超对曾国藩的评价颇高，说曾文正公做到了“立德、立功、立言三并不朽”，文森特·梵高希望所有人都能看到他的画并因此感受到他的内心，不惜因此疯掉；阿来在《尘埃落定》里塑造的傻子，因为傻，反而能对大事做出超乎常人的正确决断，加西亚·马尔克斯的《百年孤独》中经历战争而变了个人的年老上校将所有的生命热力用于制作金鱼；痞子在酒肉中嫖赌，高僧鹤形仙眉隐于白云深处，或宏伟、或浪漫、甚至疯狂、不堪，这些生命形态，真的可以用一条金线去分割吗？不然。他们仅仅是以不同的形式存在而已，云在青天水在瓶，野猪在林，家猪在圈，蝼蚁在泥土，它们都在存在的金线之上。</p>
+<p>How long does this take?  Let&#39;s say there are n elements in the array.  For every element the algorithm has to perform a constant number of operations.  Therefore we can say that the algorithm runs in O(n) time, or that the runtime is a linear function of how many elements are in the array.  So this algorithm runs in <strong>linear time</strong>.</p>
 
-<p>万紫千红，各花入各眼。南北西东，各方自有人。既然存在着，虽不欲划分生命形态的三六九等，人活着的不同阶段也有不同的追求，情怀会变。但我想，每个人在自己老了之后，心里是会有条金线的，或准之以勤，或以诚，或以快乐，或以勇敢，或成就，或物质。回顾一生，达到或者没达到，各位看官，茶余饭后，不妨斟酌斟酌。</p>
+<p>You can also have algorithms that run in <strong>quadratic time</strong> (O(n^2)), <strong>exponential time</strong> (O(2^n)), or even <strong>logarithmic time</strong> (O(log n)).  Binary search (on a balanced tree) runs in logarithmic time because the height of the binary search tree is a logarithmic function of the number of elements in the tree.</p>
+
+<p>If the running time is some polynomial function of the size of the input, for instance if the algorithm runs in linear time or quadratic time or cubic time, then we say the algorithm runs in <strong>polynomial time</strong> and the problem it solves is in class <strong>P</strong>.</p>
+
+<h3><strong>NP</strong></h3>
+
+<p>Now there are a lot of programs that don&#39;t (necessarily) run in polynomial time on a regular computer, but do run in polynomial time on a nondeterministic Turing machine.  These programs solve problems in <strong>NP</strong>, which stands for <strong>nondeterministic polynomial time</strong>.  A nondeterministic Turing machine can do everything a regular computer can and more. This means all problems in P are also in NP.</p>
+
+<p>An equivalent way to define NP is by pointing to the problems that can be verified in polynomial time.  This means there is not necessarily a polynomial-time way to find a solution, but once you have a solution it only takes polynomial time to verify that it is correct.</p>
+
+<p>Some people think P = NP, which means any problem that can be verified in polynomial time can also be solved in polynomial time and vice versa.  If they could prove this, it would revolutionize computer science because people would be able to construct faster algorithms for a lot of important problems.</p>
+
+<h3><strong>NP-hard</strong></h3>
+
+<p>What does NP-hard mean?  A lot of times you can solve a problem by reducing it to a different problem.  I can reduce Problem B to Problem A if, given a solution to Problem A, I can easily construct a solution to Problem B.  (In this case, &quot;easily&quot; means &quot;in polynomial time.&quot;)</p>
+
+<p>If a problem is <strong>NP-hard</strong>, this means I can reduce any problem in NP to that problem.  This means if I can solve that problem, I can easily solve any problem in NP.  If we could solve an NP-hard problem in polynomial time, this would prove P = NP.</p>
+
+<h3><strong>NP-complete</strong></h3>
+
+<p>A problem is <strong>NP-complete</strong> if the problem is both</p>
+
+<ul>
+<li>NP-hard, and</li>
+<li>in NP.</li>
+</ul>
+
+<h3>参考资料</h3>
+
+<p>【1】<a href="http://www.quora.com/What-are-P-NP-NP-complete-and-NP-hard">What are P, NP, NP-complete, and NP-hard?</a></p>
 
     </div>
     <hr>

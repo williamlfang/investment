@@ -17,10 +17,6 @@
 
   /page5/index.html
 
-  /page6/index.html
-
-  /page7/index.html
-
 
 
   /2015/03/23/Newton-QuasiNewton-Method.html
@@ -95,8 +91,6 @@
 
   /2013/01/28/Mung-Bean-Soup.html
 
-  /2013/01/28/Mung-Bean-Soup.html
-
   /2013/01/01/Book-List-2013.html
 
   /2012/12/31/To-my-friends.html
@@ -110,41 +104,5 @@
   /2011/01/01/Book-List-2011.html
 
   /2010/01/01/Book-List-2010.html
-
-  /2009/09/15/liu-nian.html
-
-  /2009/03/14/my-love-for-you.html
-
-  /2009/02/20/till-the-end.html
-
-  /2008/11/11/where-to-go.html
-
-  /2008/08/14/year-arournd.html
-
-  /2008/07/17/lost-in-shunde.html
-
-  /2008/05/31/thinking.html
-
-  /2008/05/28/confusing.html
-
-  /2008/05/21/waiting-for-you.html
-
-  /2008/03/24/lonely-dancing.html
-
-  /2008/03/13/together.html
-
-  /2007/12/10/living.html
-
-  /2007/11/14/strong.html
-
-  /2007/07/24/first-year-at-uni.html
-
-  /2007/05/25/healthy.html
-
-  /2007/05/19/losing-my-dear-time.html
-
-  /2007/05/19/always-there.html
-
-  /2007/05/18/lonely-words.html
 
   /2007/05/15/time-flying.html

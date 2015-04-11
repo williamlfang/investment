@@ -4,23 +4,23 @@ markdown: redcarpet
 
 # 作者信息
 author: 
-  name: Anya Lin
-  email: lay.1010@hotmail.com
-  link: http://painterlin.com
+  name: William Fang
+  email: william.lian.fang@gmail.com
+  # link:  
   weibo: http://weibo.com/orangeissweet
-  github: http://github.com/lay1010
-  music: http://site.douban.com/linanya
-  linkedin: https://www.linkedin.com/pub/anya-lin/81/91/232
+  github: http://github.com/williamlfang
+  # music: http://site.douban.com/linanya
+  # linkedin: https://www.linkedin.com/pub/anya-lin/81/91/232
 
 # 站点信息
 title: 林安亚的博客
-description: My personal blog
-url: http://williamlfang.github.com/investment
+description: Website for Investment
+url: http://williamlfang.github.com/investment         ## {{ site.url }}
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
-gavatar: /public/img/deer3.png
-favicon: /public/img/deer3.png
+gavatar: /public/img/deer3.png                         ##         
+favicon: /public/img/deer3.png                         ##
 
 # google analytics 设置
 ga:

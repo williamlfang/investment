@@ -37,7 +37,7 @@ active: 读书
 
 # 首页除了最新文章外显示分类
 cates: 
-  - Optimization
+  - Linux
   - LaTeX
 
 # 中文本地化

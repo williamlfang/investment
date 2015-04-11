@@ -784,49 +784,6 @@ $ git push --tags                       #上传所有标签
       </item>
     
       <item>
-        <title>黑椒牛排</title>
-        <link>http://painterlin.com/2014/11/02/Steak.html</link>
-        <guid isPermaLink="true">http://painterlin.com/2014/11/02/Steak.html</guid>
-        <pubDate>2014-11-02 00:00:00 +0800</pubDate>
-        <description>&lt;blockquote&gt;
-&lt;p&gt;“两个人吃的是饭，一个人吃的是饲料。”——日剧《最完美的离婚》&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;就算这样，那也要用心地吃饲料啊。&lt;/p&gt;
-
-&lt;h3&gt;材料&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;超市黑椒牛排&lt;/li&gt;
-&lt;li&gt;黑胡椒&lt;/li&gt;
-&lt;li&gt;橄榄油&lt;/li&gt;
-&lt;li&gt;西兰花&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3&gt;步骤&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;西兰花焯水，捞出备用。&lt;/li&gt;
-&lt;li&gt;锅内加入适量橄榄油，将准备好的西兰花加入锅内快速翻炒2分钟，装入盘内。&lt;/li&gt;
-&lt;li&gt;锅内加入适量橄榄油，大火将油加至7、8成热。&lt;/li&gt;
-&lt;li&gt;将牛排放入煎锅，以听到清脆的滋滋声为准来判断步骤3中油是否够热。&lt;/li&gt;
-&lt;li&gt;转为中火，每隔1~2分钟将牛排翻一次面，翻3~4次即可。（这一次的牛排厚度仅为13mm左右，如果牛排更厚，我觉得最多翻6次就够了。此时牛排外表焦香，里面不会渗血又够嫩。）&lt;/li&gt;
-&lt;li&gt;牛排装盘，撒上黑胡椒碎屑，不要急着切，静置2分钟，让牛肉吸足汤汁。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3&gt;完成&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/public/img/food/steak.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
-
-&lt;h3&gt;后记&lt;/h3&gt;
-
-&lt;p&gt;今天跑了12km，又搬家，又打扫卫生，直到煎好牛排全身发飘的时候才意识到：尼玛我就早上8点吃了2个手指饼啊有木有，真是饿成狗了，所以牛排做好立马风卷残云。&lt;/p&gt;
-
-&lt;p&gt;美味啊TT。&lt;/p&gt;
-</description>
-      </item>
-    
-      <item>
         <title>Yosemite OS X 10.10 Matlab 2012a停止工作的解决办法</title>
         <link>http://painterlin.com/2014/10/31/Yosemite-Matlab-Running-Error.html</link>
         <guid isPermaLink="true">http://painterlin.com/2014/10/31/Yosemite-Matlab-Running-Error.html</guid>
@@ -852,43 +809,6 @@ sudo ln -s /opt/X11/ /usr/X11
 &lt;h3&gt;参考文章&lt;/h3&gt;
 
 &lt;p&gt;[1]&lt;a href=&quot;http://brainsuite.org/quickstart/installation/mac/yosemite/&quot;&gt; running svreg and bdp on yosemite (os x 10.10)&lt;/a&gt;&lt;/p&gt;
-</description>
-      </item>
-    
-      <item>
-        <title>煎蛋吐司</title>
-        <link>http://painterlin.com/2014/10/29/Fried-Egg-Toast.html</link>
-        <guid isPermaLink="true">http://painterlin.com/2014/10/29/Fried-Egg-Toast.html</guid>
-        <pubDate>2014-10-29 00:00:00 +0800</pubDate>
-        <description>&lt;blockquote&gt;
-&lt;p&gt;“两个人吃的是饭，一个人吃的是饲料。”——日剧《最完美的离婚》&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;就算这样，那也要用心地吃饲料啊。&lt;/p&gt;
-
-&lt;h3&gt;材料&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;超醇厚片吐司&lt;/li&gt;
-&lt;li&gt;柴鸡蛋&lt;/li&gt;
-&lt;li&gt;花生油&lt;/li&gt;
-&lt;li&gt;玫瑰红糖膏，&lt;a href=&quot;https://haofeng.blog.ustc.edu.cn&quot;&gt;浩锋&lt;/a&gt;的贴心小礼物，专治手脚冰凉，及大姨妈痛，感动。&lt;/li&gt;
-&lt;li&gt;枣片&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3&gt;步骤&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;锅内倒入少许花生油，加至5成热&lt;/li&gt;
-&lt;li&gt;将鸡蛋打入，约10秒后在尚未凝固的鸡蛋上盖上吐司（盖上吐司前用锅铲将蛋黄刺破，可以形成薄而均匀的溏心鸡蛋，更加美味）&lt;/li&gt;
-&lt;li&gt;小火煎至鸡蛋完全凝固，并与吐司紧密贴合&lt;/li&gt;
-&lt;li&gt;用锅铲将吐司反面，小火煎至吐司变金黄色&lt;/li&gt;
-&lt;li&gt;出锅入盘，搭配玫瑰红糖膏，搭配枣片&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3&gt;完成&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/public/img/food/toast.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
 </description>
       </item>
     
@@ -1487,6 +1407,199 @@ shutdown -k now ‘The system will be reboot’    #仅发出警告，系统并�
 &lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;重启、关机：reboot，halt，poweroff。务必用man去查询一下。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Linux 0：实际问题</title>
+        <link>http://painterlin.com/2014/09/12/Linux-Problems.html</link>
+        <guid isPermaLink="true">http://painterlin.com/2014/09/12/Linux-Problems.html</guid>
+        <pubDate>2014-09-12 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;管理实验室服务器的大神师兄&lt;a href=&quot;&quot;&gt;苏宇&lt;/a&gt;毕业了，他将管理服务器的工作交给了我——对Linux和服务器管理毫无经验的小菜一枚。前几天师弟&lt;a href=&quot;https://yunpeng.blog.ustc.edu.cn&quot;&gt;段云鹏&lt;/a&gt;的一些机缘巧合的误操作导致服务器核崩溃，我却手足无措，请来&lt;a href=&quot;http://painterliu.com&quot;&gt;刘惠民&lt;/a&gt;童鞋帮着忙活了两晚，也没能复原系统。最后还是让苏神师兄回了学校一趟才解决问题。由此想了两件事：既然答应了负责管理服务器，就不能再以“浪费精力”、“没兴趣”等借口拒绝学习相关技术；人的时间与精力真的很有限，下一次给承诺之前，先想想自己是否花得起这份时间与精力。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://book.douban.com/subject/4889838/&quot;&gt;《鸟哥的Linux私房菜——基础学习篇》&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://book.douban.com/subject/2338464/&quot;&gt;《鸟哥的Linux私房菜——服务器架设篇》&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;本系列文章分为两部分：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;系统学习上面两本书的笔记。&lt;/li&gt;
+&lt;li&gt;实际中遇到的问题及解决方案，即本文内容。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;实际问题&lt;/h2&gt;
+
+&lt;h2&gt;1. 建立网络映射&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mac：&lt;code&gt;Finder&lt;/code&gt;-&amp;gt;&lt;code&gt;前往&lt;/code&gt;-&amp;gt;&lt;code&gt;连接服务器&lt;/code&gt;-&amp;gt;输入&lt;code&gt;smb://IPaddress/samba&lt;/code&gt;-&amp;gt;&lt;code&gt;连接&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Linux：&lt;code&gt;位置&lt;/code&gt;-&amp;gt;&lt;code&gt;连接服务器&lt;/code&gt;-&amp;gt;“服务类型”选择&lt;code&gt;自定义位置&lt;/code&gt;-&amp;gt;输入&lt;code&gt;smb://IPaddress/samba&lt;/code&gt;-&amp;gt;&lt;code&gt;连接&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;2. ssh登陆失败&lt;/h2&gt;
+
+&lt;p&gt;以root身份远程登陆服务器，密码正确，却显示如下警告：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;bash
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the RSA key sent by the remote host is
+3a:17:4b:6e:62:e6:94:df:09:78:99:90:51:68:18:62.
+Please contact your system administrator.
+Add correct host key in /Users/AnyaLin/.ssh/known_hosts to get rid of this message.
+Offending RSA key in /Users/AnyaLin/.ssh/known_hosts:4
+RSA host key for 222.195.93.129 has changed and you have requested strict checking.
+Host key verification failed.
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;解决方法：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;bash
+vi ~/.ssh/known_hosts     #选中最后一条登陆记录，双击`d`删除，按“：”进入末行编辑模式，输入“x”，回车
+ssh root@222.195.93.129   #再次登陆
+The authenticity of host &amp;#39;222.195.93.129 (222.195.93.129)&amp;#39; can&amp;#39;t be established.
+RSA key fingerprint is 3a:17:4b:6e:62:e6:94:df:09:78:99:90:51:68:18:62.
+Are you sure you want to continue connecting (yes/no)?    #输入yes
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2&gt;3. tar.gz 文件解压&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;打开终端&lt;/li&gt;
+&lt;li&gt;进入需要解压的xxxx.tar.gz文件所在目录&lt;/li&gt;
+&lt;li&gt;$ tar xvfz xxxx.tar.gz&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; HEAD&lt;/p&gt;
+
+&lt;h2&gt;4. 新建文件命令&lt;/h2&gt;
+
+&lt;p&gt;```
+touch a.txt&lt;/p&gt;
+
+&lt;h1&gt;```&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;cc60f2ed32a5f9727a68a2eb7f2f6a8a1eeac51a&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Matlab科研小贴士</title>
+        <link>http://painterlin.com/2014/09/11/Matlab-tips.html</link>
+        <guid isPermaLink="true">http://painterlin.com/2014/09/11/Matlab-tips.html</guid>
+        <pubDate>2014-09-11 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;使用MATLAB运行算法程序时，可能遇到各种各样的报错。比如，为了保护隐私数据，我在分布式矩阵补全算法中加入随机矩阵之后，某项变量在运行几百步之后会出现NaN报错。我只根据算法顺序去分析问题出现的可能原因，并修改程序。感觉并没有很好地利用MATLAB的强大功能去锁定症结所在。幸运的是，&lt;a href=&quot;http://home.ustc.edu.cn/%7Eshiwei00/index.html&quot;&gt;施伟&lt;/a&gt;大师兄当时和我在一起，他非常热心地帮我分析问题，教我以后遇到类似状况应该怎么去分析与思考。和大师兄讨论了半小时，感觉自己收获不少。&lt;/p&gt;
+
+&lt;p&gt;这篇文章会陆续记录下自己使用MATLAB的体会，以及解决问题的一些技巧。&lt;/p&gt;
+
+&lt;h3&gt;Clear&lt;/h3&gt;
+
+&lt;p&gt;运行一段代码前通常需要将工作空间里的已有数据清除掉。只需要在编辑有实际意义的代码之前写下如下代码：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;matlab
+clc; clear; close all;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;Random Seed&lt;/h3&gt;
+
+&lt;p&gt;为了保证程序在相同环境下运行以便测试某一个或几个改变对于算法的影响，在使用各种random命令时，需要设定固定种子。这样就不会因为每次随机产生的序列不同而影响程序运行结果。设置随机种子的代码如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;matlab
+%% random seed
+%seed=round(5000*rand);       % use this line if you set a random seed
+seed=3302;    % use this line if you set a fixed seed. 3302 can be replaced by other numbers.
+fprintf(&amp;#39;Seed = %d\n&amp;#39;,seed);  % print the current seed 
+if exist(&amp;#39;RandStream&amp;#39;,&amp;#39;file&amp;#39;)
+   RandStream.setGlobalStream(RandStream(&amp;#39;mt19937ar&amp;#39;,&amp;#39;seed&amp;#39;,seed));
+else
+   rand(&amp;#39;state&amp;#39;,seed); 
+   randn(&amp;#39;state&amp;#39;,seed^2);
+end
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;NaN&lt;/h3&gt;
+
+&lt;p&gt;NaN是Not a Number的缩写。当某变量显示NaN时，表示该变量是不明确的数值结果。比如0/0、inf/inf等运算会出现NaN报错。遇到这种情况，首先判断NaN出现在哪一步：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;matlab
+if isnan(norres)    %括号里是变量名。判断norres是否为NaN，若是，则在该步暂停程序。
+    keyboard;
+end
+&lt;/code&gt;
+再在命令窗里单独查看与该变量有关的其他变量，从而排除正常变量，获知究竟是哪个或哪几个变量出了问题，变为无穷大或无穷小。再检查与这些变量有关的算法。&lt;/p&gt;
+
+&lt;h3&gt;SaveAs&lt;/h3&gt;
+
+&lt;p&gt;若需要比较各参数对算法性能的影响，通常是在程序中修改参数运行，得到算法收敛精度与迭代次数的曲线图。再根据曲线图反向思考修改哪些参数有效。这个过程需要保存产生的大量图片。可以使用&lt;code&gt;hold on&lt;/code&gt;命令将所有虚线画在同一张图上，也可以使用&lt;code&gt;saveas&lt;/code&gt;将所有图片自动保存。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;matlab
+%% plot
+figure(1)
+semilogy(1:iter,y_axis(1:iter),&amp;#39;b-&amp;#39;);  %b：蓝色。－：线段形状
+set(gca,&amp;#39;fontsize&amp;#39;,12);
+grid on;
+xlabel(&amp;#39;\fontsize{12}\it Iteration&amp;#39;); ylabel(&amp;#39;\fontsize{12}\it Normalized residual&amp;#39;);
+legend(&amp;#39;\fontsize{12}\it text&amp;#39;);       %text：这条蓝色代表什么
+hold on
+saveas(gcf,&amp;#39;filename&amp;#39;,&amp;#39;fig&amp;#39;)           %filename：将图片保存为这个名字。fig：保存为fig格式
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;保存变量数据的命令：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+save(&amp;#39;filename&amp;#39;)
+save(&amp;#39;filename&amp;#39;,&amp;#39;variables&amp;#39;)
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;注意，在使用&lt;code&gt;hold on&lt;/code&gt;命令时，应该保留上次程序运行后产生的各种数据。即不能在程序中写类似与&lt;code&gt;clear all&lt;/code&gt;之类的清除语句，否则上次曲线图也将被删除。&lt;/p&gt;
+
+&lt;h3&gt;矩阵规范化&lt;/h3&gt;
+
+&lt;p&gt;已知满秩矩阵A，进行下面操作使其所有奇异值均为1。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;matlab
+[u s v]=svd(A);
+A=u*v&amp;#39;;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;安装CVX&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;将cvx压缩包解压&lt;/li&gt;
+&lt;li&gt;将cvx文件夹拷贝至如D:\MATLAB Programs\Compressed Sensing目录下&lt;/li&gt;
+&lt;li&gt;在Current Folder窗口中打开cvx文件夹&lt;/li&gt;
+&lt;li&gt;在Command Window中输入cvx_setup&lt;/li&gt;
+&lt;li&gt;在MATLAB的File菜单下的set path把此路径加上。&lt;/li&gt;
+&lt;li&gt;把路径加进去后在file→Preferences→General的Toolbox Path Caching里点击update Toolbox Path Cache更新一下&lt;/li&gt;
+&lt;li&gt;完成&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;%%分段运行程序&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;选中%%分段&lt;/li&gt;
+&lt;li&gt;右键选择&lt;code&gt;evaluate current section&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
       </item>
     

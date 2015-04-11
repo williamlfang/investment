@@ -39,11 +39,7 @@
 
   /2014/11/03/Coast.html
 
-  /2014/11/02/Steak.html
-
   /2014/10/31/Yosemite-Matlab-Running-Error.html
-
-  /2014/10/29/Fried-Egg-Toast.html
 
   /2014/10/07/Mac-Rar-Unrar.html
 
@@ -71,8 +67,6 @@
 
   /2014/08/22/Average-Consensus.html
 
-  /2014/08/16/Pig-Trotter.html
-
   /2014/08/12/Remote-Desk-from-Mac-to-Windows-PC.html
 
   /2014/08/10/Using-LaTeX-with-Sublime-and-Skim-for-Mac.html
@@ -94,10 +88,6 @@
   /2014/01/01/Book-List-2014.html
 
   /2013/12/31/Can-not.html
-
-  /2013/01/30/Fish.html
-
-  /2013/01/29/Fried-Lobster.html
 
   /2013/01/28/Mung-Bean-Soup.html
 

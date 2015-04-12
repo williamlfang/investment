@@ -20,7 +20,7 @@ sub_url: /investment
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
-gavatar: /investment/public/img/deer3.png                         ##         
+gavatar: /investment/public/img/william.png                         ##         
 favicon: /investment/public/img/deer3.png                         ##
 
 # google analytics 设置

@@ -19,6 +19,8 @@
 
 
 
+  /2015/04/12/ce-shi.html
+
   /2015/03/23/Newton-QuasiNewton-Method.html
 
   /2015/02/13/Cplus-on-MAC.html

@@ -6,6 +6,14 @@
     <description>Website for Investment</description>
     
       <item>
+        <title>测试</title>
+        <link>http://williamlfang.github.com//2015/04/12/ce-shi.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2015/04/12/ce-shi.html</guid>
+        <pubDate>2015-04-12 00:00:00 +0800</pubDate>
+        <description></description>
+      </item>
+    
+      <item>
         <title>牛顿法与拟牛顿法（DFP BFGS LBFGS VLBFGS）</title>
         <link>http://williamlfang.github.com//2015/03/23/Newton-QuasiNewton-Method.html</link>
         <guid isPermaLink="true">http://williamlfang.github.com//2015/03/23/Newton-QuasiNewton-Method.html</guid>
@@ -1395,98 +1403,6 @@ chmod       #改变文件的权限
 &lt;h3&gt;缺点：&lt;/h3&gt;
 
 &lt;p&gt;Markdown文件的易读性却因此下降了很多。&lt;/p&gt;
-</description>
-      </item>
-    
-      <item>
-        <title>Linux 1：登陆与在线求助man page</title>
-        <link>http://williamlfang.github.com//2014/09/13/Linux.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com//2014/09/13/Linux.html</guid>
-        <pubDate>2014-09-13 00:00:00 +0800</pubDate>
-        <description>&lt;h3&gt;查看内核版本&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;
-uname -r
-&lt;/code&gt;
-稳定版本的偶数版，如2.6.x，适合于商业与家用环境使用；开发中版本，如2.5.x，适合开发特殊功能的环境。&lt;/p&gt;
-
-&lt;h3&gt;登陆&lt;/h3&gt;
-
-&lt;p&gt;Mac：（若以root身份登陆，将username改为root）&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-ssh username@IPaddress
-&lt;/code&gt;
-Linux：(若以root身份登陆，将username删掉）Linux默认root的提示符为#,而一般身份用户的提示符为$。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-su - username
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3&gt;注销Linux&lt;/h3&gt;
-
-&lt;p&gt;注销Linux并不意味着关机，只是用户离开系统。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-exit
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3&gt;基础命令的操作&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;
-command [-options] parameter1 parameter2 ···
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-echo $LANG   #显示目前支持的语言
-LANG=en_US   #将语言改为英文系
-date         #显示日期与实践
-cal 10 2014  #显示日历
-bc           #计算器
-quit         #退出
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3&gt;重要的热键&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;[tab]&lt;/code&gt;：连按两次，具有“命令补全”和“文件补齐”的作用。
-&lt;code&gt;[control]+c&lt;/code&gt;：中断目前程序。
-&lt;code&gt;[control]+d&lt;/code&gt;：键盘输入结束；直接离开文字界面（相当于`&lt;code&gt;exit&lt;/code&gt;）。&lt;/p&gt;
-
-&lt;h3&gt;在线求助 man page&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;
-man command  #command是要查询的命令名称
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;进入man命令后，可按&lt;code&gt;空格&lt;/code&gt;往下翻页，按&lt;code&gt;q&lt;/code&gt;键离开。
-在man page中，可以在任何时候输入&lt;code&gt;/keyword&lt;/code&gt;来查询关键字，比如/date.&lt;/p&gt;
-
-&lt;h3&gt;正确的关机方法&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;
-who         #查看目前有谁在线
-netstat -a  #查看网络的联机状态
-ps -aux     #查看后台执行的程序
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;数据同步写入磁盘：为了防止不正常关机导致的内存数据没有来得及写入磁盘，在文字界面输入&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-sync 
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;惯用的关机命令：&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-shutdown -h now     #立刻关机
-shutdown -h 20:25   #晚上8点25分关机
-shutdown -h +10     #过十分钟后关机
-shutdown -r now     #立刻重启
-shutdown -r +30 ‘The system will be reboot’    #再过30分钟关机，并显示后面的消息给所有在线用户
-shutdown -k now ‘The system will be reboot’    #仅发出警告，系统并不会真正关机
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;重启、关机：reboot，halt，poweroff。务必用man去查询一下。&lt;/p&gt;
 </description>
       </item>
     

@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-<title>Linux 0：实际问题 | 价值投资者</title>
+<title>价值投资手册 | 价值投资者</title>
 <meta name="author" content="William Fang">
 
 
@@ -271,97 +271,15 @@
             <div class="row">
   <div class="col-md-13 aside3-title">
     <br>
-    <h2 id="#identifier">Linux 0：实际问题</h2>
-    2014年09月12日
+    <h2 id="#identifier">价值投资手册</h2>
+    2015年04月12日
   </div>
   <div class="col-md-13 aside3-content">
     <hr>
     <div id="content">
-      <p>管理实验室服务器的大神师兄<a href="">苏宇</a>毕业了，他将管理服务器的工作交给了我——对Linux和服务器管理毫无经验的小菜一枚。前几天师弟<a href="https://yunpeng.blog.ustc.edu.cn">段云鹏</a>的一些机缘巧合的误操作导致服务器核崩溃，我却手足无措，请来<a href="http://painterliu.com">刘惠民</a>童鞋帮着忙活了两晚，也没能复原系统。最后还是让苏神师兄回了学校一趟才解决问题。由此想了两件事：既然答应了负责管理服务器，就不能再以“浪费精力”、“没兴趣”等借口拒绝学习相关技术；人的时间与精力真的很有限，下一次给承诺之前，先想想自己是否花得起这份时间与精力。</p>
+      <h1>价值投资手册</h1>
 
-<ul>
-<li><a href="http://book.douban.com/subject/4889838/">《鸟哥的Linux私房菜——基础学习篇》</a></li>
-<li><a href="http://book.douban.com/subject/2338464/">《鸟哥的Linux私房菜——服务器架设篇》</a></li>
-</ul>
-
-<p>本系列文章分为两部分：</p>
-
-<ul>
-<li>系统学习上面两本书的笔记。</li>
-<li>实际中遇到的问题及解决方案，即本文内容。</li>
-</ul>
-
-<h2>实际问题</h2>
-
-<h2>1. 建立网络映射</h2>
-
-<ul>
-<li>Mac：<code>Finder</code>-&gt;<code>前往</code>-&gt;<code>连接服务器</code>-&gt;输入<code>smb://IPaddress/samba</code>-&gt;<code>连接</code></li>
-<li>Linux：<code>位置</code>-&gt;<code>连接服务器</code>-&gt;“服务类型”选择<code>自定义位置</code>-&gt;输入<code>smb://IPaddress/samba</code>-&gt;<code>连接</code></li>
-</ul>
-
-<h2>2. ssh登陆失败</h2>
-
-<p>以root身份远程登陆服务器，密码正确，却显示如下警告：</p>
-
-<p><code>bash
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
-Someone could be eavesdropping on you right now (man-in-the-middle attack)!
-It is also possible that a host key has just been changed.
-The fingerprint for the RSA key sent by the remote host is
-3a:17:4b:6e:62:e6:94:df:09:78:99:90:51:68:18:62.
-Please contact your system administrator.
-Add correct host key in /Users/AnyaLin/.ssh/known_hosts to get rid of this message.
-Offending RSA key in /Users/AnyaLin/.ssh/known_hosts:4
-RSA host key for 222.195.93.129 has changed and you have requested strict checking.
-Host key verification failed.
-</code></p>
-
-<p>解决方法：</p>
-
-<p><code>bash
-vi ~/.ssh/known_hosts     #选中最后一条登陆记录，双击`d`删除，按“：”进入末行编辑模式，输入“x”，回车
-ssh root@222.195.93.129   #再次登陆
-The authenticity of host &#39;222.195.93.129 (222.195.93.129)&#39; can&#39;t be established.
-RSA key fingerprint is 3a:17:4b:6e:62:e6:94:df:09:78:99:90:51:68:18:62.
-Are you sure you want to continue connecting (yes/no)?    #输入yes
-</code></p>
-
-<h2>3. tar.gz 文件解压</h2>
-
-<ul>
-<li>打开终端</li>
-<li>进入需要解压的xxxx.tar.gz文件所在目录</li>
-<li>$ tar xvfz xxxx.tar.gz</li>
-</ul>
-
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-
-<h2>4. 新建文件命令</h2>
-
-<p>```
-touch a.txt</p>
-
-<h1>```</h1>
-
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>cc60f2ed32a5f9727a68a2eb7f2f6a8a1eeac51a</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
+<p>使用量化投资可以带来超额收益率，而这不受投资策略的影响。</p>
 
     </div>
     <hr>

@@ -14,11 +14,1260 @@
       </item>
     
       <item>
-        <title>2011年阅读书单</title>
-        <link>http://williamlfang.github.com//2011/01/01/Book-List-2011.html</link>
-        <guid isPermaLink="true">http://williamlfang.github.com//2011/01/01/Book-List-2011.html</guid>
-        <pubDate>2011-01-01 00:00:00 +0800</pubDate>
-        <description></description>
+        <title>Mac以及Windows上搭建C++工作环境</title>
+        <link>http://williamlfang.github.com//2015/02/13/Cplus-on-MAC.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2015/02/13/Cplus-on-MAC.html</guid>
+        <pubDate>2015-02-13 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;实验室里我申请的垃圾老爷机被师弟玩坏了，弄了一天，最后发现根本就是硬件损伤，想把它砸掉！太坑了。&lt;/p&gt;
+
+&lt;p&gt;clang是osx自带的c,c++,objective-c编译器；gnu是常用的c++的轻量级编译器，在windows上通常是下载MinGW；sublime就不多说了；本文的目的就是搭建一个轻量级的C++编辑-编译-调试-运行环境。&lt;/p&gt;
+
+&lt;h2&gt;MAC上&lt;/h2&gt;
+
+&lt;h3&gt;方法一：&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;打开sublime，&lt;code&gt;command&lt;/code&gt;+&lt;code&gt;shift&lt;/code&gt;+&lt;code&gt;P&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;输入install，选择&lt;code&gt;install package&lt;/code&gt;，回车&lt;/li&gt;
+&lt;li&gt;输入sublimeClang，回车下载&lt;/li&gt;
+&lt;li&gt;编写一个简单的c++程序，保存为name.cpp&lt;/li&gt;
+&lt;li&gt;在terminal中，&lt;code&gt;clang++ name.cpp -o name&lt;/code&gt;或者&lt;code&gt;g++ name.cpp -o name&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;双击name运行&lt;/li&gt;
+&lt;li&gt;如果运行过程不需要输入数据，可以直接在sublime中&lt;code&gt;command&lt;/code&gt;+&lt;code&gt;shift&lt;/code&gt;+&lt;code&gt;B&lt;/code&gt;运行&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;方法二&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;AppStore中下载Xcode&lt;/li&gt;
+&lt;li&gt;使用这个IDE&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;WINDOWS上&lt;/h2&gt;
+
+&lt;h3&gt;方法一：&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;安装Installation Manager，运行，选择需要下载的组件，比如这里需要C++有关的组件&lt;/li&gt;
+&lt;li&gt;将MinGW的安装路径添加到环境变量中&lt;/li&gt;
+&lt;li&gt;cmd中输入&lt;code&gt;g++ -v&lt;/code&gt;来检测gnu是否安装成功&lt;/li&gt;
+&lt;li&gt;打开sublime text 3&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;preferences&lt;/code&gt;-&amp;gt;&lt;code&gt;browse packages&lt;/code&gt;-&amp;gt;&lt;code&gt;gcc&lt;/code&gt;(好像是这样，反正自己摸索就好了)&lt;/li&gt;
+&lt;li&gt;OK，完成&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;方法二：&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Visual Studio&lt;/li&gt;
+&lt;li&gt;使用该IDE&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;有用的资料&lt;/h3&gt;
+
+&lt;p&gt;【1】&lt;a href=&quot;https://www.cs.drexel.edu/%7Emcs171/Sp14/extras/g++/index.html&quot;&gt;Writing and Running C++ Programs in the UNIX Environment using g++&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;【2】&lt;a href=&quot;https://www.cs.drexel.edu/%7Emcs171/Sp14/extras/xCode_Instructions/index.html&quot;&gt;Writing and Running C++ Programs in the Mac OS X 10.4 Environment using xCode&lt;/a&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Git常用命令速查表</title>
+        <link>http://williamlfang.github.com//2015/01/30/Git-Resources.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2015/01/30/Git-Resources.html</guid>
+        <pubDate>2015-01-30 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;master: 默认开发分支&lt;/p&gt;
+
+&lt;p&gt;origin: 默认远程版本库&lt;/p&gt;
+
+&lt;p&gt;Head: 默认开发分支&lt;/p&gt;
+
+&lt;p&gt;Head^: Head的父提交&lt;/p&gt;
+
+&lt;h3&gt;创建版本库&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;
+$ git clone &amp;lt;url&amp;gt;   #克隆远程版本库
+$ git init          #初始化本地版本库
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;修改和提交&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;
+$ git status        #查看状态
+$ git diff          #查看变更内容
+$ git add .         #跟踪所有改动过的文件
+$ git add &amp;lt;file&amp;gt;    #跟踪指定的文件
+$ git mv &amp;lt;old&amp;gt;&amp;lt;new&amp;gt; #文件改名
+$ git rm&amp;lt;file&amp;gt;      #删除文件
+$ git rm --cached&amp;lt;file&amp;gt;            #停止跟踪文件但不删除
+$ git commit -m &amp;quot;commit messages&amp;quot;  #提交所有更新过的文件
+$ git commit --amend               #修改最后一次改动
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;查看提交历史&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;
+$ git log                    #查看提交历史
+$ git log -p &amp;lt;file&amp;gt;          #查看指定文件的提交历史
+$ git blame &amp;lt;file&amp;gt;           #以列表方式查看指定文件的提交历史
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;撤销&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;
+$ git reset --hard HEAD      #撤销工作目录中所有未提交文件的修改内容
+$ git checkout HEAD &amp;lt;file&amp;gt;   #撤销指定的未提交文件的修改内容
+$ git revert &amp;lt;commit&amp;gt;        #撤销指定的提交
+$ git log --before=&amp;quot;1 days&amp;quot;  #退回到之前1天的版本 
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;分支与标签&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;
+$ git branch                   #显示所有本地分支
+$ git checkout &amp;lt;branch/tag&amp;gt;    #切换到指定分支和标签
+$ git branch &amp;lt;new-branch&amp;gt;      #创建新分支
+$ git branch -d &amp;lt;branch&amp;gt;       #删除本地分支
+$ git tag                      #列出所有本地标签
+$ git tag &amp;lt;tagname&amp;gt;            #基于最新提交创建标签
+$ git tag -d &amp;lt;tagname&amp;gt;         #删除标签
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;合并与衍合&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;
+$ git merge &amp;lt;branch&amp;gt;        #合并指定分支到当前分支
+$ git rebase &amp;lt;branch&amp;gt;       #衍合指定分支到当前分支
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;远程操作&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;
+$ git remote -v                   #查看远程版本库信息
+$ git remote show &amp;lt;remote&amp;gt;        #查看指定远程版本库信息
+$ git remote add &amp;lt;remote&amp;gt; &amp;lt;url&amp;gt;   #添加远程版本库
+$ git fetch &amp;lt;remote&amp;gt;              #从远程库获取代码
+$ git pull &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;      #下载代码及快速合并
+$ git push &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;      #上传代码及快速合并
+$ git push &amp;lt;remote&amp;gt; :&amp;lt;branch/tag-name&amp;gt;  #删除远程分支或标签
+$ git push --tags                       #上传所有标签
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;资料链接&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://try.github.io/levels/1/challenges/1&quot;&gt;Try Git&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>在Mac上用LaTeX写漂亮的简历</title>
+        <link>http://williamlfang.github.com//2014/12/06/Make-resume-by-LaTeX.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/12/06/Make-resume-by-LaTeX.html</guid>
+        <pubDate>2014-12-06 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;&lt;img src=&quot;/public/img/posts/resume.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;你会搜索查看到这篇文章，相信就不需要我解释为什么要用LaTeX写Resume了：）&lt;/p&gt;
+
+&lt;p&gt;今晚报名Facebook China Tech Talk，最后一步需要上传简历。看着已经2年没有更新过的简历，好捉急。那时真是年轻，不舍得做减法，恨不能一张A4纸写尽一生。于是索性重新制作一份简历。&lt;/p&gt;
+
+&lt;h3&gt;需要准备&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;安装好的LaTeX，如果没有安装请参考&lt;a href=&quot;http://painterlin.com/2014/08/10/Using-LaTeX-with-Sublime-and-Skim-for-Mac.html&quot;&gt;在Mac上通过Sublime、Skim编辑LaTeX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;互联网&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;资料&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.rpi.edu/dept/arc/training/latex/resumes/&quot;&gt;Using the LaTeX Resume Templates&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.latextemplates.com/cat/curricula-vitae&quot;&gt;LaTeX Templates&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;步骤&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;在上述资料中寻找自己喜欢的模板&lt;/li&gt;
+&lt;li&gt;下载模板对应的tex文件&lt;/li&gt;
+&lt;li&gt;用LaTeX打开对应文件，编辑，编译&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这个时候，如果你使用的是Mac系统，非常不幸，大多数情况下都将编译失败。因为网上多数模板需要使用windows环境下的Tex应用程序，而Mac环境下MacTex应用程序会缺少部分文件。没关系，我们有办法解决。&lt;/p&gt;
+
+&lt;h3&gt;解决方案一：moderncv&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;进入&lt;a href=&quot;http://www.ctan.org/pkg/moderncv&quot;&gt;http://www.ctan.org/pkg/moderncv &lt;/a&gt;下载&lt;code&gt;moderncv package&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;解压，找到模板文件&lt;code&gt;template.tex&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;用已经安装好的LaTeX打开模板文件，编辑，编译，成功&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;但是呢，我个人觉得moderncv模板并不够好，虽然其结构清新简洁，但布局过于稀疏。没关系，我们仍然有办法。感谢一个我无意中发现的网站：ShareLaTeX.com&lt;/p&gt;
+
+&lt;h3&gt;解决方案二：ShareLaTeX.com&lt;/h3&gt;
+
+&lt;p&gt;也许你在上面的资料中找到了你最喜欢的模板，却苦于在Mac OS X系统下无法编译成功。这时可以求助于&lt;a href=&quot;https://www.sharelatex.com/&quot;&gt;ShareLaTeX&lt;/a&gt;，这是一个在线LaTeX编辑网站，并且提供&lt;code&gt;Resume&lt;/code&gt;,&lt;code&gt;Cover Letter&lt;/code&gt;,&lt;code&gt;Journal Article&lt;/code&gt;,&lt;code&gt;Presentation&lt;/code&gt;,&lt;code&gt;Thesis&lt;/code&gt;,&lt;code&gt;Bibliographies&lt;/code&gt;等不同分类的多种模板。最重要的一点事，只需要确定Latex语法无误，再也不需担心什么编译环境、文件缺失等乱七八糟的问题。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;进入&lt;a href=&quot;https://www.sharelatex.com/&quot;&gt;ShareLaTeX&lt;/a&gt;，注册账号&lt;/li&gt;
+&lt;li&gt;点击&lt;code&gt;New Project&lt;/code&gt;，选择&lt;code&gt;CV or Resume&lt;/code&gt;，挑选你喜欢的简历模板&lt;/li&gt;
+&lt;li&gt;根据自己的情况编辑，自动或手动编译，保存PDF&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;后记&lt;/h3&gt;
+
+&lt;p&gt;既然写到这里了，还想讲讲自己对于简历的体会。但我真的是困得不行了。。。。北京第一次不归夜。。。改天再来补全。。。。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>黑椒牛排</title>
+        <link>http://williamlfang.github.com//2014/11/02/Steak.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/11/02/Steak.html</guid>
+        <pubDate>2014-11-02 00:00:00 +0800</pubDate>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;“两个人吃的是饭，一个人吃的是饲料。”——日剧《最完美的离婚》&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;就算这样，那也要用心地吃饲料啊。&lt;/p&gt;
+
+&lt;h3&gt;材料&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;超市黑椒牛排&lt;/li&gt;
+&lt;li&gt;黑胡椒&lt;/li&gt;
+&lt;li&gt;橄榄油&lt;/li&gt;
+&lt;li&gt;西兰花&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;步骤&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;西兰花焯水，捞出备用。&lt;/li&gt;
+&lt;li&gt;锅内加入适量橄榄油，将准备好的西兰花加入锅内快速翻炒2分钟，装入盘内。&lt;/li&gt;
+&lt;li&gt;锅内加入适量橄榄油，大火将油加至7、8成热。&lt;/li&gt;
+&lt;li&gt;将牛排放入煎锅，以听到清脆的滋滋声为准来判断步骤3中油是否够热。&lt;/li&gt;
+&lt;li&gt;转为中火，每隔1~2分钟将牛排翻一次面，翻3~4次即可。（这一次的牛排厚度仅为13mm左右，如果牛排更厚，我觉得最多翻6次就够了。此时牛排外表焦香，里面不会渗血又够嫩。）&lt;/li&gt;
+&lt;li&gt;牛排装盘，撒上黑胡椒碎屑，不要急着切，静置2分钟，让牛肉吸足汤汁。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;完成&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/food/steak.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;后记&lt;/h3&gt;
+
+&lt;p&gt;今天跑了12km，又搬家，又打扫卫生，直到煎好牛排全身发飘的时候才意识到：尼玛我就早上8点吃了2个手指饼啊有木有，真是饿成狗了，所以牛排做好立马风卷残云。&lt;/p&gt;
+
+&lt;p&gt;美味啊TT。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Yosemite OS X 10.10 Matlab 2012a停止工作的解决办法</title>
+        <link>http://williamlfang.github.com//2014/10/31/Yosemite-Matlab-Running-Error.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/10/31/Yosemite-Matlab-Running-Error.html</guid>
+        <pubDate>2014-10-31 00:00:00 +0800</pubDate>
+        <description>&lt;h3&gt;问题描述&lt;/h3&gt;
+
+&lt;p&gt;OS X 系统更新到Yosemite后，Matlab 2012a就无法运行了。&lt;/p&gt;
+
+&lt;h3&gt;解决步骤&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;进入&lt;a href=&quot;http://xquartz.macosforge.org/landing/&quot;&gt;XQuartz&lt;/a&gt;下载&lt;code&gt;XQuartz-2.7.7.dmg&lt;/code&gt;，并安装更新。&lt;/li&gt;
+&lt;li&gt;打开Mac终端，执行命令：&lt;code&gt;
+sudo ln -s /opt/X11/ /usr/X11
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;下载并安装&lt;a href=&quot;http://support.apple.com/kb/DL1572&quot;&gt;Java 6&lt;/a&gt;更新。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;完成✌️&lt;/h3&gt;
+
+&lt;p&gt;OK，现在Matlab就能重新工作了。&lt;/p&gt;
+
+&lt;h3&gt;参考文章&lt;/h3&gt;
+
+&lt;p&gt;[1]&lt;a href=&quot;http://brainsuite.org/quickstart/installation/mac/yosemite/&quot;&gt; running svreg and bdp on yosemite (os x 10.10)&lt;/a&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>煎蛋吐司</title>
+        <link>http://williamlfang.github.com//2014/10/29/Fried-Egg-Toast.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/10/29/Fried-Egg-Toast.html</guid>
+        <pubDate>2014-10-29 00:00:00 +0800</pubDate>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;“两个人吃的是饭，一个人吃的是饲料。”——日剧《最完美的离婚》&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;就算这样，那也要用心地吃饲料啊。&lt;/p&gt;
+
+&lt;h3&gt;材料&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;超醇厚片吐司&lt;/li&gt;
+&lt;li&gt;柴鸡蛋&lt;/li&gt;
+&lt;li&gt;花生油&lt;/li&gt;
+&lt;li&gt;玫瑰红糖膏，&lt;a href=&quot;https://haofeng.blog.ustc.edu.cn&quot;&gt;浩锋&lt;/a&gt;的贴心小礼物，专治手脚冰凉，及大姨妈痛，感动。&lt;/li&gt;
+&lt;li&gt;枣片&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;步骤&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;锅内倒入少许花生油，加至5成热&lt;/li&gt;
+&lt;li&gt;将鸡蛋打入，约10秒后在尚未凝固的鸡蛋上盖上吐司（盖上吐司前用锅铲将蛋黄刺破，可以形成薄而均匀的溏心鸡蛋，更加美味）&lt;/li&gt;
+&lt;li&gt;小火煎至鸡蛋完全凝固，并与吐司紧密贴合&lt;/li&gt;
+&lt;li&gt;用锅铲将吐司反面，小火煎至吐司变金黄色&lt;/li&gt;
+&lt;li&gt;出锅入盘，搭配玫瑰红糖膏，搭配枣片&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;完成&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/food/toast.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Mac安装unrar和rar解压缩工具</title>
+        <link>http://williamlfang.github.com//2014/10/07/Mac-Rar-Unrar.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/10/07/Mac-Rar-Unrar.html</guid>
+        <pubDate>2014-10-07 00:00:00 +0800</pubDate>
+        <description>&lt;h3&gt;问题描述&lt;/h3&gt;
+
+&lt;p&gt;Mac不能解压rar文件，但实际中会需要这项功能。比如从邮件中的附件时常以rar文件格式传输。&lt;/p&gt;
+
+&lt;h3&gt;步骤&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;进入&lt;a href=&quot;http://www.rarlab.com/download.htm&quot;&gt;rarlab&lt;/a&gt;下载&lt;code&gt;RAR 5.20 beta 1 for Mac OS X&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;打开Mac终端，执行解压缩命令：tar xvfz rarosx-5.2.b1.tar进行解压&lt;/li&gt;
+&lt;li&gt;进入刚刚解压的rar目录中，cd downloads/rar&lt;/li&gt;
+&lt;li&gt;在rar目录下使用如下命令进行安装&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;code&gt;
+sudo install -c -o$USER unrar /bin
+sudo install -c -o$USER rar /bin
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;解压与压缩&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;
+unrar x filename.rar             #解压
+rar a archivename.rar filename   #压缩
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;后记&lt;/h3&gt;
+
+&lt;p&gt;为什么要折腾这个，因为今天收到一份rar格式的文件。
+转眼一年了，好快啊。这是要每年送我一个生日蛋糕的节奏吗？如果是的话，这篇博客需要每年更新一次。&lt;/p&gt;
+
+&lt;h4&gt;2013年&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/birthday/1.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+
+&lt;h4&gt;2014年&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/birthday/2.jpg&quot; alt=&quot;2&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;谢意&lt;/h3&gt;
+
+&lt;p&gt;蒲俊楠童鞋，阿里嘎多~&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Linux 4：磁盘与文件系统管理</title>
+        <link>http://williamlfang.github.com//2014/09/30/Linux4.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/09/30/Linux4.html</guid>
+        <pubDate>2014-09-30 00:00:00 +0800</pubDate>
+        <description>&lt;h3&gt;认识EXT2文件系统&lt;/h3&gt;
+
+&lt;p&gt;每种操作系统能够使用的文件系统并不相同。 举例来说，windows 98以前的微软操作系统主要利用的文件系统是&lt;code&gt;FAT(或FAT16)&lt;/code&gt;，windows 2000以后的版本有所谓的&lt;code&gt;NTFS&lt;/code&gt;文件系统，至于Linux的正统文件系统则为&lt;code&gt;Ext2&lt;/code&gt;(Linux second extended file system, ext2fs)这一个。此外，在默认的情况下，windows操作系统是不会认识Linux的Ext2的。&lt;/p&gt;
+
+&lt;p&gt;那么文件系统是如何运行的呢？这与操作系统的文件数据有关。较新的操作系统的文件数据除了文件实际内容外，通常含有非常多的属性，例如Linux操作系统的文件权限(rwx)与文件属性(拥有者、群组、时间参数等)。 文件系统通常会将这两部份的数据分别存放在不同的区块，权限与属性放置到&lt;code&gt;inode&lt;/code&gt;中，至于实际数据则放置到&lt;code&gt;data block&lt;/code&gt;区块中。 另外，还有一个超级区块(&lt;code&gt;superblock&lt;/code&gt;)会记录整个文件系统的整体信息，包括inode与block的总量、使用量、剩余量等。&lt;/p&gt;
+
+&lt;h3&gt;文件系统的简单操作&lt;/h3&gt;
+
+&lt;h3&gt;磁盘的分割、格式化、检验与挂载&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;磁盘分区： fdisk, partprobe&lt;/li&gt;
+&lt;li&gt;磁盘格式化： mkfs, mke2fs&lt;/li&gt;
+&lt;li&gt;磁盘检验： fsck, badblocks&lt;/li&gt;
+&lt;li&gt;磁盘挂载与卸除： mount, umount&lt;/li&gt;
+&lt;li&gt;磁盘参数修订： mknod, e2label, tune2fs, hdparm&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;配置启动挂载&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;启动挂载 /etc/fstab 及 /etc/mtab&lt;/li&gt;
+&lt;li&gt;特殊装置 loop 挂载(映象档不刻录就挂载使用)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;内存置换空间(swap)之建置&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;使用实体分割槽建置swap&lt;/li&gt;
+&lt;li&gt;使用文件建置swap&lt;/li&gt;
+&lt;li&gt;swap使用上的限制&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;文件系统的特殊观察与操作&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;boot sector 与 superblock 的关系&lt;/li&gt;
+&lt;li&gt;磁盘空间之浪费问题&lt;/li&gt;
+&lt;li&gt;利用 GNU 的 parted 进行分割行为&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;重点回顾&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;基本上 Linux 的正统文件系统为 Ext2 ，该文件系统内的信息主要有：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;superblock：记录此 filesystem 的整体信息，包括inode/block的总量、使用量、剩余量， 以及文件系统的格式与相关信息等；&lt;/li&gt;
+&lt;li&gt;inode：记录文件的属性，一个文件占用一个inode，同时记录此文件的数据所在的 block 号码；&lt;/li&gt;
+&lt;li&gt;block：实际记录文件的内容，若文件太大时，会占用多个 block 。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ext2 文件系统的数据存取为索引式文件系统(indexed allocation)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;需要碎片整理的原因就是文件写入的 block 太过于离散了，此时文件读取的效能将会变的很差所致。 这个时候可以透过碎片整理将同一个文件所属的 blocks 汇整在一起。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ext2文件系统主要有：boot sector, superblock, inode bitmap, block bitmap, inode table, data block 等六大部分。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;data block 是用来放置文件内容数据地方，在 Ext2 文件系统中所支持的 block 大小有 1K, 2K 及 4K 三种而已&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;inode 记录文件的属性/权限等数据，其他重要项目为： 每个 inode 大小均固定为 128 bytes； 每个文件都仅会占用一个 inode 而已； 因此文件系统能够创建的文件数量与 inode 的数量有关；&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;文件的 block 在记录文件的实际数据，目录的 block 则在记录该目录底下文件名与其 inode 号码的对照表；&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;日志式文件系统 (journal) 会多出一块记录区，随时记载文件系统的主要活动，可加快系统复原时间；&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Linux 文件系统为添加效能，会让主存储器作为大量的磁盘高速缓存；&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;实体链接只是多了一个文件名对该 inode 号码的链接而已；&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;符号链接就类似Windows的快捷方式功能。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;磁盘的使用必需要经过：分割、格式化与挂载，分别惯用的命令为：fdisk, mkfs, mount三个命令&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;启动自动挂载可参考/etc/fstab之配置，配置完毕务必使用 mount -a 测试语法正确否；&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;参考资料&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://vbird.dic.ksu.edu.tw/linux_basic/0230filesystem.php#harddisk&quot;&gt;鸟哥的Linux私房菜 第八章&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Linux 3：文件与目录管理</title>
+        <link>http://williamlfang.github.com//2014/09/19/Linux3.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/09/19/Linux3.html</guid>
+        <pubDate>2014-09-19 00:00:00 +0800</pubDate>
+        <description>&lt;h3&gt;目录的相关操作&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;
+.         # 代表此层目录
+..        # 代表上一层目录
+-         # 代表前一个工作目录
+~         # 代表『目前使用者身份』所在的家目录
+~account  # 代表 account 这个使用者的家目录(account是个帐号名称)
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;在所有目录底下都会存在的两个目录，分别是&lt;code&gt;.&lt;/code&gt;与&lt;code&gt;..&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;根目录的上一层&lt;code&gt;(..)&lt;/code&gt;与根目录自己&lt;code&gt;(.)&lt;/code&gt;是同一个目录&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;几个常见的处理目录的命令&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;cd：变换目录，cd是Change Directory的缩写&lt;/li&gt;
+&lt;li&gt;pwd：显示目前的目录，pwd是Print Working Directory的缩写&lt;/li&gt;
+&lt;li&gt;mkdir：创建一个新的目录&lt;/li&gt;
+&lt;li&gt;rmdir：删除一个空的目录&lt;/li&gt;
+&lt;li&gt;mv：移动文件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;
+pwd -P                   # -P：代表显示正确的完整路径，而不是连接路径
+mkdir -m xxx             # -m：直接配置文件的权限
+mkdir -p test1/test2     # -p：直接将所需要的目录(包含上一级目录)递回创建起来！
+PATH=&amp;quot;$PATH&amp;quot;:/root       # 将/root路径加入PATH环境变量中
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;文件与目录管理&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;文件与目录的检视： ls&lt;/li&gt;
+&lt;li&gt;复制、删除与移动： cp, rm, mv&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;
+cp -a        # 将文件的所有特性都一起复制过来
+cp -p        # 连同文件的属性一起复制过去，而非使用默认属性(备份常用)
+cp -r        # 可以复制目录，但是，文件与目录的权限可能会被改变
+rm -i        # 互动模式，在删除前会询问使用者是否动作
+rm -r        # 连目录下的东西一起删掉，并且不会询问，慎用
+mv -f        # force强制移动，如果目标文件已经存在，不会询问而直接覆盖
+mv -i        # 若目标文件 (destination) 已经存在时，就会询问是否覆盖
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;文件内容查询&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;直接检视文件内容： cat, tac, nl （常用）&lt;/li&gt;
+&lt;li&gt;可翻页检视： more, less （常用）&lt;/li&gt;
+&lt;li&gt;数据撷取： head, tail&lt;/li&gt;
+&lt;li&gt;非纯文字档： od&lt;/li&gt;
+&lt;li&gt;修改文件时间与建置新档： touch&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;
+cat [-AbEnTv] filename # 由第一行开始显示文件内容。-b列出非空白行行号；-n列出所有行号。
+tac                    # 从最后一行开始显示文件内容，tac就是cat倒着写！
+nl                     # 显示文件内容，顺便输出行号
+more                   # 一页一页地显示文件内容
+less                   # 与more类似，但可以往前翻页
+head [-n number]       # 只看文件头几行，默认是10行，number是自定义行数
+tail                   # 只看文件尾几行，文件很大的时候常用
+od                     # 以二进制方式读取文件内容
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;文件与目录的默认权限与隐藏权限&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;文件默认权限：umask&lt;/li&gt;
+&lt;li&gt;文件隐藏属性： chattr, lsattr&lt;/li&gt;
+&lt;li&gt;文件特殊权限：SUID, SGID, SBIT, 权限配置&lt;/li&gt;
+&lt;li&gt;观察文件类型：file&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;
+umask           # 后三位数是被拿走的权限分数，比如0022，u没有被拿走权限，g和o被拿走了w权限
+umask -S        # 以符号类型来显示权限
+umask number    # 配置自己需要的权限
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;在默认的情况中，root的umask会拿掉比较多的属性，root的umask默认是&lt;code&gt;022&lt;/code&gt;， 这是基於安全的考量啦～至於一般身份使用者，通常他们的 umask 为&lt;code&gt;002&lt;/code&gt; ，亦即保留同群组的写入权力。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;特殊权限&lt;code&gt;s&lt;/code&gt;和&lt;code&gt;t&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Set UID，简称SUID，当s标志在文件拥有者的x项目为SUID，对目录无效&lt;/li&gt;
+&lt;li&gt;Set GID，简称SGID，当s标志在群组的x项目为SGID，对目录有效&lt;/li&gt;
+&lt;li&gt;Sticky Bit, 简称SBIT，目前只针对目录有效，对於文件已经没有效果了&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;配置SUID,SGID,SBIT权限&lt;/h3&gt;
+
+&lt;p&gt;在原有的权限数字前面加上需要配置的权限数字。
+比如&lt;code&gt;755&lt;/code&gt;-&amp;gt;&lt;code&gt;4755&lt;/code&gt; ，就意味着&lt;code&gt;-rwxr-xr-x&lt;/code&gt;变为了&lt;code&gt;-rwsr-xr-x&lt;/code&gt;。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;4 为 SUID&lt;/li&gt;
+&lt;li&gt;2 为 SGID&lt;/li&gt;
+&lt;li&gt;1 为 SBIT&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;
+chmod 4755 filename
+chmod u=rwxs,go=x test; ls -l test      # 配置权限为-rws--x--x的模样
+chmod g+s,o+t test; ls -l test          # 配置权限为-rws--s--t，即加入SGID,SBIT权限
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;命令与文件的搜寻&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;命令档名的搜寻：which&lt;/li&gt;
+&lt;li&gt;文件档名的搜寻：whereis, locate, find&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;权限与命令的关系&lt;/h3&gt;
+
+&lt;h4&gt;一、让使用者能进入某目录成为『可工作目录』的基本权限为何：&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;可使用的命令：例如 cd 等变换工作目录的命令；&lt;/li&gt;
+&lt;li&gt;目录所需权限：使用者对这个目录至少需要具有 x 的权限&lt;/li&gt;
+&lt;li&gt;额外需求：如果使用者想要在这个目录内利用 ls 查阅档名，则使用者对此目录还需要 r 的权限。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;二、使用者在某个目录内读取一个文件的基本权限为何？&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;可使用的命令：例如本章谈到的 cat, more, less等等&lt;/li&gt;
+&lt;li&gt;目录所需权限：使用者对这个目录至少需要具有 x 权限；&lt;/li&gt;
+&lt;li&gt;文件所需权限：使用者对文件至少需要具有 r 的权限才行！&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;三、让使用者可以修改一个文件的基本权限为何？&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;可使用的命令：例如 nano 或未来要介绍的 vi 编辑器等；&lt;/li&gt;
+&lt;li&gt;目录所需权限：使用者在该文件所在的目录至少要有 x 权限；&lt;/li&gt;
+&lt;li&gt;文件所需权限：使用者对该文件至少要有 r, w 权限&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;四、让一个使用者可以创建一个文件的基本权限为何？&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;目录所需权限：使用者在该目录要具有 w,x 的权限，重点在 w 啦！&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;五、让使用者进入某目录并运行该目录下的某个命令之基本权限为何？&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;目录所需权限：使用者在该目录至少要有 x 的权限；&lt;/li&gt;
+&lt;li&gt;文件所需权限：使用者在该文件至少需要有 x 的权限&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Linux 2：文件权限与目录配置</title>
+        <link>http://williamlfang.github.com//2014/09/17/Linux2.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/09/17/Linux2.html</guid>
+        <pubDate>2014-09-17 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;Linux最优秀的地方之一，就在于它的多用户、多任务环境。Linux一般将文件可存取访问的身份分为3个类别，分别是owner（用户）、group（用户组）、others（其他人），且3种身份都各自有自己的read，write，execute等权限。&lt;/p&gt;
+
+&lt;h3&gt;用户身份与用户组记录的文件&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;
+\etc\passwd     #所有系统账号的相关信息
+\etc\shadow     #个人的密码
+\etc\group      #Linux所有的组名
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;文件权限概念&lt;/h3&gt;
+
+&lt;p&gt;当屏幕前面出现“Permission deny”的时候，肯定是权限设置错误。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+ls -al          #ls:list，列出所有文件的详细信息
+ls -l           #显示文件，属性的第一个字段是文件的权限，共10位，比如-rwxr-xr--，表示owner具有rwx权限，group具有rx权限，others只具有r权限
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;改变文件属性与权限&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;
+chgrp       #改变文件所属用户组，具体句法记得使用 man page 查询
+chown -R 用户账号:所在组群 文件名      #改变文件所有者
+chmod       #改变文件的权限
+&lt;/code&gt;
+其中，chmod修改权限的方法有两种，分别是符号法与数字法，数字法中r，w，x的数值分别是4，2，1。&lt;/p&gt;
+
+&lt;p&gt;要开放“目录”（注意不是“文件”）给任何人看，应该至少同时给予r和x权限，但w权限不可随便给予。&lt;/p&gt;
+
+&lt;h3&gt;文件种类与扩展名&lt;/h3&gt;
+
+&lt;p&gt;使用&lt;code&gt;ls -l&lt;/code&gt;查看到的十个字符中，第一个字符为文件的类型：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;-: 普通文件（regular file）&lt;/li&gt;
+&lt;li&gt;d: 目录文件（directory）&lt;/li&gt;
+&lt;li&gt;l: 连接文件，类似于windows的快捷方式（link）&lt;/li&gt;
+&lt;li&gt;b: 块设备文件（block）&lt;/li&gt;
+&lt;li&gt;c: 字符设备文件（character）&lt;/li&gt;
+&lt;li&gt;s: 套接字（sockets）&lt;/li&gt;
+&lt;li&gt;p: 管道（FIFO, pipe）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Linux目录配置标准：FHS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/linuxDIRTREE.gif&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;根据FHS的定义，最好将&lt;code&gt;/var&lt;/code&gt;独立出来，这样至少/var死掉的时候，根目录还活着，还能够进入救援模式。&lt;/p&gt;
+
+&lt;h3&gt;绝对路径与相对路径&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;cd/var/log(absolute)&lt;/li&gt;
+&lt;li&gt;cd../var/log(relative)&lt;/li&gt;
+&lt;li&gt;.: 代表当前的目录，也可以用./来表示&lt;/li&gt;
+&lt;li&gt;..: 代表上一层目录，也可以用../来表示&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;例子&lt;/h3&gt;
+
+&lt;p&gt;将install.log文件复制成为LAYtest.log，并且要给linanya这个人读写权限，可以这样做：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+[root@localhost ~]# cp install.log LAYtest.log     #若复制文件夹，用cp -r
+[root@localhost ~]# ls -al LAYtest.log 
+-rw-r--r-- 1 root root 62826 9月  17 15:19 LAYtest.log     #虽然完成了复制，但仍然是root的文件
+[root@localhost ~]# chown linanya LAYtest.log 
+[root@localhost ~]# ls -al LAYtest.log       
+-rw-r--r-- 1 linanya root 62826 9月  17 15:19 LAYtest.log  #文件变成linanya的
+[root@localhost ~]# 
+&lt;/code&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Markdown输入LaTeX数学公式</title>
+        <link>http://williamlfang.github.com//2014/09/16/Markdown-Math.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/09/16/Markdown-Math.html</guid>
+        <pubDate>2014-09-16 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;Markdown是读写性都非常好的轻量文本编辑语言，这个博客以及世界上许多博客的文章都是用其书写的。但是，在写“科研”博客时，难免会需要频繁地输入数学公式，而Markdown本身并不支持数学公式的输入。我曾经想偷懒直接用Markdown的语法去代替LaTeX数学公式，最后页面显示的结果有点儿丑。却一直也没有去修改。直到前天收到了&lt;a href=&quot;http://www.math.ucla.edu/%7Ewotaoyin/&quot;&gt;印卧涛&lt;/a&gt;老师的一封邮件，邮件里所有的数学公式都是用LaTeX代码写的，正规而美观。由此觉得自己做事还是水了点。做事要认真啊亲。&lt;/p&gt;
+
+&lt;p&gt;本文默认我们是会使用LaTeX编辑数学公式的。&lt;/p&gt;
+
+&lt;h3&gt;解决办法：&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;将数学公式以图片形式保存，再在Markdown中将其插入。&lt;/li&gt;
+&lt;li&gt;或者，使用LaTeX在线编辑器，输入数学公式，获得html代码，将其插入Markdown。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;步骤：&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;进入&lt;a href=&quot;http://www.codecogs.com/latex/eqneditor.php&quot;&gt;CodeCogs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;在盒子里书写公式&lt;/li&gt;
+&lt;li&gt;在页面下方复制html代码&lt;/li&gt;
+&lt;li&gt;将复制的html代码拷贝到Markdown里&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;缺点：&lt;/h3&gt;
+
+&lt;p&gt;Markdown文件的易读性却因此下降了很多。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Linux 1：登陆与在线求助man page</title>
+        <link>http://williamlfang.github.com//2014/09/13/Linux.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/09/13/Linux.html</guid>
+        <pubDate>2014-09-13 00:00:00 +0800</pubDate>
+        <description>&lt;h3&gt;查看内核版本&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;
+uname -r
+&lt;/code&gt;
+稳定版本的偶数版，如2.6.x，适合于商业与家用环境使用；开发中版本，如2.5.x，适合开发特殊功能的环境。&lt;/p&gt;
+
+&lt;h3&gt;登陆&lt;/h3&gt;
+
+&lt;p&gt;Mac：（若以root身份登陆，将username改为root）&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+ssh username@IPaddress
+&lt;/code&gt;
+Linux：(若以root身份登陆，将username删掉）Linux默认root的提示符为#,而一般身份用户的提示符为$。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+su - username
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;注销Linux&lt;/h3&gt;
+
+&lt;p&gt;注销Linux并不意味着关机，只是用户离开系统。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+exit
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;基础命令的操作&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;
+command [-options] parameter1 parameter2 ···
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+echo $LANG   #显示目前支持的语言
+LANG=en_US   #将语言改为英文系
+date         #显示日期与实践
+cal 10 2014  #显示日历
+bc           #计算器
+quit         #退出
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;重要的热键&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;[tab]&lt;/code&gt;：连按两次，具有“命令补全”和“文件补齐”的作用。
+&lt;code&gt;[control]+c&lt;/code&gt;：中断目前程序。
+&lt;code&gt;[control]+d&lt;/code&gt;：键盘输入结束；直接离开文字界面（相当于`&lt;code&gt;exit&lt;/code&gt;）。&lt;/p&gt;
+
+&lt;h3&gt;在线求助 man page&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;
+man command  #command是要查询的命令名称
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;进入man命令后，可按&lt;code&gt;空格&lt;/code&gt;往下翻页，按&lt;code&gt;q&lt;/code&gt;键离开。
+在man page中，可以在任何时候输入&lt;code&gt;/keyword&lt;/code&gt;来查询关键字，比如/date.&lt;/p&gt;
+
+&lt;h3&gt;正确的关机方法&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;
+who         #查看目前有谁在线
+netstat -a  #查看网络的联机状态
+ps -aux     #查看后台执行的程序
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;数据同步写入磁盘：为了防止不正常关机导致的内存数据没有来得及写入磁盘，在文字界面输入&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+sync 
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;惯用的关机命令：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+shutdown -h now     #立刻关机
+shutdown -h 20:25   #晚上8点25分关机
+shutdown -h +10     #过十分钟后关机
+shutdown -r now     #立刻重启
+shutdown -r +30 ‘The system will be reboot’    #再过30分钟关机，并显示后面的消息给所有在线用户
+shutdown -k now ‘The system will be reboot’    #仅发出警告，系统并不会真正关机
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;重启、关机：reboot，halt，poweroff。务必用man去查询一下。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Linux 0：实际问题</title>
+        <link>http://williamlfang.github.com//2014/09/12/Linux-Problems.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/09/12/Linux-Problems.html</guid>
+        <pubDate>2014-09-12 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;管理实验室服务器的大神师兄&lt;a href=&quot;&quot;&gt;苏宇&lt;/a&gt;毕业了，他将管理服务器的工作交给了我——对Linux和服务器管理毫无经验的小菜一枚。前几天师弟&lt;a href=&quot;https://yunpeng.blog.ustc.edu.cn&quot;&gt;段云鹏&lt;/a&gt;的一些机缘巧合的误操作导致服务器核崩溃，我却手足无措，请来&lt;a href=&quot;http://painterliu.com&quot;&gt;刘惠民&lt;/a&gt;童鞋帮着忙活了两晚，也没能复原系统。最后还是让苏神师兄回了学校一趟才解决问题。由此想了两件事：既然答应了负责管理服务器，就不能再以“浪费精力”、“没兴趣”等借口拒绝学习相关技术；人的时间与精力真的很有限，下一次给承诺之前，先想想自己是否花得起这份时间与精力。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://book.douban.com/subject/4889838/&quot;&gt;《鸟哥的Linux私房菜——基础学习篇》&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://book.douban.com/subject/2338464/&quot;&gt;《鸟哥的Linux私房菜——服务器架设篇》&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;本系列文章分为两部分：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;系统学习上面两本书的笔记。&lt;/li&gt;
+&lt;li&gt;实际中遇到的问题及解决方案，即本文内容。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;实际问题&lt;/h2&gt;
+
+&lt;h2&gt;1. 建立网络映射&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mac：&lt;code&gt;Finder&lt;/code&gt;-&amp;gt;&lt;code&gt;前往&lt;/code&gt;-&amp;gt;&lt;code&gt;连接服务器&lt;/code&gt;-&amp;gt;输入&lt;code&gt;smb://IPaddress/samba&lt;/code&gt;-&amp;gt;&lt;code&gt;连接&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Linux：&lt;code&gt;位置&lt;/code&gt;-&amp;gt;&lt;code&gt;连接服务器&lt;/code&gt;-&amp;gt;“服务类型”选择&lt;code&gt;自定义位置&lt;/code&gt;-&amp;gt;输入&lt;code&gt;smb://IPaddress/samba&lt;/code&gt;-&amp;gt;&lt;code&gt;连接&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;2. ssh登陆失败&lt;/h2&gt;
+
+&lt;p&gt;以root身份远程登陆服务器，密码正确，却显示如下警告：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;bash
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the RSA key sent by the remote host is
+3a:17:4b:6e:62:e6:94:df:09:78:99:90:51:68:18:62.
+Please contact your system administrator.
+Add correct host key in /Users/AnyaLin/.ssh/known_hosts to get rid of this message.
+Offending RSA key in /Users/AnyaLin/.ssh/known_hosts:4
+RSA host key for 222.195.93.129 has changed and you have requested strict checking.
+Host key verification failed.
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;解决方法：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;bash
+vi ~/.ssh/known_hosts     #选中最后一条登陆记录，双击`d`删除，按“：”进入末行编辑模式，输入“x”，回车
+ssh root@222.195.93.129   #再次登陆
+The authenticity of host &amp;#39;222.195.93.129 (222.195.93.129)&amp;#39; can&amp;#39;t be established.
+RSA key fingerprint is 3a:17:4b:6e:62:e6:94:df:09:78:99:90:51:68:18:62.
+Are you sure you want to continue connecting (yes/no)?    #输入yes
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2&gt;3. tar.gz 文件解压&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;打开终端&lt;/li&gt;
+&lt;li&gt;进入需要解压的xxxx.tar.gz文件所在目录&lt;/li&gt;
+&lt;li&gt;$ tar xvfz xxxx.tar.gz&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; HEAD&lt;/p&gt;
+
+&lt;h2&gt;4. 新建文件命令&lt;/h2&gt;
+
+&lt;p&gt;```
+touch a.txt&lt;/p&gt;
+
+&lt;h1&gt;```&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;cc60f2ed32a5f9727a68a2eb7f2f6a8a1eeac51a&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>黄豆焖猪手</title>
+        <link>http://williamlfang.github.com//2014/08/16/Pig-Trotter.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/08/16/Pig-Trotter.html</guid>
+        <pubDate>2014-08-16 00:00:00 +0800</pubDate>
+        <description>&lt;h3&gt;材料&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;黄豆300g&lt;/li&gt;
+&lt;li&gt;猪手2个&lt;/li&gt;
+&lt;li&gt;大葱3段&lt;/li&gt;
+&lt;li&gt;蒜4瓣&lt;/li&gt;
+&lt;li&gt;冰糖3坨&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;步骤&lt;/h3&gt;
+
+&lt;p&gt;我忘记了，回家咨询老妈后补上&lt;/p&gt;
+
+&lt;h3&gt;完成&lt;/h3&gt;
+
+&lt;p&gt;历时4小时的菜哦，这回做的是江浙口味，下次可以尝试重庆的火辣猪手，应该更好吃。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/food/pigtrotter.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Mac远程桌面连接Windows</title>
+        <link>http://williamlfang.github.com//2014/08/12/Remote-Desk-from-Mac-to-Windows-PC.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/08/12/Remote-Desk-from-Mac-to-Windows-PC.html</guid>
+        <pubDate>2014-08-12 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;在学习或者工作中，有时候需要远程控制Windows电脑。比如在家遇上暴雨天气，又急需使用办公室里的电脑，每当跋涉在雨中的时候，都希望可以远程控制。在生活中，也会有这样的时刻。比如远程帮助爸妈或者爷爷奶奶外公外婆解决一些电脑问题。&lt;/p&gt;
+
+&lt;p&gt;本文的目标就是，在完成所有步骤之后，可以从Mac OS X系统远程控制Windows电脑。&lt;/p&gt;
+
+&lt;h3&gt;准备工作：&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mac一台&lt;/li&gt;
+&lt;li&gt;Windows PC一台（这里用Windows 8系统的电脑）&lt;/li&gt;
+&lt;li&gt;互联网&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;第一步：在Mac上安装Remote Desktop Connection&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;进入&lt;a href=&quot;http://www.microsoft.com/en-us/download/details.aspx?id=18140&quot;&gt;Microsoft Remote Desktop Connection&lt;/a&gt;下载安装包。&lt;/li&gt;
+&lt;li&gt;下载完成之后，双击安装包进行安装。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;第二步：在Windows电脑上设置“远程设置”&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;右键“&lt;code&gt;我的电脑&lt;/code&gt;”，单击“&lt;code&gt;属性&lt;/code&gt;”，单击“&lt;code&gt;远程设置&lt;/code&gt;”&lt;/li&gt;
+&lt;li&gt;勾选“&lt;code&gt;允许远程协助连接这台计算机&lt;/code&gt;”，勾选“&lt;code&gt;允许远程连接到此计算机&lt;/code&gt;”&lt;/li&gt;
+&lt;li&gt;单击“&lt;code&gt;确定&lt;/code&gt;”退出&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;第三步：在Windows电脑上设置用户账户及密码（已设置过就跳过这一步）&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;进入“&lt;code&gt;控制面板&lt;/code&gt;”，进入“&lt;code&gt;用户账户&lt;/code&gt;”&lt;/li&gt;
+&lt;li&gt;设置账户名和密码，并牢记&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;第四步：查看Windows电脑的IP地址&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;将鼠标移动至屏幕最右侧，出现命令条，单击“&lt;code&gt;搜索&lt;/code&gt;”&lt;/li&gt;
+&lt;li&gt;输入“&lt;code&gt;cmd&lt;/code&gt;”并回车，这样就打开了命令提示符&lt;/li&gt;
+&lt;li&gt;在命令提示符里输入“&lt;code&gt;ipconfig&lt;/code&gt;”，回车&lt;/li&gt;
+&lt;li&gt;在输出中查看“&lt;code&gt;IPv4 地址&lt;/code&gt;”后面的数字串，就是Windows本机的IP（比如我家的192.168.1.112）。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;第五步：从Mac远程桌面连接到Windows&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;回到Mac，打开第一步中下载并安装好的&lt;code&gt;Remote Desktop Connection&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;窗口中输入第四步中查看到的Windows电脑IP地址（比如我就输入192.168.1.112）&lt;/li&gt;
+&lt;li&gt;点击“&lt;code&gt;连接&lt;/code&gt;”&lt;/li&gt;
+&lt;li&gt;输入第三步里设置的Windows电脑的用户账户名和密码&lt;/li&gt;
+&lt;li&gt;点击“&lt;code&gt;确定&lt;/code&gt;”（注意：在远程连接过程中Windows电脑必须保持开机状态，关机、待机或者锁屏状态都不行）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;恭喜，全部完成! ✌️&lt;/h3&gt;
+
+&lt;p&gt;OK，现在就稍微等待一下，我们已经完成了从Mac远程桌面控制Windows电脑，大概30秒之后就可以身在合肥，操作远在重庆的Windows电脑了。或者看着暴雨中浑身湿乎乎的人们然后心中暗爽一下。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>在Mac上通过Sublime、Skim编辑LaTeX</title>
+        <link>http://williamlfang.github.com//2014/08/10/Using-LaTeX-with-Sublime-and-Skim-for-Mac.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/08/10/Using-LaTeX-with-Sublime-and-Skim-for-Mac.html</guid>
+        <pubDate>2014-08-10 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;Sublime Text是一款非常优秀的编辑器，速度快，界面简洁，插件众多。并且能跨平台使用，在Mac和Windows上都能完美使用。虽然是一款付费软件，但作者很厚道地给了无限期的试用期限。这一切正如其官网广告词说的那样：The text editor you&amp;#39;ll fall in love with.&lt;/p&gt;
+
+&lt;p&gt;Skim是一款免费轻量的PDF阅读、标注工具，布局贴心友好，与OS X自带的Previewer相比，Skim能更好的注释PDF文件。&lt;/p&gt;
+
+&lt;p&gt;LaTeX是一款权威的科技论文排版软件，不仅可以写论文，也可以处理日常的各种文档工作，甚至是做幻灯片。相比于Word，LaTeX最大的优势是对于复杂公式的编辑与排版非常漂亮。并且用简单的命令就可以生成脚注、索引、目录和参考文献等复杂的结构。这一切优点都使得世界上众多的“科学家”们不再需要身兼作者与排版工两职，从而将更多的精力集中于文章内容本身。&lt;/p&gt;
+
+&lt;p&gt;本文的目的是将上述三种软件综合部署在Mac上。完成之后，你将可以在Sublime Text里面进行LaTeX代码编辑，用Skim预览生成的PDF文件。更重要的是，让你觉得，写论文也可以是一件很优美的事。&lt;/p&gt;
+
+&lt;h3&gt;准备工作：&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mac上至少4GB的空余空间&lt;/li&gt;
+&lt;li&gt;高速的互联网连接&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;第一步：安装MacTeX&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;进入&lt;a href=&quot;http://www.tug.org/mactex&quot;&gt;MacTeX官网&lt;/a&gt;下载&lt;code&gt;MacTeX.pkg&lt;/code&gt;文件。文件大约2GB，需要一段时间才能完成下载，趁现在去喝杯咖啡吧。&lt;/li&gt;
+&lt;li&gt;下载完成之后，双击&lt;code&gt;MacTeX.pkg&lt;/code&gt;进行安装。&lt;/li&gt;
+&lt;li&gt;安装完成之后，会看到许多与TeX有关的程序图标，暂时忽略它们。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;第二步：安装Sublime Text&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;进入&lt;a href=&quot;http://www.sublimetext.com&quot;&gt;Sublime Text官网&lt;/a&gt;下载最新版本的Sublime Text。这里我下载的是Sublime Text 3.&lt;/li&gt;
+&lt;li&gt;下载完成之后，将文件拖入应用程序文件夹安装。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;第三步：在Sublime Text中安装Package Control&lt;/h3&gt;
+
+&lt;p&gt;我们需要在Sublime Text中下载插件以便能够很好地操作与LaTeX有关的文件。而插件是通过Package Control下载的。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;进入&lt;a href=&quot;http://sublime.wbond.net/installation&quot;&gt;Package Control官网&lt;/a&gt;复制灰色区块的代码。&lt;/li&gt;
+&lt;li&gt;打开Sublime Text。&lt;/li&gt;
+&lt;li&gt;使用快捷键“&lt;code&gt;control+~&lt;/code&gt;”（~就在Esc键的下方）打开控制面板Console。你会在Sublime Text的底部看到弹出一个白色窗口。&lt;/li&gt;
+&lt;li&gt;将刚才复制的代码粘贴到控制面板。&lt;/li&gt;
+&lt;li&gt;按下“&lt;code&gt;Enter&lt;/code&gt;”回车键。然后退出并重启Sublime Text。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;第四步：安装LaTeX Tools&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sublime Text重启后，按下“&lt;code&gt;Command+Shift+P&lt;/code&gt;”打开命令托盘Command pallet，这一步也可以通过Tools下拉菜单完成。&lt;/li&gt;
+&lt;li&gt;在命令托盘里输入“&lt;code&gt;Install Package&lt;/code&gt;”，按下&lt;code&gt;Enter&lt;/code&gt;回车建。&lt;/li&gt;
+&lt;li&gt;完成之后，输入“&lt;code&gt;LaTeX Tools&lt;/code&gt;”，找到这一项并回车安装。&lt;/li&gt;
+&lt;li&gt;退出并重启Sublime Text。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;第五步：安装Skim&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;进&lt;a href=&quot;http://skim-app.sourceforge.net&quot;&gt;Skim&lt;/a&gt;下载Skim并安装&lt;/li&gt;
+&lt;li&gt;打开Skim，在菜单栏中&lt;code&gt;Skim &amp;gt; Preference(选项) &amp;gt; Sync(同步)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在预设菜单中选择&lt;code&gt;Sublime Text&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/skim.png&quot; alt=&quot;skim&quot;&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;关闭上面这个窗口。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;全部完成，✌️&lt;/h3&gt;
+
+&lt;p&gt;现在，我们已经做完了所有的步骤，可以打开Sublime Text，&lt;code&gt;Command+N&lt;/code&gt;新建文件并在里面编写LaTeX代码了，完成编辑之后，&lt;code&gt;Command+S&lt;/code&gt;保存文件，&lt;code&gt;Command+B&lt;/code&gt;编译并运行，这时就可以在Skim里面看到PDF预览了。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>LaTeX beamer制作幻灯片</title>
+        <link>http://williamlfang.github.com//2014/07/31/LaTeX-beamer-slides.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2014/07/31/LaTeX-beamer-slides.html</guid>
+        <pubDate>2014-07-31 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;用LaTeX beamer制作幻灯片简洁优美，在需要很多数学公式的情况下很实用。这里我用我的第一份LaTeX beamer幻灯片代码为例说明。学习使用任何一种语言编程时，最重要的是对整个代码框架的理解，本文重点讲框架。&lt;/p&gt;
+
+&lt;h3&gt;代码框架理解&lt;/h3&gt;
+
+&lt;p&gt;beamer制作幻灯片的框架大致可分三级（其中for语句仅为便于理解，实际的LaTeX语句中并不会出现）如下：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;定义文件类型&lt;/li&gt;
+&lt;li&gt;放入所有需要使用的主题和包&lt;/li&gt;
+&lt;li&gt;总的开始
+
+&lt;ul&gt;
+&lt;li&gt;编辑幻灯片首页&lt;/li&gt;
+&lt;li&gt;for i = 1,2,...,N
+
+&lt;ul&gt;
+&lt;li&gt;开始编辑第i张幻灯片&lt;/li&gt;
+&lt;li&gt;结束编辑第i张幻灯片&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;end for&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;总的结束&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;一级结构代码&lt;/h3&gt;
+
+&lt;p&gt;具体从代码看，首先是一级结构：&lt;/p&gt;
+
+&lt;p&gt;```tex
+\documentclass[xcolor=dvipsnames]{beamer}  %定义文件类型
+\usetheme{Copenhagen}                      %此句及以下是我使用的主题和包
+\usecolortheme{wolverine}                       %颜色主题
+\usepackage{utopia}                             %字体
+\usecolortheme[named=brown]{structure}          %改变主题内嵌结构的颜色
+\usepackage{CJK}                                %中文包，如果全部英文可以不用&lt;/p&gt;
+
+&lt;p&gt;\begin{document}                           %总的开始&lt;/p&gt;
+
+&lt;p&gt;\end{document}                             %总的结束
+```&lt;/p&gt;
+
+&lt;h3&gt;二级结构代码&lt;/h3&gt;
+
+&lt;p&gt;在&lt;code&gt;总的开始&lt;/code&gt;与&lt;code&gt;总的结束&lt;/code&gt;之间写入如下代码，是二级结构：&lt;/p&gt;
+
+&lt;p&gt;```tex
+\title[幻灯片缩略名]{幻灯片全名}           %以下是幻灯片首页的编辑
+\subtitle{副标题}
+\author{作者姓名}
+\institute{作者所属学校}
+\date[\initclock\tdtime]{\today}                     %总是显示当前的日期
+\logo{\includegraphics[height=10mm]{yellowdeer.jpg}} %这是我的logo，如果不需要删掉词句即可
+\begin{frame}
+\titlepage
+\end{frame}                                %幻灯片首页的编辑到此结束&lt;/p&gt;
+
+&lt;p&gt;\begin{frame}                              %开始编辑第i张幻灯片&lt;/p&gt;
+
+&lt;p&gt;\end{frame}                                %结束编辑第i张幻灯片&lt;/p&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;h3&gt;三级结构代码&lt;/h3&gt;
+
+&lt;p&gt;在&lt;code&gt;开始编辑第i张幻灯片&lt;/code&gt;与&lt;code&gt;结束编辑第i张幻灯片&lt;/code&gt;之间，写入第i张幻灯片的编辑代码，即三级结构。
+这里我以如下图所示的幻灯片的编辑代码为例说明一些基本的、常用的语法：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/slide_eg.JPG&quot; alt=&quot;slide_eg&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;tex
+\begin{frame}{Decentralized low-rank matrix completion problem}  %大括号中是这页幻灯片的标题
+\begin{columns}[onlytextwidth]                                   %将幻灯片分为两栏
+\begin{column}{0.4\textwidth}                                    %开始左边的一栏，该栏占宽比为40%
+\includegraphics[height=40mm]{networki2.jpg}                     %插入图片，图片大小可通过高度自定义
+\begin{itemize}                                                  %开始列出清单
+\footnotesize \item A network of $L$ agents\\                    %清单第一项。其中\footnotesize控制字体大小
+\item Each agent $i$ observes some entries of $\mathbf{W}_{i}$   %清单第二项
+\end{itemize}                                                    %结束列出清单
+\end{column}                                                     %结束左边的这栏
+\begin{column}{0.6\textwidth}                                    %开始右边的一栏，与左栏类似
+\begin{itemize}
+\vbox{}                                                          %空一行
+\item Consider a low-rank matrix $\mathbf{W}$
+\scriptsize \begin{itemize}
+                   \item $\mathbf{W} \in \mathbb{R}^{N \times M}$
+                   \item $rank(\mathbf{W})\le r$
+                   \item $\mathbf{W}_{n,m}$ is known for $(n,m) \in \Omega$
+                   \item $\mathbf{W} = [\mathbf{W}_{1}, \mathbf{W}_{2}, ...,
+\mathbf{W}_{L}] $
+                 \end{itemize}
+\normalsize \vbox{}
+\item An estimate matrix of $\mathbf{W}$: $\mathbf{Z}$
+\scriptsize \begin{itemize}
+                \item $\mathbf{Z} \in \mathbb{R}^{N \times M}$
+                \item $rank(\mathbf{Z})\le r$
+                \item $\mathbf{Z}=\mathbf{X}\mathbf{Y}= \mathbf{X} [\mathbf{Y}_{1}, \mathbf{Y}_{2}, ..., \mathbf{Y}_{L}]$
+                \item $\mathbf{X}\in \mathbb{R}^{N \times r},\mathbf{Y} \in \mathbb{R}^{r \times M}$
+              \end{itemize}
+\end{itemize}
+\normalsize \vbox{}                                             %\normalize使字体恢复正常大小
+\end{column}                                                    %结束右边栏
+\end{columns}                                                   %结束分栏
+\end{frame}
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;以上就是LaTex beamer制作幻灯片的主要内容。
+再次强调，在理解细节之前应先对代码框架有一个大的把握，具体编辑所需的语句可查阅书籍或互联网。&lt;/p&gt;
+
+&lt;p&gt;其实一句话就可以概括啦：不断的begin，不断的end。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>葱油鲤鱼</title>
+        <link>http://williamlfang.github.com//2013/01/30/Fish.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2013/01/30/Fish.html</guid>
+        <pubDate>2013-01-30 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;特别说明：这道菜被列入我的拿手保留菜品!!!足以见得其美味程度。&lt;/p&gt;
+
+&lt;h3&gt;材料&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;鲤鱼800g&lt;/li&gt;
+&lt;li&gt;小葱20g，姜5g&lt;/li&gt;
+&lt;li&gt;香油20g，酱油15g，料酒10g&lt;/li&gt;
+&lt;li&gt;香菜10g，胡椒粉、盐、味精适量。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;步骤&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;去超市买鱼!（老板会帮你刮去鳞，去掉腮和内脏）&lt;/li&gt;
+&lt;li&gt;用清水将鱼洗净，洗净的鲤鱼以1cm刀距打上柳叶花刀，深至刺骨。（就是切一组平行线）葱姜切丝备用。&lt;/li&gt;
+&lt;li&gt;将鲤鱼焯水，控净水分，放盘内，撒上盐、味精、料酒略腌，再散放入葱姜丝。（我在盘底也放了，觉得这样入味应该会更好）&lt;/li&gt;
+&lt;li&gt;蒸鱼9分钟，取出滗净汤汁，撒上洗净的香菜梗。（啊!此时才发现忘记放香菜了）&lt;/li&gt;
+&lt;li&gt;炒勺加香油，入葱段煸炒，待葱段焦黄时捞出不用，随即放入胡椒粉搅匀，再倒入酱油一烹，均匀地浇在鱼身上即成。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;完成&lt;/h3&gt;
+
+&lt;p&gt;其实在鱼被蒸至嫩熟的时候我就觉得很香了，而最后一步的浇油则将这道菜的美味提高了一个数量级。由于家里锅小，而鱼买得挺大，直接导致鱼尾在蒸的过程中露在锅外，最后一不留神就被我扯断了。这道菜因为工序较多，我给忘了香菜那茬儿，以后再做此类菜时应先将步骤谙熟于心再动手啊。最后还得说一句，真，的，很，好，吃。哈哈哈哈哈。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/food/fish.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>油爆虾</title>
+        <link>http://williamlfang.github.com//2013/01/29/Fried-Lobster.html</link>
+        <guid isPermaLink="true">http://williamlfang.github.com//2013/01/29/Fried-Lobster.html</guid>
+        <pubDate>2013-01-29 00:00:00 +0800</pubDate>
+        <description>&lt;h3&gt;材料&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;基围虾450g&lt;/li&gt;
+&lt;li&gt;生抽5ml，料酒5ml，白糖3g，醋5ml&lt;/li&gt;
+&lt;li&gt;胡椒粉少许，姜5g，蒜5g&lt;/li&gt;
+&lt;li&gt;香菜适量&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;步骤&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;去超市采购各种所需物品!（注：香菜又名芜须，因为不知道这个在超市好丢脸）&lt;/li&gt;
+&lt;li&gt;剪去虾须，洗虾备用，姜蒜切末备用，香菜洗净甩干备用。&lt;/li&gt;
+&lt;li&gt;调制腌料，生抽、糖、醋、料酒和少许胡椒粉混合均匀。&lt;/li&gt;
+&lt;li&gt;处理好的虾放入腌料腌制15分钟。（此时我正在电脑前打字）&lt;/li&gt;
+&lt;li&gt;油锅热至4成（何为4成？这个问题就像爱情是什么一样深奥，答案就是：凭感觉），放入腌制好的虾炸3分钟，虾的颜色变得金黄起锅备用。&lt;/li&gt;
+&lt;li&gt;另起锅，锅中放入少量油，爆香姜蒜末，放入炸好的虾略炒，烹入腌虾的调料汁，翻炒起锅。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;完成&lt;/h3&gt;
+
+&lt;p&gt;全部一手操作，在剪虾的时候，虽说海腥味刺鼻，但居然内心体会到一种做菜的乐趣。味道鲜香清淡，色泽诱人。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/food/lobster.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+</description>
       </item>
     
   </channel>

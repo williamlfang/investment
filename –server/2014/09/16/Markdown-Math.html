@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-<title>关于 | 价值投资者</title>
+<title>Markdown输入LaTeX数学公式 | 价值投资者</title>
 <meta name="author" content="William Fang">
 
 
@@ -260,45 +260,35 @@
             <div class="row">
   <div class="col-md-13 aside3-title">
     <br>
-    <h2 id="#identifier"><i class="fa fa-user fa-lg"></i></h2>
+    <h2 id="#identifier">Markdown输入LaTeX数学公式</h2>
+    2014年09月16日
   </div>
   <div class="col-md-13 aside3-content">
-    <div id="page-content">
-      <h3>关于博客</h3>
-<p style=font-size:18px><B>PainterLin.com</B>是我用github、jekyll、markdown搭建起来的博客。博客名字直译过来是：画家林。在我看来，画家和黑客是相似的：他们都是创造者，就好像作曲家，建筑师，以及作家一样，他们的目的是创造某种美好的事物。选域名时想到这个也许代表了我的某种愿望。博客内容不一定与技术相关，技术只是世界上的一个小目录。</p>
+    <hr>
+    <div id="content">
+      <p>Markdown是读写性都非常好的轻量文本编辑语言，这个博客以及世界上许多博客的文章都是用其书写的。但是，在写“科研”博客时，难免会需要频繁地输入数学公式，而Markdown本身并不支持数学公式的输入。我曾经想偷懒直接用Markdown的语法去代替LaTeX数学公式，最后页面显示的结果有点儿丑。却一直也没有去修改。直到前天收到了<a href="http://www.math.ucla.edu/%7Ewotaoyin/">印卧涛</a>老师的一封邮件，邮件里所有的数学公式都是用LaTeX代码写的，正规而美观。由此觉得自己做事还是水了点。做事要认真啊亲。</p>
 
-<h3>关于作者</h3>
-<p style=font-size:18px>我们也许在很多地方扮演不同的角色去适应环境，但在这里，一切都由自己控制。转眼间即将进入自己学生生涯的倒数第二年，未来的日子里，希望在这里写下一些自己的思考和感悟。如果可以的话，创造一些美好的事物。话说回来，一个人天天折腾不就是为了一个温暖怀抱吗。</p>
+<p>本文默认我们是会使用LaTeX编辑数学公式的。</p>
 
-<center><img src="/investment/public/img/dog.jpg" style="width:100%"></center>
+<h3>解决办法：</h3>
 
+<ul>
+<li>将数学公式以图片形式保存，再在Markdown中将其插入。</li>
+<li>或者，使用LaTeX在线编辑器，输入数学公式，获得html代码，将其插入Markdown。</li>
+</ul>
 
-<hr>
-<a href="">
-  <i class="fa fa-linkedin fa-lg" style="color:#16a095;"></i>
-</a>
-<a href="http://weibo.com/orangeissweet" target="_blank">
-  <i class="fa fa-weibo fa-lg" style="color:#16a095;"></i>
-</a>
-<a href="http://github.com/williamlfang" target="_blank">
-  <i class="fa fa-github fa-lg" style="color:#16a095;"></i>
-</a>
-<a href="/investment/pages/atom.xml" target="_blank">
-  <i class="fa fa-rss fa-lg" style="color:#16a095;"></i>
-</a>
-<a href="mailto:william.lian.fang@gmail.com">
-  <i class="fa fa-envelope-o fa-lg" style="color:#16a095;"></i>
-</a>
-<a href="">
-  <i class="fa fa-music fa-lg" style="color:#16a095;"></i>
-</a>
-<hr>
-<div id="disqus_thread">
-  <button type="button" name="painterlin" class="btn btn-default show-commend">	
-  	<i class="fa fa-comment-o fa-lg" style="color: #16a095;"></i>     <!-- 修改显示评论按钮图标-->
-  </button>
-</div>
+<h3>步骤：</h3>
 
+<ul>
+<li>进入<a href="http://www.codecogs.com/latex/eqneditor.php">CodeCogs</a></li>
+<li>在盒子里书写公式</li>
+<li>在页面下方复制html代码</li>
+<li>将复制的html代码拷贝到Markdown里</li>
+</ul>
+
+<h3>缺点：</h3>
+
+<p>Markdown文件的易读性却因此下降了很多。</p>
 
     </div>
     <hr>
@@ -309,7 +299,14 @@
 </div>
 
   </div>
+  <!-- 目录 -->
+  <div id="content_table" style="position:fixed;right:20px;top:120px;display:none;">
+    <div class="panel panel-success">
+      <div class="panel-body" id="nav"></div>
+    </div>
+  </div>
 </div>
+
 
           </div>
         </div>

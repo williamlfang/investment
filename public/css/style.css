@@ -34,7 +34,9 @@
   box-shadow: 0 0 10px 10px transparent;
   outline: none;
   cursor: pointer;
-  position: fixed;
+  /*
+position: fixed;
+  */
   -webkit-transition: box-shadow .35s;
   -moz-transition: box-shadow .35s;
   -ms-transition: box-shadow .35s;

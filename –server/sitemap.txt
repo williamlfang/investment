@@ -7,54 +7,10 @@
 
   /pages/about.html
 
-  /page2/index.html
-
-  /page3/index.html
-
 
 
   /2015/04/12/jia-zhi-tou-zi-shou-ce.html
 
   /2015/04/12/ce-shi.html
-
-  /2015/02/13/Cplus-on-MAC.html
-
-  /2015/01/30/Git-Resources.html
-
-  /2014/12/06/Make-resume-by-LaTeX.html
-
-  /2014/11/02/Steak.html
-
-  /2014/10/31/Yosemite-Matlab-Running-Error.html
-
-  /2014/10/29/Fried-Egg-Toast.html
-
-  /2014/10/07/Mac-Rar-Unrar.html
-
-  /2014/09/30/Linux4.html
-
-  /2014/09/19/Linux3.html
-
-  /2014/09/17/Linux2.html
-
-  /2014/09/16/Markdown-Math.html
-
-  /2014/09/13/Linux.html
-
-  /2014/09/12/Linux-Problems.html
-
-  /2014/08/16/Pig-Trotter.html
-
-  /2014/08/12/Remote-Desk-from-Mac-to-Windows-PC.html
-
-  /2014/08/10/Using-LaTeX-with-Sublime-and-Skim-for-Mac.html
-
-  /2014/07/31/LaTeX-beamer-slides.html
-
-  /2013/01/30/Fish.html
-
-  /2013/01/29/Fried-Lobster.html
-
-  /2013/01/28/Mung-Bean-Soup.html
 
   /2011/01/01/Book-List-2011.html

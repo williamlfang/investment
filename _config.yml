@@ -30,7 +30,7 @@ ga:
 
 # disqus 设置
 disqus:
-  shortname: william_fang
+  shortname: william
 
 # 主题设置，自动激活某个标签
 active: tags

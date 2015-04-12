@@ -7,8 +7,6 @@
 
   /pages/about.html
 
-  /pages/atom.xml
-
   /page2/index.html
 
   /page3/index.html

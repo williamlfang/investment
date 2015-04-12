@@ -21,8 +21,13 @@
   height: 40px; }
 
 #js-fullscreen, #nprogress .spinner {
+/*
   top: 12px;
-  right: 20px; }
+  right: 20px; 
+*/
+  top: 59px;
+  right: 16px; 
+}
 
 #js-fullscreen {
   margin: 0;

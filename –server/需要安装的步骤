@@ -1,0 +1,16 @@
+############################################################
+## 需要安装的软件包
+############################################################
+sudo apt-get install rake
+
+sudo gem install hz2py
+
+sudo apt-get install ruby1.9.1-dev 
+
+sudo gem install rdiscount
+
+sudo apt-get install jekyll
+
+############################################################
+
+rake post title="这是一个例子"

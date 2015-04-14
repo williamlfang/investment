@@ -158,57 +158,57 @@ MathJax.Hub.Queue(function() {
       <p>假定短期利率在风险中性测度下（等价鞅测度）服从以下随机过程
 $$
 \begin{align}
- dr<em>t &amp;= \theta dt + \sigma dW</em>t \
+ dr_t &amp;= \theta dt + \sigma dW_t <br />
  \Rightarrow
- \int<em>{s}^{t} dr</em>t &amp;= \int<em>{s}^{t} \theta dt + \int</em>{s}^{t}  \sigma dW<em>t \
+ \int<em>{s}^{t} dr_t &amp;= \int</em>{s}^{t} \theta dt + \int<em>{s}^{t}  \sigma dW_t <br />
   \Rightarrow
-  r(t) &amp;= r(s) + \theta (t-s) + \sigma  \int</em>{s}^{t}  dW_t \
+  r(t) &amp;= r(s) + \theta (t-s) + \sigma  \int</em>{s}^{t}  dW_t <br />
 \end{align}
 $$</p>
 
 <p>则在同样的等价鞅测度下，零息票债券的价格为
 $$
 \begin{align}
- P(t,T) &amp;= E^{Q}\bigg[ e^{ - \int<em>{t}^{T} r(u) du } \bigg| \mathcal{F}</em>t \bigg]
+ P(t,T) &amp;= E^{Q}\bigg[ e^{ - \int_{t}^{T} r(u) du } \bigg| \mathcal{F}_t \bigg]
 \end{align}
 $$</p>
 
 <!-- more -->
 
-<p>同时，我们令 $X(t,T)$ 为一个有关短期利率的线性关系，我们在前面提过，短期利率 $\boxed{r(t)  = \cdots + \sigma  \int<em>{s}^{t}  dW</em>t}$ 是一个服从正太分布的变量（从布朗运动的正太分布特征得到），因而 $X(t,T)$ 也是一个服从正太分布的随机变量。
+<p>同时，我们令 $X(t,T)$ 为一个有关短期利率的线性关系，我们在前面提过，短期利率 $\boxed{r(t)  = \cdots + \sigma  \int<em>{s}^{t}  dW_t}$ 是一个服从正太分布的变量（从布朗运动的正太分布特征得到），因而 $X(t,T)$ 也是一个服从正太分布的随机变量。
 $$
-\begin{align<em>}
- X(t,T) &amp;= \int<em>{t}^{T} r(u) du = \int</em>{t}^{T} r(t) du + \int<em>{t}^{T} \theta (u-t) du + \int</em>{t}^{T}  \sigma du \int<em>{t}^{u}  dW</em>\epsilon \
- &amp;= r(t)(T-t) + \frac{\theta}{2}(T-t)^2 + \int<em>{t}^{T}  \sigma du \int</em>{t}^{u}  dW<em>\epsilon \
+\begin{align*}
+ X(t,T) &amp;= \int</em>{t}^{T} r(u) du = \int<em>{t}^{T} r(t) du + \int</em>{t}^{T} \theta (u-t) du + \int<em>{t}^{T}  \sigma du \int</em>{t}^{u}  dW<em>\epsilon <br />
+ &amp;= r(t)(T-t) + \frac{\theta}{2}(T-t)^2 + \int</em>{t}^{T}  \sigma du \int<em>{t}^{u}  dW</em>\epsilon <br />
  \Rightarrow
- E\bigg[ X(t,T) \bigg| \mathcal{F}</em>t \bigg]
- &amp;= r(t)(T-t) + \frac{\theta}{2}(T-t)^2 + \int<em>{t}^{T}  \sigma du \underbrace{ E\bigg[  \int</em>{t}^{u}  dW<em>\epsilon}</em>{0}  \bigg] \
- &amp;= r(t)(T-t) + \frac{\theta}{2}(T-t)^2  \
+ E\bigg[ X(t,T) \bigg| \mathcal{F}<em>t \bigg]
+ &amp;= r(t)(T-t) + \frac{\theta}{2}(T-t)^2 + \int</em>{t}^{T}  \sigma du \underbrace{ E\bigg[  \int<em>{t}^{u}  dW</em>\epsilon}<em>{0}  \bigg] <br />
+ &amp;= r(t)(T-t) + \frac{\theta}{2}(T-t)^2  <br />
  \Rightarrow
- Var\bigg[ X(t,T) \bigg| \mathcal{F}<em>t \bigg]
+ Var\bigg[ X(t,T) \bigg| \mathcal{F}_t \bigg]
  &amp;= \sigma^2 E\bigg[ \int</em>{t}^{T} du 
       \bigg( \int<em>{t}^{u} dW</em>{\epsilon} \cdot   \int<em>{t}^{v} dW</em>{\epsilon}  \bigg) 
-      \int<em>{t}^{T} dv \bigg| \mathcal{F}</em>t \bigg] \
-  &amp;= \sigma^2 \int<em>{t}^{T} du \int</em>{t}^{\min{u,v}} d\epsilon  \int<em>{t}^{T} dv \
-  &amp;= 2 \sigma^2 \int</em>{t}^{v} (u-t) du \int<em>{t}^{T} dv \
-  &amp;= 2 \sigma^2 \int</em>{t}^{T} \bigg( \frac{1}{2} u^2 - u t \bigg)\bigg|<em>t^v dv  \
-  &amp;= 2 \sigma^2 \int</em>{t}^{T} \bigg( \frac{1}{2} v^2 - vt + \frac{1}{2} t^2 \bigg) dv \
-  &amp;= \sigma^2 \int<em>{t}^{T} (v-t)^2 dv \
-  &amp;= \frac{\sigma^2}{3} (v-t)^3\bigg|</em>t^T \
-  &amp;= \frac{\sigma^2}{3} (T-t)^3 \
+      \int<em>{t}^{T} dv \bigg| \mathcal{F}_t \bigg] <br />
+  &amp;= \sigma^2 \int</em>{t}^{T} du \int<em>{t}^{\min{u,v}} d\epsilon  \int</em>{t}^{T} dv <br />
+  &amp;= 2 \sigma^2 \int<em>{t}^{v} (u-t) du \int</em>{t}^{T} dv <br />
+  &amp;= 2 \sigma^2 \int<em>{t}^{T} \bigg( \frac{1}{2} u^2 - u t \bigg)\bigg|_t^v dv  <br />
+  &amp;= 2 \sigma^2 \int</em>{t}^{T} \bigg( \frac{1}{2} v^2 - vt + \frac{1}{2} t^2 \bigg) dv <br />
+  &amp;= \sigma^2 \int_{t}^{T} (v-t)^2 dv <br />
+  &amp;= \frac{\sigma^2}{3} (v-t)^3\bigg|_t^T <br />
+  &amp;= \frac{\sigma^2}{3} (T-t)^3 <br />
   \Rightarrow
   X(t,T) &amp;\sim \mathcal{N}\bigg( r(t)(T-t) + \frac{\theta}{2}(T-t)^2, \frac{\sigma^2}{3} (T-t)^3 \bigg)
-\end{align</em>}
+\end{align*}
 $$</p>
 
 <p>我们可以利用正太分布函数的矩阵生成函数来推导债券价格的公式。
 $$
 \begin{align}
- P(t,T) &amp;= E^{Q}\bigg[ e^{ - X(t,T) } \bigg| \mathcal{F}<em>t \bigg] \
- &amp;= e^{ -\mu</em>X + \frac{1}{2} \sigma_X^2} \
- &amp;= e^{ -r(t)(T-t) - \frac{\theta}{2}(T-t)^2 + \frac{\sigma^2}{6} (T-t)^3 } \
- &amp;= A(t,T) e^{ -B(t,T) r(t) } \
- A(t,T)  &amp;= e^{ - \frac{\theta}{2}(T-t)^2 + \frac{\sigma^2}{6} (T-t)^3  } \
+ P(t,T) &amp;= E^{Q}\bigg[ e^{ - X(t,T) } \bigg| \mathcal{F}_t \bigg] <br />
+ &amp;= e^{ -\mu_X + \frac{1}{2} \sigma_X^2} <br />
+ &amp;= e^{ -r(t)(T-t) - \frac{\theta}{2}(T-t)^2 + \frac{\sigma^2}{6} (T-t)^3 } <br />
+ &amp;= A(t,T) e^{ -B(t,T) r(t) } <br />
+ A(t,T)  &amp;= e^{ - \frac{\theta}{2}(T-t)^2 + \frac{\sigma^2}{6} (T-t)^3  } <br />
  B(t,T)  &amp;= (T-t)
 \end{align}
 $$</p>
@@ -217,17 +217,17 @@ $$</p>
 
 <p>$$
 \begin{align}
- f(t,T) &amp;= -\frac{\partial \ln P(t,T)}{ \partial T} \
- &amp;= r<em>t + \theta(T-t) - \frac{\sigma^2}{2} (T-t)^2
+ f(t,T) &amp;= -\frac{\partial \ln P(t,T)}{ \partial T} <br />
+ &amp;= r_t + \theta(T-t) - \frac{\sigma^2}{2} (T-t)^2
 \end{align}
 $$
 根据 <strong>Ito formula</strong>，有
 $$
 \begin{align}
- df(t,T) &amp;= \underbrace{f&#39;</em>t}<em>{-\theta + \sigma^2(T-t)} dt + \underbrace{f&#39;</em>{r}}<em>{1} dr</em>t  + \frac{1}{2} \underbrace{f&#39;&#39;<em>{rr}}</em>{0} dr<em>tdr</em>t  \
- &amp;= \bigg[ -\theta + \sigma^2(T-t) \bigg] dt + \bigg( \theta dt + \sigma dW<em>t \bigg) \
+ df(t,T) &amp;= \underbrace{f’<em>t}</em>{-\theta + \sigma^2(T-t)} dt + \underbrace{f’<em>{r}}</em>{1} dr_t  + \frac{1}{2} \underbrace{f’‘<em>{rr}}</em>{0} dr_tdr_t  <br />
+ &amp;= \bigg[ -\theta + \sigma^2(T-t) \bigg] dt + \bigg( \theta dt + \sigma dW_t \bigg) <br />
  &amp;= \boxed{
-   \sigma^2(T-t) dt +  \sigma dW</em>t
+   \sigma^2(T-t) dt +  \sigma dW_t
  }
 \end{align}
 $$</p>

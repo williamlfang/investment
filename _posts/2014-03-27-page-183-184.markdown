@@ -1,0 +1,90 @@
+---
+layout:   post
+title:    "Page 183 184"
+category: Finance  
+tags:     
+- 利率
+- 债券
+description: 
+published: true
+status: publish
+---
+ 
+假定短期利率在风险中性测度下（等价鞅测度）服从以下随机过程
+$$
+\begin{align}
+ dr_t &= \theta dt + \sigma dW_t \\
+ \Rightarrow
+ \int_{s}^{t} dr_t &= \int_{s}^{t} \theta dt + \int_{s}^{t}  \sigma dW_t \\
+  \Rightarrow
+  r(t) &= r(s) + \theta (t-s) + \sigma  \int_{s}^{t}  dW_t \\
+\end{align}
+$$
+ 
+则在同样的等价鞅测度下，零息票债券的价格为
+$$
+\begin{align}
+ P(t,T) &= E^{Q}\bigg[ e^{ - \int_{t}^{T} r(u) du } \bigg| \mathcal{F}_t \bigg]
+\end{align}
+$$
+ 
+<!-- more -->
+ 
+同时，我们令 $X(t,T)$ 为一个有关短期利率的线性关系，我们在前面提过，短期利率 $\boxed{r(t)  = \cdots + \sigma  \int_{s}^{t}  dW_t}$ 是一个服从正太分布的变量（从布朗运动的正太分布特征得到），因而 $X(t,T)$ 也是一个服从正太分布的随机变量。
+$$
+\begin{align*}
+ X(t,T) &= \int_{t}^{T} r(u) du = \int_{t}^{T} r(t) du + \int_{t}^{T} \theta (u-t) du + \int_{t}^{T}  \sigma du \int_{t}^{u}  dW_\epsilon \\
+ &= r(t)(T-t) + \frac{\theta}{2}(T-t)^2 + \int_{t}^{T}  \sigma du \int_{t}^{u}  dW_\epsilon \\
+ \Rightarrow
+ E\bigg[ X(t,T) \bigg| \mathcal{F}_t \bigg]
+ &= r(t)(T-t) + \frac{\theta}{2}(T-t)^2 + \int_{t}^{T}  \sigma du \underbrace{ E\bigg[  \int_{t}^{u}  dW_\epsilon}_{0}  \bigg] \\
+ &= r(t)(T-t) + \frac{\theta}{2}(T-t)^2  \\
+ \Rightarrow
+ Var\bigg[ X(t,T) \bigg| \mathcal{F}_t \bigg]
+ &= \sigma^2 E\bigg[ \int_{t}^{T} du 
+      \bigg( \int_{t}^{u} dW_{\epsilon} \cdot   \int_{t}^{v} dW_{\epsilon}  \bigg) 
+      \int_{t}^{T} dv \bigg| \mathcal{F}_t \bigg] \\
+  &= \sigma^2 \int_{t}^{T} du \int_{t}^{\min\{u,v\}} d\epsilon  \int_{t}^{T} dv \\
+  &= 2 \sigma^2 \int_{t}^{v} (u-t) du \int_{t}^{T} dv \\
+  &= 2 \sigma^2 \int_{t}^{T} \bigg( \frac{1}{2} u^2 - u t \bigg)\bigg|_t^v dv  \\
+  &= 2 \sigma^2 \int_{t}^{T} \bigg( \frac{1}{2} v^2 - vt + \frac{1}{2} t^2 \bigg) dv \\
+  &= \sigma^2 \int_{t}^{T} (v-t)^2 dv \\
+  &= \frac{\sigma^2}{3} (v-t)^3\bigg|_t^T \\
+  &= \frac{\sigma^2}{3} (T-t)^3 \\
+  \Rightarrow
+  X(t,T) &\sim \mathcal{N}\bigg( r(t)(T-t) + \frac{\theta}{2}(T-t)^2, \frac{\sigma^2}{3} (T-t)^3 \bigg)
+\end{align*}
+$$
+ 
+我们可以利用正太分布函数的矩阵生成函数来推导债券价格的公式。
+$$
+\begin{align}
+ P(t,T) &= E^{Q}\bigg[ e^{ - X(t,T) } \bigg| \mathcal{F}_t \bigg] \\
+ &= e^{ -\mu_X + \frac{1}{2} \sigma_X^2} \\
+ &= e^{ -r(t)(T-t) - \frac{\theta}{2}(T-t)^2 + \frac{\sigma^2}{6} (T-t)^3 } \\
+ &= A(t,T) e^{ -B(t,T) r(t) } \\
+ A(t,T)  &= e^{ - \frac{\theta}{2}(T-t)^2 + \frac{\sigma^2}{6} (T-t)^3  } \\
+ B(t,T)  &= (T-t)
+\end{align}
+$$
+ 
+下面我们来推导远期利率的公式。
+ 
+$$
+\begin{align}
+ f(t,T) &= -\frac{\partial \ln P(t,T)}{ \partial T} \\
+ &= r_t + \theta(T-t) - \frac{\sigma^2}{2} (T-t)^2
+\end{align}
+$$
+根据 **Ito formula**，有
+$$
+\begin{align}
+ df(t,T) &= \underbrace{f'_t}_{-\theta + \sigma^2(T-t)} dt + \underbrace{f'_{r}}_{1} dr_t  + \frac{1}{2} \underbrace{f''_{rr}}_{0} dr_tdr_t  \\
+ &= \bigg[ -\theta + \sigma^2(T-t) \bigg] dt + \bigg( \theta dt + \sigma dW_t \bigg) \\
+ &= \boxed{
+   \sigma^2(T-t) dt +  \sigma dW_t
+ }
+\end{align}
+$$
+ 
+从以上关系可以看到，远期利率的漂移项依赖于短期利率的瞬时波动项，即$\mu_{f(t,T)} = \sigma^2(T-t)$，这个是典型的具有 **HJM** 模型特征。我们将在下一回细解。

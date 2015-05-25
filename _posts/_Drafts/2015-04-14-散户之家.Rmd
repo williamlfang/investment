@@ -1,0 +1,113 @@
+---
+layout:   post
+title:    "散户之家"
+category: stock 
+tags:     
+    -  
+    -   
+description: 
+published: false
+status:    process
+---
+
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+library(beepr)
+library(rvest)
+```
+
+<!------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- as.character( rep(NA,10) )        ## No. = 10，可以修改
+for ( i in 1:length(url) ){
+  url[i] <- paste("http://www.zf826.com/page/", i, sep="")
+}
+
+#############################################################
+link <- function(x){
+  x %>% 
+  read_html() %>% 
+  html_nodes(".fl") %>% 
+  html_attr("href")
+}
+all <- lapply(url, link)
+```
+<!------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------->
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[1]][1]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[1]][2]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->

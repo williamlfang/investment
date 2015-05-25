@@ -1,0 +1,5583 @@
+---
+layout:   post
+title:    "散户之家"
+category:  strategy
+tags:     
+    -  
+    -   
+description: 
+published: false
+status:    process
+---
+
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+library(beepr)
+library(rvest)
+```
+
+<!------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- as.character( rep(NA,10) )        ## No. = 10，可以修改
+for ( i in 1:length(url) ){
+  url[i] <- paste("http://www.zf826.com/page/", i, sep="")
+}
+
+#############################################################
+link <- function(x){
+  x %>% 
+  read_html() %>% 
+  html_nodes(".fl") %>% 
+  html_attr("href")
+}
+all <- lapply(url, link)
+```
+<!------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------->
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[1]][1]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[1]][2]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[1]][3]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[1]][4]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[1]][5]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[1]][6]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[1]][7]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[1]][8]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[1]][9]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[1]][10]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[1]][11]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[1]][12]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[1]][13]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[1]][14]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[1]][15]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[2]][1]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[2]][2]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[2]][3]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[2]][4]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[2]][5]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[2]][6]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[2]][7]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[2]][8]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[2]][9]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[2]][10]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[2]][11]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[2]][12]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[2]][13]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[2]][14]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[2]][15]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[3]][1]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[3]][2]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[3]][3]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[3]][4]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[3]][5]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[3]][6]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[3]][7]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[3]][8]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[3]][9]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[3]][10]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[3]][11]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[3]][12]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[3]][13]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[3]][14]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[3]][15]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[4]][1]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[4]][2]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[4]][3]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[4]][4]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[4]][5]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[4]][6]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[4]][7]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[4]][8]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[4]][9]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[4]][10]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[4]][11]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[4]][12]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[4]][13]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[4]][14]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[4]][15]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[5]][1]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[5]][2]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[5]][3]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[5]][4]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[5]][5]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[5]][6]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[5]][7]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[5]][8]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[5]][9]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[5]][10]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[5]][11]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[5]][12]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[5]][13]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[5]][14]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[5]][15]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[6]][1]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[6]][2]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[6]][3]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[6]][4]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[6]][5]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[6]][6]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[6]][7]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[6]][8]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[6]][9]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[6]][10]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[6]][11]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[6]][12]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[6]][13]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[6]][14]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[6]][15]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+<!------------------------------------------------------------------------------------------------------->
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[7]][1]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[7]][2]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[7]][3]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[7]][4]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[7]][5]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[7]][6]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[7]][7]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[7]][8]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[7]][9]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[7]][10]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[7]][11]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[7]][12]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[7]][13]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[7]][14]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[7]][15]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[8]][1]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[8]][2]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[8]][3]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[8]][4]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[8]][5]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[8]][6]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[8]][7]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[8]][8]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[8]][9]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[8]][10]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[8]][11]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[8]][12]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[8]][13]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[8]][14]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[8]][15]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[9]][1]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[9]][2]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[9]][3]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[9]][4]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[9]][5]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[9]][6]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[9]][7]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[9]][8]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[9]][9]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[9]][10]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[9]][11]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[9]][12]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[9]][13]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[9]][14]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[9]][15]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[10]][1]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[10]][2]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[10]][3]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[10]][4]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[10]][5]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[10]][6]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[10]][7]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[10]][8]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[10]][9]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[10]][10]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[10]][11]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[10]][12]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[10]][13]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[10]][14]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+
+<!------------------------------------------------------------------------------------------------------->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+url <- all[[10]][15]
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+title <- url %>%
+  read_html() %>%
+  html_nodes(".single-title") %>% 
+  html_text()
+
+date <- url %>%
+  read_html() %>%
+  html_nodes(".single-info span") %>% 
+  html_text()
+date <- date[1]
+
+main <- url %>%
+  read_html() %>%
+  html_nodes("#single-con p") %>% 
+  html_text()
+###############################################################
+main = gsub("———", "\n --------------------------------------------------------------------------------------------- \n", main)
+main = gsub("-", "", main)
+## main = paste(main, collapse = '\n ===================================================================================== \n')  
+main = paste(main, collapse = '\n                                                                                              \n')
+```
+
+### `r title`
+[`r date`](`r url`)
+
+`r main`
+
+<!------------------------------------------------------------------------------------------------------->
+
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+beep()
+```
